@@ -7,28 +7,49 @@ export default function About() {
   return (
     <section className="max-w-3xl mx-auto py-16 px-4 text-center">
       <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-[#232323]">Reimagining Urban Life. One Detail at a Time.</h1>
-      <p className="text-lg text-[#232323] mb-6">
-        Ukiyo Habitat is a collaborative design studio working at the intersection of landscape architecture, urban design, and social innovation.
-      </p>
-      <p className="text-lg text-[#232323] mb-6">
-        We fuse ecological thinking with technology to craft spaces that are climate-resilient, context-aware, and deeply human. Our approach is rooted in the belief that every project is an opportunity to create environments that are not only functional, but also inspiring and sustainable.
-      </p>
-      <p className="text-lg text-[#232323] mb-6">
-        Our designs are not just solutions—they’re invitations to engage, reflect, and co-create. We believe in the power of collaboration, drawing on diverse perspectives to shape spaces that respond to the needs of people, communities, and the planet.
-      </p>
-      <p className="text-lg text-[#232323] mb-10">
-        At Ukiyo Habitat, we are committed to pushing the boundaries of what’s possible in the built environment, reimagining urban life one detail at a time.
-      </p>
-
       {/* Team Bio, Vision, Journey */}
       <div className="mb-12">
         <h2 className="text-2xl font-semibold text-[#232323] mb-4">Our Team & Vision</h2>
         <p className="text-[#232323] mb-4">We are a diverse team of architects, designers, and urbanists united by a passion for shaping sustainable, human-centered environments. Our journey began with a shared vision: to create spaces that inspire, connect, and endure.</p>
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-4">
-          <div className="bg-white rounded-xl shadow p-4 w-full sm:w-1/3">
-            <div className="font-bold text-[#232323]">Aarav Mehta</div>
-            <div className="text-sm text-[#232323]">Founder & Principal Architect</div>
+        {/* Founder Bio Card with Photo */}
+        <div className="bg-[#f6f2ed] rounded-xl shadow p-6 mb-6 flex flex-col sm:flex-row items-center text-left mx-auto max-w-2xl gap-6">
+          <div className="flex-shrink-0 flex justify-center items-center w-full sm:w-auto mb-4 sm:mb-0">
+            <img src="/garima-dubey.jpg" alt="Garima Dubey" className="w-28 h-28 rounded-full object-cover border-4 border-white shadow" />
           </div>
+          <div>
+            <h3 className="text-xl font-bold text-[#232323] mb-1">Garima Dubey</h3>
+            <div className="text-sm text-[#e7a77e] font-semibold mb-3">Founder</div>
+            <p className="text-[#232323] mb-2">
+              Growing up in Jabalpur, I was surrounded by the natural beauty of Madhya Pradesh—lush forests, serene rivers, and breathtaking landscapes like the towering falls of Bhedaghat and the wildlife of Kanha National Park. These places instilled in me a deep respect for nature and a passion for creating designs that reflect the balance and harmony of the environment.
+            </p>
+            <p className="text-[#232323] mb-2">
+              After completing my master's at SPA Delhi, I founded Ukiyo Habitat with the vision to incorporate these natural principles into urban design. Our work focuses on creating spaces that are not only sustainable but also rooted in the environment around them. Just as the forests of Madhya Pradesh sustain a delicate ecosystem, we aim to design urban spaces that coexist seamlessly with nature, fostering resilience, beauty, and functionality.
+            </p>
+            <p className="text-[#232323]">
+              At Ukiyo Habitat, every project is an opportunity to transform urban landscapes into places that nurture both people and the planet—just as I’ve witnessed nature do in my home state.
+            </p>
+          </div>
+        </div>
+        {/* Second Founder Bio Card with Photo */}
+        <div className="bg-[#f6f2ed] rounded-xl shadow p-6 mb-6 flex flex-col sm:flex-row items-center text-left mx-auto max-w-2xl gap-6">
+          <div className="flex-shrink-0 flex justify-center items-center w-full sm:w-auto mb-4 sm:mb-0">
+            <img src="/aarav-mehta.jpg" alt="Aarav Mehta" className="w-28 h-28 rounded-full object-cover border-4 border-white shadow" />
+          </div>
+          <div>
+            <h3 className="text-xl font-bold text-[#232323] mb-1">Aarav Mehta</h3>
+            <div className="text-sm text-[#e7a77e] font-semibold mb-3">Co-Founder</div>
+            <p className="text-[#232323] mb-2">
+              Raised in Mumbai, I was always fascinated by the dynamic interplay between people and the built environment. The city’s vibrant streets and diverse communities inspired me to pursue architecture as a way to shape meaningful urban experiences.
+            </p>
+            <p className="text-[#232323] mb-2">
+              After earning my degree from CEPT University, I joined forces with Garima to co-found Ukiyo Habitat. My focus is on integrating smart technology and participatory design into our projects, ensuring that every space we create is both innovative and inclusive.
+            </p>
+            <p className="text-[#232323]">
+              I believe that great design is a dialogue—between history and future, nature and city, people and place. At Ukiyo Habitat, I strive to make that dialogue visible in every project we undertake.
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-4">
           <div className="bg-white rounded-xl shadow p-4 w-full sm:w-1/3">
             <div className="font-bold text-[#232323]">Maya Kapoor</div>
             <div className="text-sm text-[#232323]">Urban Designer</div>

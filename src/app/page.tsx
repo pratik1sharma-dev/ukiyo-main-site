@@ -58,6 +58,34 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* Our Clients Section */}
+      <section className="w-full bg-white py-12 px-4 border-y border-[#e7d8c9]">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-[#232323] mb-8">Our Clients</h2>
+          <div className="flex flex-wrap justify-center gap-8 items-center">
+            {/* Kahwa */}
+            <div className="bg-[#f6f2ed] rounded-xl px-8 py-4 flex flex-col items-center shadow min-w-[140px]">
+              <img src="/kahwa-logo.png" alt="Kahwa Logo" className="h-12 mb-2 object-contain" />
+              <span className="text-lg font-semibold text-[#232323]">Kahwa</span>
+            </div>
+            {/* Cover and Pax */}
+            <div className="bg-[#f6f2ed] rounded-xl px-8 py-4 flex flex-col items-center shadow min-w-[140px]">
+              <img src="/cover-and-pax-logo.png" alt="Cover and Pax Logo" className="h-12 mb-2 object-contain" />
+              <span className="text-lg font-semibold text-[#232323]">Cover and Pax</span>
+            </div>
+            {/* Haldiram */}
+            <div className="bg-[#f6f2ed] rounded-xl px-8 py-4 flex flex-col items-center shadow min-w-[140px]">
+              <img src="/haldiram-logo.png" alt="Haldiram Logo" className="h-12 mb-2 object-contain" />
+              <span className="text-lg font-semibold text-[#232323]">Haldiram</span>
+            </div>
+            {/* Indian Navy */}
+            <div className="bg-[#f6f2ed] rounded-xl px-8 py-4 flex flex-col items-center shadow min-w-[140px]">
+              <img src="/indian-navy-logo.png" alt="Indian Navy Logo" className="h-12 mb-2 object-contain" />
+              <span className="text-lg font-semibold text-[#232323]">Indian Navy</span>
+            </div>
+          </div>
+        </div>
+      </section>
        {/* Who We Are (About Us Preview) Section */}
        <section className="w-full bg-white py-12 px-4 border-y border-[#e7d8c9]">
         <div className="max-w-3xl mx-auto text-center">
