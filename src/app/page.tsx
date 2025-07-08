@@ -1,6 +1,8 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { motion, useMotionValue, useTransform, animate } from "framer-motion";
+import { useRef } from "react";
 
 const heroSlides = [
   {
@@ -36,6 +38,23 @@ const heroSlides = [
     ],
   },
 ];
+
+// AnimatedCounter component
+function AnimatedCounter({ to, duration = 1.2 }: { to: number; duration?: number }) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (latest) => Math.floor(latest));
+  useEffect(() => {
+    const controls = animate(count, to, { duration, ease: "easeOut" });
+    return controls.stop;
+  }, [to, duration, count]);
+  useEffect(() => {
+    return rounded.on("change", (v) => {
+      if (ref.current) ref.current.textContent = v.toString();
+    });
+  }, [rounded]);
+  return <span ref={ref}>0</span>;
+}
 
 export default function Home() {
   const [bgIndex, setBgIndex] = useState(0);
@@ -102,43 +121,83 @@ export default function Home() {
       </div>
 
       {/* New Statement after Carousel */}
-      <div className="w-full bg-[#f6f2ed] py-8 px-4">
+      <motion.div
+        className="w-full bg-[#f6f2ed] py-14 px-4 md:py-20 md:px-0 rounded-2xl shadow-sm mb-10 md:mb-16"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
         <div className="max-w-2xl mx-auto text-center">
           <p className="text-2xl sm:text-3xl font-semibold text-[#232323] font-[var(--font-cormorant)] mb-4">We are in the practice of shaping places that listen — to people, to climate, and to change.</p>
           {/* Subtext and CTA */}
           <p className="text-base sm:text-lg text-[#6b7280] mb-6 font-light">Whether it’s a stormwater edge or a city’s identity, our work responds to the moment while staying rooted in what truly matters — land, care, and time.</p>
           <a href="/contact" className="inline-block bg-[#f59e42] hover:bg-[#ea580c] text-white font-semibold rounded-full px-8 py-3 transition-colors shadow-md text-base">🟠 Start a Conversation</a>
         </div>
+      </motion.div>
+      {/* Section Divider */}
+      <div className="w-full flex justify-center mb-10 md:mb-16">
+        <div className="h-1 w-32 bg-gradient-to-r from-[#e7d8c9]/0 via-[#e7d8c9] to-[#e7d8c9]/0 rounded-full" />
       </div>
 
       {/* Rooted in India. Open to the world. Section */}
-      <div className="w-full bg-[#f6f2ed] py-8 px-4">
-        <div className="max-w-2xl mx-auto text-center">
+      <motion.div
+        className="w-full bg-[#f6f2ed] py-14 px-4 md:py-20 md:px-0 rounded-2xl shadow-sm mb-10 md:mb-16 flex items-center justify-center min-h-[340px] md:min-h-[420px]"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+      >
+        <div className="max-w-2xl mx-auto text-center w-full">
           <h3 className="text-xl sm:text-2xl font-semibold text-[#232323] mb-3 font-[var(--font-cormorant)]">Rooted in India. Open to the world.</h3>
           <p className="text-base sm:text-lg text-[#232323] font-light">
             We are based in India — where urban complexity, ecological urgency, and cultural depth collide every day.<br/><br/>
             Yet our practice is shaped by questions and inspirations from across geographies. We believe in designing for specific contexts, while staying tuned to the global conversations on climate, resilience, and future cities.
           </p>
         </div>
+      </motion.div>
+      {/* Section Divider */}
+      <div className="w-full flex justify-center mb-10 md:mb-16">
+        <div className="h-1 w-32 bg-gradient-to-r from-[#e7d8c9]/0 via-[#e7d8c9] to-[#e7d8c9]/0 rounded-full" />
       </div>
 
       {/* Stats Row */}
-      <div className="w-full bg-[#f6f2ed] py-6 px-4">
+      <motion.div
+        className="w-full bg-[#f6f2ed] py-10 px-4 md:py-14 md:px-0 rounded-2xl shadow-sm mb-10 md:mb-16"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+      >
         <div className="max-w-2xl mx-auto flex flex-col sm:flex-row justify-center items-center gap-8 text-center">
           <div>
-            <div className="text-2xl font-bold text-[#232323] font-[var(--font-cormorant)]">15+ years</div>
+            <div className="text-2xl font-bold text-[#232323] font-[var(--font-cormorant)]">
+              <AnimatedCounter to={15} duration={2.2} />+ years
+            </div>
             <div className="text-sm text-[#6b7280]">of team experience</div>
           </div>
           <div className="w-px h-8 bg-[#e7d8c9] hidden sm:block" />
           <div>
-            <div className="text-2xl font-bold text-[#232323] font-[var(--font-cormorant)]">50+ projects</div>
+            <div className="text-2xl font-bold text-[#232323] font-[var(--font-cormorant)]">
+              <AnimatedCounter to={50} duration={2.2} />+ projects
+            </div>
             <div className="text-sm text-[#6b7280]">across 8 cities</div>
           </div>
         </div>
+      </motion.div>
+      {/* Section Divider */}
+      <div className="w-full flex justify-center mb-10 md:mb-16">
+        <div className="h-1 w-32 bg-gradient-to-r from-[#e7d8c9]/0 via-[#e7d8c9] to-[#e7d8c9]/0 rounded-full" />
       </div>
 
       {/* What We Do (Services Preview) Section */}
-      <section className="w-full bg-[#f6f2ed] py-16 px-4">
+      <motion.section
+        className="w-full bg-[#f6f2ed] py-20 px-4 md:py-28 md:px-0 rounded-2xl shadow-sm mb-10 md:mb-16"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+      >
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-semibold text-[#232323] mb-10 text-center">Services that Shape Cities and Consciousness.</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
@@ -173,9 +232,20 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
+      {/* Section Divider */}
+      <div className="w-full flex justify-center mb-10 md:mb-16">
+        <div className="h-1 w-32 bg-gradient-to-r from-[#e7d8c9]/0 via-[#e7d8c9] to-[#e7d8c9]/0 rounded-full" />
+      </div>
+
       {/* Our Clients Section */}
-      <section className="w-full bg-white py-12 px-4 border-y border-[#e7d8c9]">
+      <motion.section
+        className="w-full bg-white py-20 px-4 md:py-28 md:px-0 rounded-2xl shadow-sm mb-10 md:mb-16 border-y border-[#e7d8c9]"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+      >
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl font-semibold text-[#232323] mb-4">We work with those who value what design can do.</h2>
           <p className="text-base sm:text-lg text-[#232323] mb-8 font-light max-w-2xl mx-auto">From institutions and infrastructure bodies to artists, educators, and small businesses — our clients come to us not just for solutions, but for possibilities</p>
@@ -202,7 +272,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
        {/* Who We Are (About Us Preview) Section */}
        <section className="w-full bg-white py-12 px-4 border-y border-[#e7d8c9]">
         <div className="max-w-3xl mx-auto text-center">
