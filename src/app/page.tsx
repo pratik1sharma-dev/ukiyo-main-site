@@ -85,20 +85,20 @@ export default function Home() {
         ))}
         {/* Hero Section - Fullscreen Carousel */}
         <section
-          className="relative flex flex-col items-center justify-center px-4 sm:px-0 bg-transparent overflow-hidden z-10"
+          className="relative flex flex-col items-start justify-end px-4 sm:px-0 bg-transparent overflow-hidden z-10"
           style={{ minHeight: '100vh', height: '100svh', maxHeight: '100svh' }}
         >
           {/* Overlay for readability */}
           <div className="absolute inset-0 bg-black/50 z-0 pointer-events-none" aria-hidden="true" />
-          <div className="relative z-10 flex flex-col items-center max-w-2xl mx-auto text-center justify-center h-full">
-            <h1 className="font-[var(--font-cormorant)] text-4xl sm:text-6xl font-bold text-white leading-tight mb-4 drop-shadow-xl">{current.headline}</h1>
-            <p className="text-lg sm:text-xl text-white mb-8 max-w-xl drop-shadow-lg">{current.subheadline}</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="relative z-10 flex flex-col items-start justify-end h-full w-full max-w-2xl pb-16 pl-6 sm:pb-24 sm:pl-12">
+            <h1 className="font-[var(--font-cormorant)] text-2xl sm:text-4xl font-bold text-white leading-tight mb-3 drop-shadow-xl">{current.headline}</h1>
+            <p className="text-base sm:text-lg text-white mb-6 max-w-xl drop-shadow-lg">{current.subheadline}</p>
+            <div className="flex flex-col sm:flex-row gap-4">
               {current.buttons.map((btn, idx) => (
                 <a
                   key={btn.label}
                   href={btn.href}
-                  className={`font-semibold rounded-full px-7 py-3 transition-colors shadow-md text-base ${btn.style}`}
+                  className={`font-semibold rounded-full px-6 py-2 transition-colors shadow-md text-sm sm:text-base ${btn.style}`}
                 >
                   {btn.label}
                 </a>
