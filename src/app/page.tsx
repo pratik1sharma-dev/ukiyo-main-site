@@ -43,7 +43,7 @@ export default function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setBgIndex((prev) => (prev + 1) % heroSlides.length);
-    }, 4000); // 4 seconds per image
+    }, 8000); // 4 seconds per image
     return () => clearInterval(interval);
   }, []);
 
@@ -96,6 +96,13 @@ export default function Home() {
             ))}
           </div>
         </section>
+      </div>
+
+      {/* New Statement after Carousel */}
+      <div className="w-full bg-[#f6f2ed] py-8 px-4">
+        <div className="max-w-2xl mx-auto text-center">
+          <p className="text-2xl sm:text-3xl font-semibold text-[#232323] font-[var(--font-cormorant)]">We are in the practice of shaping places that listen — to people, to climate, and to change.</p>
+        </div>
       </div>
 
       {/* What We Do (Services Preview) Section */}
