@@ -136,19 +136,19 @@ export default function Home() {
         </div>
       </motion.div>
       {/* Section Divider */}
-      <div className="w-full flex justify-center mb-10 md:mb-16">
+      <div className="w-full flex justify-center mt-0 mb-0">
         <div className="h-1 w-32 bg-gradient-to-r from-[#e7d8c9]/0 via-[#e7d8c9] to-[#e7d8c9]/0 rounded-full" />
       </div>
 
       {/* Rooted in India. Open to the world. Section */}
       <motion.div
-        className="w-full bg-[#f6f2ed] py-14 px-4 md:py-20 md:px-0 rounded-2xl shadow-sm mb-10 md:mb-16 flex items-center justify-center min-h-[340px] md:min-h-[420px]"
+        className="w-full bg-[#f6f2ed] flex items-center justify-center min-h-[340px] md:min-h-[420px] rounded-2xl shadow-sm"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
       >
-        <div className="max-w-2xl mx-auto text-center w-full">
+        <div className="max-w-2xl mx-auto text-center w-full py-14 md:py-20">
           <h3 className="text-xl sm:text-2xl font-semibold text-[#232323] mb-3 font-[var(--font-cormorant)]">Rooted in India. Open to the world.</h3>
           <p className="text-base sm:text-lg text-[#232323] font-light">
             We are based in India — where urban complexity, ecological urgency, and cultural depth collide every day.<br/><br/>
@@ -157,7 +157,7 @@ export default function Home() {
         </div>
       </motion.div>
       {/* Section Divider */}
-      <div className="w-full flex justify-center mb-10 md:mb-16">
+      <div className="w-full flex justify-center mt-0 mb-0">
         <div className="h-1 w-32 bg-gradient-to-r from-[#e7d8c9]/0 via-[#e7d8c9] to-[#e7d8c9]/0 rounded-full" />
       </div>
 
@@ -186,7 +186,7 @@ export default function Home() {
         </div>
       </motion.div>
       {/* Section Divider */}
-      <div className="w-full flex justify-center mb-10 md:mb-16">
+      <div className="w-full flex justify-center mt-0 mb-0">
         <div className="h-1 w-32 bg-gradient-to-r from-[#e7d8c9]/0 via-[#e7d8c9] to-[#e7d8c9]/0 rounded-full" />
       </div>
 
@@ -234,7 +234,7 @@ export default function Home() {
         </div>
       </motion.section>
       {/* Section Divider */}
-      <div className="w-full flex justify-center mb-10 md:mb-16">
+      <div className="w-full flex justify-center mt-0 mb-0">
         <div className="h-1 w-32 bg-gradient-to-r from-[#e7d8c9]/0 via-[#e7d8c9] to-[#e7d8c9]/0 rounded-full" />
       </div>
 
