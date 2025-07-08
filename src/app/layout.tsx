@@ -24,6 +24,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <body className={`${cormorant.variable} bg-[#f6f2ed] min-h-screen flex flex-col`}>
         <div className="relative w-full min-h-screen">
           <Header />
