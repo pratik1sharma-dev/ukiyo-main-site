@@ -25,8 +25,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${cormorant.variable} bg-[#f6f2ed] min-h-screen flex flex-col`}>
-        <Header />
-        <main className="flex-1">{children}</main>
+        <div className="relative w-full min-h-screen">
+          <Header />
+          <main className="flex-1">{children}</main>
+        </div>
         <Footer />
       </body>
     </html>

@@ -64,11 +64,14 @@ export default function Home() {
             aria-hidden="true"
           />
         ))}
-        {/* Hero Section */}
-        <section className="relative flex flex-col items-center justify-center pt-16 pb-24 px-4 sm:px-0 bg-transparent overflow-hidden z-10">
+        {/* Hero Section - Fullscreen Carousel */}
+        <section
+          className="relative flex flex-col items-center justify-center px-4 sm:px-0 bg-transparent overflow-hidden z-10"
+          style={{ minHeight: '100vh', height: '100svh', maxHeight: '100svh' }}
+        >
           {/* Overlay for readability */}
           <div className="absolute inset-0 bg-black/50 z-0 pointer-events-none" aria-hidden="true" />
-          <div className="relative z-10 flex flex-col items-center max-w-2xl mx-auto text-center">
+          <div className="relative z-10 flex flex-col items-center max-w-2xl mx-auto text-center justify-center h-full">
             <h1 className="font-[var(--font-cormorant)] text-4xl sm:text-6xl font-bold text-white leading-tight mb-4 drop-shadow-xl">{current.headline}</h1>
             <p className="text-lg sm:text-xl text-white mb-8 max-w-xl drop-shadow-lg">{current.subheadline}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -84,7 +87,7 @@ export default function Home() {
             </div>
           </div>
           {/* Carousel Dots */}
-          <div className="flex justify-center mt-8 gap-3 z-20">
+          <div className="flex justify-center mt-8 gap-3 z-20 absolute bottom-8 left-0 right-0">
             {heroSlides.map((_, i) => (
               <button
                 key={i}
@@ -101,7 +104,36 @@ export default function Home() {
       {/* New Statement after Carousel */}
       <div className="w-full bg-[#f6f2ed] py-8 px-4">
         <div className="max-w-2xl mx-auto text-center">
-          <p className="text-2xl sm:text-3xl font-semibold text-[#232323] font-[var(--font-cormorant)]">We are in the practice of shaping places that listen — to people, to climate, and to change.</p>
+          <p className="text-2xl sm:text-3xl font-semibold text-[#232323] font-[var(--font-cormorant)] mb-4">We are in the practice of shaping places that listen — to people, to climate, and to change.</p>
+          {/* Subtext and CTA */}
+          <p className="text-base sm:text-lg text-[#6b7280] mb-6 font-light">Whether it’s a stormwater edge or a city’s identity, our work responds to the moment while staying rooted in what truly matters — land, care, and time.</p>
+          <a href="/contact" className="inline-block bg-[#f59e42] hover:bg-[#ea580c] text-white font-semibold rounded-full px-8 py-3 transition-colors shadow-md text-base">🟠 Start a Conversation</a>
+        </div>
+      </div>
+
+      {/* Rooted in India. Open to the world. Section */}
+      <div className="w-full bg-[#f6f2ed] py-8 px-4">
+        <div className="max-w-2xl mx-auto text-center">
+          <h3 className="text-xl sm:text-2xl font-semibold text-[#232323] mb-3 font-[var(--font-cormorant)]">Rooted in India. Open to the world.</h3>
+          <p className="text-base sm:text-lg text-[#232323] font-light">
+            We are based in India — where urban complexity, ecological urgency, and cultural depth collide every day.<br/><br/>
+            Yet our practice is shaped by questions and inspirations from across geographies. We believe in designing for specific contexts, while staying tuned to the global conversations on climate, resilience, and future cities.
+          </p>
+        </div>
+      </div>
+
+      {/* Stats Row */}
+      <div className="w-full bg-[#f6f2ed] py-6 px-4">
+        <div className="max-w-2xl mx-auto flex flex-col sm:flex-row justify-center items-center gap-8 text-center">
+          <div>
+            <div className="text-2xl font-bold text-[#232323] font-[var(--font-cormorant)]">15+ years</div>
+            <div className="text-sm text-[#6b7280]">of team experience</div>
+          </div>
+          <div className="w-px h-8 bg-[#e7d8c9] hidden sm:block" />
+          <div>
+            <div className="text-2xl font-bold text-[#232323] font-[var(--font-cormorant)]">50+ projects</div>
+            <div className="text-sm text-[#6b7280]">across 8 cities</div>
+          </div>
         </div>
       </div>
 
@@ -145,7 +177,8 @@ export default function Home() {
       {/* Our Clients Section */}
       <section className="w-full bg-white py-12 px-4 border-y border-[#e7d8c9]">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl font-semibold text-[#232323] mb-8">Our Clients</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold text-[#232323] mb-4">We work with those who value what design can do.</h2>
+          <p className="text-base sm:text-lg text-[#232323] mb-8 font-light max-w-2xl mx-auto">From institutions and infrastructure bodies to artists, educators, and small businesses — our clients come to us not just for solutions, but for possibilities</p>
           <div className="flex flex-wrap justify-center gap-8 items-center">
             {/* Kahwa */}
             <div className="bg-[#f6f2ed] rounded-xl px-8 py-4 flex flex-col items-center shadow min-w-[140px]">
