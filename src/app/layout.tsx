@@ -4,6 +4,13 @@ import { ReactNode } from "react";
 // Import Header and Footer components (to be created)
 import Header from "./Header";
 import Footer from "./Footer";
+import { Cormorant_Garamond } from "next/font/google";
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-cormorant",
+});
 
 export const metadata: Metadata = {
   title: "Ukiyo Habitat | Architectural Firm",
@@ -17,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-[#f6f2ed] min-h-screen flex flex-col">
+      <body className={`${cormorant.variable} bg-[#f6f2ed] min-h-screen flex flex-col`}>
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

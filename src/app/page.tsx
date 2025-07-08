@@ -4,36 +4,35 @@ import { useEffect, useState } from "react";
 
 const heroSlides = [
   {
-    image: "/hero-bg-10.jpg",
-    headline: "Designing Tomorrow—Today",
-    subheadline: "A cross disciplinary design studio creating sustainable immersive environments rooted in ecology and driven by innovation.",
+    image: "/hero-bg.jpg",
+    headline: "Between soil and skyline, we imagine what’s next.",
+    subheadline: "We design landscapes, cities, spaces, brands and blue-green systems that return value — to the earth, to people, and to generations not yet born. Our work is both gentle and urgent",
     buttons: [
-      { label: "Explore Our Work", href: "/projects", style: "bg-[#e7a77e] hover:bg-[#e38d5f] text-white" },
-      { label: "Book a Discovery Call", href: "/contact", style: "bg-transparent border border-black text-[#232323] hover:bg-[#f2ede7]" },
+      { label: "Our Studio", href: "/about", style: "bg-[#e7a77e] hover:bg-[#e38d5f] text-white" }
+    ],
+  },
+  {
+    image: "/hero-bg-1.jpg",
+    headline: "Where Ecology Meets Imagination.",
+    subheadline: "At the intersection of sustainability and design fiction, we explore what the future needs — not just what the present demands. We use design as a speculative, visual tool.",
+    buttons: [
+      { label: "Explore our vision", href: "/how-we-work", style: "bg-[#e7a77e] hover:bg-[#e38d5f] text-white" },
     ],
   },
   {
     image: "/hero-bg-2.jpg",
-    headline: "Urban Spaces, Human Stories",
-    subheadline: "We shape resilient streetscapes and vibrant communities for a better tomorrow.",
+    headline: "Co-Designing With Communities, Not Just for Them",
+    subheadline: "Our process is participatory. We listen, sketch, walk, and build together. From workshops to walkshops — we believe design is collective knowledge in motion.",
     buttons: [
-      { label: "See Urban Projects", href: "/projects?cat=urban", style: "bg-[#e7a77e] hover:bg-[#e38d5f] text-white" },
+      { label: "See what we do", href: "/how-we-work", style: "bg-[#e7a77e] hover:bg-[#e38d5f] text-white" },
     ],
   },
   {
     image: "/hero-bg-3.jpg",
-    headline: "Nature Meets Innovation",
-    subheadline: "From green infrastructure to smart interiors, we blend ecology and technology.",
+    headline: "Exploring Technology That Listens",
+    subheadline: "We’re curious about how AI, GIS, and data tools can shape better cities — not just faster ones. As we grow, we’re open to collaborators, tools, and provocations that help design more meaningfully.",
     buttons: [
-      { label: "Our Approach", href: "/about", style: "bg-[#e7a77e] hover:bg-[#e38d5f] text-white" },
-    ],
-  },
-  {
-    image: "/hero-bg-4.jpg",
-    headline: "Co-Designing the Future",
-    subheadline: "Workshops, research, and international collaborations for a new era of design.",
-    buttons: [
-      { label: "Join a Workshop", href: "/contact", style: "bg-transparent border border-black text-[#232323] hover:bg-[#f2ede7]" },
+      { label: "Collaborate with us", href: "/services-extended", style: "bg-transparent border border-black text-[#232323] hover:bg-[#f2ede7]" },
     ],
   },
 ];
@@ -67,9 +66,11 @@ export default function Home() {
         ))}
         {/* Hero Section */}
         <section className="relative flex flex-col items-center justify-center pt-16 pb-24 px-4 sm:px-0 bg-transparent overflow-hidden z-10">
+          {/* Overlay for readability */}
+          <div className="absolute inset-0 bg-black/50 z-0 pointer-events-none" aria-hidden="true" />
           <div className="relative z-10 flex flex-col items-center max-w-2xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-6xl font-bold text-[#232323] leading-tight mb-4">{current.headline}</h1>
-            <p className="text-lg sm:text-xl text-[#232323] mb-8 max-w-xl">{current.subheadline}</p>
+            <h1 className="font-[var(--font-cormorant)] text-4xl sm:text-6xl font-bold text-white leading-tight mb-4 drop-shadow-xl">{current.headline}</h1>
+            <p className="text-lg sm:text-xl text-white mb-8 max-w-xl drop-shadow-lg">{current.subheadline}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               {current.buttons.map((btn, idx) => (
                 <a
