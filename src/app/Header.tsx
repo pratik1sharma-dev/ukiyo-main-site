@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -10,10 +11,10 @@ export default function Header() {
           <span className="sr-only">Ukiyo Habitat</span>
         </Link>
         <ul className="flex gap-6 text-base font-medium text-[#232323]">
-          <li><Link href="/" className="hover:underline">Home</Link></li>
-          <li><Link href="/about" className="hover:underline">About</Link></li>
+        <li><Link href="/projects" className="hover:underline">Our work</Link></li>
+        <li><Link href="/projects" className="hover:underline">Think Tank</Link></li>          
+          <li><Link href="/about" className="hover:underline">About Us</Link></li>
           <li><Link href="/services" className="hover:underline">Services</Link></li>
-          <li><Link href="/projects" className="hover:underline">Projects</Link></li>
           <li><Link href="/contact" className="hover:underline">Contact</Link></li>
         </ul>
       </nav>

@@ -1,22 +1,98 @@
+"use client";
 import Image from "next/image";
+import { useEffect, useState } from "react";
+
+const heroSlides = [
+  {
+    image: "/hero-bg-10.jpg",
+    headline: "Designing Tomorrow—Today",
+    subheadline: "A cross disciplinary design studio creating sustainable immersive environments rooted in ecology and driven by innovation.",
+    buttons: [
+      { label: "Explore Our Work", href: "/projects", style: "bg-[#e7a77e] hover:bg-[#e38d5f] text-white" },
+      { label: "Book a Discovery Call", href: "/contact", style: "bg-transparent border border-black text-[#232323] hover:bg-[#f2ede7]" },
+    ],
+  },
+  {
+    image: "/hero-bg-2.jpg",
+    headline: "Urban Spaces, Human Stories",
+    subheadline: "We shape resilient streetscapes and vibrant communities for a better tomorrow.",
+    buttons: [
+      { label: "See Urban Projects", href: "/projects?cat=urban", style: "bg-[#e7a77e] hover:bg-[#e38d5f] text-white" },
+    ],
+  },
+  {
+    image: "/hero-bg-3.jpg",
+    headline: "Nature Meets Innovation",
+    subheadline: "From green infrastructure to smart interiors, we blend ecology and technology.",
+    buttons: [
+      { label: "Our Approach", href: "/about", style: "bg-[#e7a77e] hover:bg-[#e38d5f] text-white" },
+    ],
+  },
+  {
+    image: "/hero-bg-4.jpg",
+    headline: "Co-Designing the Future",
+    subheadline: "Workshops, research, and international collaborations for a new era of design.",
+    buttons: [
+      { label: "Join a Workshop", href: "/contact", style: "bg-transparent border border-black text-[#232323] hover:bg-[#f2ede7]" },
+    ],
+  },
+];
 
 export default function Home() {
+  const [bgIndex, setBgIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setBgIndex((prev) => (prev + 1) % heroSlides.length);
+    }, 4000); // 4 seconds per image
+    return () => clearInterval(interval);
+  }, []);
+
+  const current = heroSlides[bgIndex];
+
   return (
     <div className="min-h-screen bg-[#f6f2ed] flex flex-col items-center font-sans">
       {/* Parallax Background Wrapper for Navbar + Hero */}
-      <div className="w-full bg-[url('/hero-bg.png')] bg-cover bg-center bg-fixed">
+      <div className="w-full relative">
+        {/* Carousel Background Images */}
+        {heroSlides.map((slide, i) => (
+          <img
+            key={slide.image}
+            src={slide.image}
+            alt="Hero background"
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${i === bgIndex ? 'opacity-100 z-0' : 'opacity-0 z-0'}`}
+            style={{ pointerEvents: 'none' }}
+            aria-hidden="true"
+          />
+        ))}
         {/* Hero Section */}
-        <section className="relative flex flex-col items-center justify-center pt-16 pb-24 px-4 sm:px-0 bg-transparent overflow-hidden">
-          {/* Removed background image from here */}
+        <section className="relative flex flex-col items-center justify-center pt-16 pb-24 px-4 sm:px-0 bg-transparent overflow-hidden z-10">
           <div className="relative z-10 flex flex-col items-center max-w-2xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-6xl font-bold text-[#232323] leading-tight mb-4">Designing<br className="sm:hidden" /> Tomorrow—Today</h1>
-            <p className="text-lg sm:text-xl text-[#232323] mb-8 max-w-xl">
-              A cross disciplinary design studio creating sustainable immersive environments rooted in ecology and driven by innovation.
-            </p>
+            <h1 className="text-4xl sm:text-6xl font-bold text-[#232323] leading-tight mb-4">{current.headline}</h1>
+            <p className="text-lg sm:text-xl text-[#232323] mb-8 max-w-xl">{current.subheadline}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/projects" className="bg-[#e7a77e] hover:bg-[#e38d5f] text-white font-semibold rounded-full px-7 py-3 transition-colors shadow-md text-base">Explore Our Work</a>
-              <a href="/contact" className="bg-transparent border border-black text-[#232323] font-semibold rounded-full px-7 py-3 transition-colors shadow-md text-base hover:bg-[#f2ede7]">Book a Discovery Call</a>
+              {current.buttons.map((btn, idx) => (
+                <a
+                  key={btn.label}
+                  href={btn.href}
+                  className={`font-semibold rounded-full px-7 py-3 transition-colors shadow-md text-base ${btn.style}`}
+                >
+                  {btn.label}
+                </a>
+              ))}
             </div>
+          </div>
+          {/* Carousel Dots */}
+          <div className="flex justify-center mt-8 gap-3 z-20">
+            {heroSlides.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setBgIndex(i)}
+                className={`w-3 h-3 rounded-full border border-white transition-all duration-300 ${bgIndex === i ? 'bg-[#e7a77e] scale-125 shadow-lg' : 'bg-white/70 hover:bg-[#e7a77e]/60'}`}
+                aria-label={`Go to slide ${i + 1}`}
+                style={{ outline: 'none' }}
+              />
+            ))}
           </div>
         </section>
       </div>
