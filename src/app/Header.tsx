@@ -5,17 +5,17 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 export default function Header() {
-  const pathname = typeof window !== 'undefined' ? window.location.pathname : '/';
+  const pathname = usePathname();
   const floating = pathname === '/';
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <header
       className={
         floating
-          ? "w-full absolute top-0 left-0 z-50 bg-transparent text-white transition-all"
-          : "w-full bg-[url('/hero-bg.png')] bg-cover bg-center bg-fixed text-[#232323] border-b border-[#b7c9c9] sticky top-0 z-50 shadow-sm"
+          ? "w-full absolute top-0 left-0 z-50 bg-transparent transition-all"
+          : "w-full bg-[#f6f2ed] border-b border-[#b7c9c9] sticky top-0 z-50 shadow-sm"
       }
-      style={floating ? { background: 'transparent', boxShadow: 'none' } : {}}
+      style={floating ? { background: 'transparent', boxShadow: 'none' } : { background: '#f6f2ed', backgroundImage: 'none' }}
     >
       <nav
         className={
@@ -31,15 +31,15 @@ export default function Header() {
         </Link>
         {/* Desktop Nav */}
         <ul className={(floating ? "flex gap-6 text-base font-medium text-white" : "flex gap-6 text-base font-medium text-[#232323]") + " hidden sm:flex"}>
-          <li><Link href="/projects" className="hover:underline">Our work</Link></li>
-          <li><Link href="/projects" className="hover:underline">Think Tank</Link></li>
+          <li><Link href="/projects" className="hover:underline">Our Work</Link></li>
           <li><Link href="/about" className="hover:underline">About Us</Link></li>
           <li><Link href="/services" className="hover:underline">Services</Link></li>
+          <li><Link href="/projects" className="hover:underline">Think Tank</Link></li>
           <li><Link href="/contact" className="hover:underline">Contact</Link></li>
         </ul>
         {/* Hamburger Icon for Mobile */}
         <button
-          className="sm:hidden flex flex-col justify-center items-center w-10 h-10 rounded focus:outline-none focus:ring-2 focus:ring-[#e7a77e]"
+          className={`sm:hidden flex flex-col justify-center items-center w-10 h-10 rounded focus:outline-none focus:ring-2 focus:ring-[#e7a77e] ${floating ? 'text-white' : 'text-[#232323]'}`}
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           onClick={() => setMenuOpen((open) => !open)}
         >

@@ -1,55 +1,101 @@
-export const metadata = {
-  title: "How We Work | Ukiyo Habitat",
-  description: "Discover Ukiyo Habitat's process: design rooted in curiosity, collaboration, and ecological thinking. Learn how we observe, collaborate, and reimagine spaces in India.",
-  keywords: [
-    "design process India",
-    "participatory design studio",
-    "ecological urbanism",
-    "co-design workshops",
-    "site-responsive architecture",
-    "spatial inquiry"
-  ],
-};
+import Link from 'next/link';
 
 export default function HowWeWork() {
   return (
-    <section className="max-w-5xl mx-auto py-16 px-4">
-      {/* Header */}
-      <h2 className="text-2xl sm:text-3xl font-bold text-[#232323] mb-6 text-center font-[var(--font-cormorant)]">Design Is Not Just What We Build — It’s What We Question.</h2>
-      {/* Intro Paragraph */}
-      <p className="text-lg text-[#232323] mb-10 text-center max-w-2xl mx-auto">
-        At Ukiyo Habitat, we believe that good design in India’s cities begins not with a blueprint, but with curiosity. Our approach is rooted in walking, listening, wondering — and sometimes, unlearning.<br/><br/>
-        We treat every site as a living system — shaped by water, memory, people, and time.<br/><br/>
-        Every brief becomes an opportunity to challenge assumptions, adapt to local ecology, and co-create spaces that evolve with changing climates, communities, and contexts.<br/><br/>
-        From sponge landscapes in Chennai to campus design in Central India, our work is driven by inquiry — not repetition.
-      </p>
-      {/* 3-Part Design Framework */}
-      <h3 className="text-xl font-semibold text-[#232323] mb-6 text-center">🔁 Our 3-Part Design Framework</h3>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-16">
-        {/* Observe */}
-        <div className="bg-[#f6f2ed] rounded-xl p-6 flex flex-col items-center shadow hover:shadow-lg transition-shadow">
-          <span className="text-4xl mb-2">🔍</span>
-          <div className="font-semibold text-lg mb-2">Observe</div>
-          <div className="text-sm text-[#232323] text-center">We begin with site visits, mapping, and immersive fieldwork — reading the land and its histories. Whether we’re studying urban heat zones in Delhi or understanding floodplains in Bangalore, we pay attention before we intervene.</div>
-        </div>
-        {/* Collaborate */}
-        <div className="bg-[#f6f2ed] rounded-xl p-6 flex flex-col items-center shadow hover:shadow-lg transition-shadow">
-          <span className="text-4xl mb-2">✏</span>
-          <div className="font-semibold text-lg mb-2">Collaborate</div>
-          <div className="text-sm text-[#232323] text-center">We work with communities, clients, researchers, and students — not just for input, but as co-authors. Through co-design workshops, walkshops, and conversations, we build shared ownership of the process.</div>
-        </div>
-        {/* Reimagine */}
-        <div className="bg-[#f6f2ed] rounded-xl p-6 flex flex-col items-center shadow hover:shadow-lg transition-shadow">
-          <span className="text-4xl mb-2">🌱</span>
-          <div className="font-semibold text-lg mb-2">Reimagine</div>
-          <div className="text-sm text-[#232323] text-center">We prototype spatial futures that are ecologically grounded and culturally relevant — spaces that regenerate, connect, and adapt. Using tools like narrative mapping, data overlays, and systems thinking, we prepare designs that are as resilient as they are poetic.</div>
-        </div>
-      </div>
-      {/* Optional Closing Statement */}
-      <div className="text-center mt-12 mb-8">
-        <p className="text-lg text-[#232323] italic mb-6 max-w-2xl mx-auto">We don’t just design for outcomes. We design to ask better questions.</p>
-        <a href="/contact" className="inline-block bg-[#f59e42] hover:bg-[#ea580c] text-white font-semibold rounded-full px-8 py-3 transition-colors shadow-md text-base">🟠 Learn How We Work</a>
-      </div>
-    </section>
+    <div className="min-h-screen bg-white">
+      {/* Main Content */}
+      <main>
+        {/* Hero Section */}
+        <section className="bg-[#f6f2ed] py-20">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+              Design Is Not Just What We Build — It's What We Question.
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
+            At Ukiyo Habitat, our design process begins with curiosity. We start by listening to the land itself—to the lone Peepal tree in a concrete jungle, or the memory of a drying lake. This is where our questions begin.
+            </p>
+          </div>
+        </section>
+
+        {/* Body Content */}
+        <section className="py-20 bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="prose prose-lg max-w-none">
+              <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+                We treat every site as a living system — shaped by water, memory, people, and time.
+              </p>
+              <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+                Every brief becomes an opportunity to challenge assumptions. In a landscape marked by increasing urbanization and shrinking green spaces, we adapt to local ecology and co-create spaces that evolve with changing climates, communities, and contexts.
+              </p>
+              <p className="text-xl text-gray-700 leading-relaxed">
+                From designing sponge landscapes to combat water scarcity in Chennai to creating a campus that breathes life back into its local environment in Central India, our work is driven by inquiry — not repetition.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Framework Section */}
+        <section className="py-20 bg-[#f6f2ed]">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Our Design Framework: Observe, Collaborate, Reimagine
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-orange-400 to-orange-600 mx-auto"></div>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-12">
+              {/* Observe */}
+              <div className="text-center">
+                <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-3xl">🔍</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Observe</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  We begin with site visits, mapping, and immersive fieldwork — reading the land and its histories. Whether we're studying urban heat and air pollution in Delhi or understanding floodplains and water wastage in Bangalore, we pay attention before we intervene.
+                </p>
+              </div>
+
+              {/* Collaborate */}
+              <div className="text-center">
+                <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-3xl">✏️</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Collaborate</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  We work with communities, clients, researchers, and students — not just for input, but as co-authors. In cities often starved of safe and inclusive public spaces, and visually cluttered by intrusive out-of-home advertising, we use co-design workshops and conversations to build shared ownership of the process.
+                </p>
+              </div>
+
+              {/* Reimagine */}
+              <div className="text-center">
+                <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-3xl">🌱</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Reimagine</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  We prototype spatial futures that are ecologically grounded and culturally relevant — spaces that regenerate, connect, and adapt. Using tools like narrative mapping and systems thinking, we prepare designs that are as resilient as they are poetic.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Closing Statement */}
+        <section className="py-20 bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+              We don't just design for outcomes. We design to ask better questions.
+            </h2>
+            <Link 
+              href="/projects" 
+              className="inline-flex items-center px-8 py-4 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-colors text-lg"
+            >
+              🟠 See Our Process in Action →
+            </Link>
+          </div>
+        </section>
+      </main>
+    </div>
   );
 } 
