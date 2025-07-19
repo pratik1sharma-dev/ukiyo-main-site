@@ -327,19 +327,19 @@ export default function Home() {
           {/* Client Logos */}
           <div className="flex flex-wrap justify-center gap-8 items-center">
             {/* Kahwa */}
-            <div className="bg-[#b7c9c9] rounded-xl px-8 py-4 flex flex-col items-center shadow min-w-[140px]">
+            <div className="bg-white rounded-xl px-8 py-4 flex flex-col items-center shadow min-w-[140px]">
               <img src="/kahwa-logo.png" alt="Kahwa Logo" className="h-12 mb-2 object-contain" />
             </div>
             {/* Cover and Pax */}
-            <div className="bg-[#b7c9c9] rounded-xl px-8 py-4 flex flex-col items-center shadow min-w-[140px]">
+            <div className="bg-white rounded-xl px-8 py-4 flex flex-col items-center shadow min-w-[140px]">
               <img src="/cover-and-pax-logo.png" alt="Cover and Pax Logo" className="h-12 mb-2 object-contain" />
             </div>
             {/* Haldiram */}
-            <div className="bg-[#b7c9c9] rounded-xl px-8 py-4 flex flex-col items-center shadow min-w-[140px]">
+            <div className="bg-white rounded-xl px-8 py-4 flex flex-col items-center shadow min-w-[140px]">
               <img src="/haldiram-logo.png" alt="Haldiram Logo" className="h-12 mb-2 object-contain" />
             </div>
             {/* Indian Navy */}
-            <div className="bg-[#b7c9c9] rounded-xl px-8 py-4 flex flex-col items-center shadow min-w-[140px]">
+            <div className="bg-white rounded-xl px-8 py-4 flex flex-col items-center shadow min-w-[140px]">
               <img src="/indian-navy-logo.png" alt="Indian Navy Logo" className="h-12 mb-2 object-contain" />
             </div>
           </div>

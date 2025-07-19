@@ -68,11 +68,11 @@ export default function About() {
                 </p>
               </div>
               
-                             <div className="bg-[#f6f2ed] rounded-xl p-8 shadow-lg">
-                 <p className="text-lg text-gray-700 leading-relaxed">
-                   Every brief becomes an opportunity to challenge assumptions. In a landscape marked by increasing urbanization and shrinking green spaces, we adapt to local ecology and co-create spaces that evolve with changing climates, communities, and contexts.
-                 </p>
-               </div>
+              <div className="bg-[#f6f2ed] rounded-xl p-8 shadow-lg">
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Every brief becomes an opportunity to challenge assumptions. In a landscape marked by increasing urbanization and shrinking green spaces, we adapt to local ecology and co-create spaces that evolve with changing climates, communities, and contexts.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -94,7 +94,10 @@ export default function About() {
               {/* Observe */}
               <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 <div className="w-24 h-24 bg-gradient-to-br from-orange-100 to-orange-200 rounded-full flex items-center justify-center mx-auto mb-8">
-                  <span className="text-4xl">🔍</span>
+                  <svg className="w-12 h-12 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                  </svg>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Observe</h3>
                 <p className="text-gray-700 leading-relaxed text-center">
@@ -105,7 +108,9 @@ export default function About() {
               {/* Collaborate */}
               <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 <div className="w-24 h-24 bg-gradient-to-br from-orange-100 to-orange-200 rounded-full flex items-center justify-center mx-auto mb-8">
-                  <span className="text-4xl">✏️</span>
+                  <svg className="w-12 h-12 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
+                  </svg>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Collaborate</h3>
                 <p className="text-gray-700 leading-relaxed text-center">
@@ -116,7 +121,9 @@ export default function About() {
               {/* Reimagine */}
               <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 <div className="w-24 h-24 bg-gradient-to-br from-orange-100 to-orange-200 rounded-full flex items-center justify-center mx-auto mb-8">
-                  <span className="text-4xl">🌱</span>
+                  <svg className="w-12 h-12 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z" />
+                  </svg>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Reimagine</h3>
                 <p className="text-gray-700 leading-relaxed text-center">
@@ -266,8 +273,6 @@ export default function About() {
             </div>
           </div>
         </section>
-
-
 
         {/* 7. Final CTA Section */}
         <section className="py-24 bg-gradient-to-br from-[#f6f2ed] to-[#f0ebe6]">

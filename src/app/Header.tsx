@@ -13,9 +13,9 @@ export default function Header() {
       className={
         floating
           ? "w-full absolute top-0 left-0 z-50 bg-transparent transition-all"
-          : "w-full bg-[#f6f2ed] border-b border-[#b7c9c9] sticky top-0 z-50 shadow-sm"
+          : "w-full border-b border-[#b7c9c9] sticky top-0 z-50 shadow-sm"
       }
-      style={floating ? { background: 'transparent', boxShadow: 'none' } : { background: '#f6f2ed', backgroundImage: 'none' }}
+      style={floating ? { background: 'transparent', boxShadow: 'none' } : { background: 'linear-gradient(90deg, rgba(231,167,126,1) 0%, rgba(231,167,126,0.7) 30%, rgba(231,167,126,0.7) 100%)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)' }}
     >
       <nav
         className={
@@ -23,14 +23,14 @@ export default function Header() {
             ? "max-w-6xl mx-auto flex items-center justify-between px-4 py-3 bg-transparent"
             : "max-w-6xl mx-auto flex items-center justify-between px-4 py-3"
         }
-        style={floating ? { background: 'rgba(0,0,0,0.0)' } : { background: 'rgba(231,216,201,0.95)', borderRadius: '0 0 1rem 1rem' }}
+        style={floating ? { background: 'rgba(0,0,0,0.0)' } : { background: 'transparent' }}
       >
-        <Link href="/" className="flex items-center">
-          <Image src="/logo-bw-1.png" alt="Ukiyo Habitat Logo" width={200} height={100} priority className="mr-2" />
+        <Link href="/" className="flex items-center -ml-34">
+          <Image src="/logo.png" alt="Ukiyo Habitat Logo" width={150} height={75} priority className="mr-2" />
           <span className="sr-only">Ukiyo Habitat</span>
         </Link>
         {/* Desktop Nav */}
-        <ul className={(floating ? "flex gap-6 text-base font-medium text-white" : "flex gap-6 text-base font-medium text-[#232323]") + " hidden sm:flex"}>
+        <ul className={(floating ? "flex gap-6 font-medium text-white font-inter" : "flex gap-6 font-medium text-white font-inter") + " hidden sm:flex"} style={{ fontSize: '1.2rem' }}>
           <li><Link href="/projects" className="hover:underline">Our Work</Link></li>
           <li><Link href="/about" className="hover:underline">About Us</Link></li>
           <li><Link href="/services" className="hover:underline">Services</Link></li>
@@ -39,7 +39,7 @@ export default function Header() {
         </ul>
         {/* Hamburger Icon for Mobile */}
         <button
-          className={`sm:hidden flex flex-col justify-center items-center w-10 h-10 rounded focus:outline-none focus:ring-2 focus:ring-[#e7a77e] ${floating ? 'text-white' : 'text-[#232323]'}`}
+          className={`sm:hidden flex flex-col justify-center items-center w-10 h-10 rounded focus:outline-none focus:ring-2 focus:ring-[#e7a77e] ${floating ? 'text-white' : 'text-white'}`}
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           onClick={() => setMenuOpen((open) => !open)}
         >
@@ -51,7 +51,7 @@ export default function Header() {
       {/* Mobile Menu Overlay */}
       {menuOpen && (
         <div className="fixed inset-0 bg-black/70 z-50 flex flex-col items-center justify-center sm:hidden transition-all">
-          <ul className="flex flex-col gap-8 text-2xl font-semibold text-white">
+          <ul className="flex flex-col gap-8 font-semibold text-white font-inter" style={{ fontSize: '1.2rem' }}>
             <li><Link href="/projects" onClick={() => setMenuOpen(false)}>Our work</Link></li>
             <li><Link href="/projects" onClick={() => setMenuOpen(false)}>Think Tank</Link></li>
             <li><Link href="/about" onClick={() => setMenuOpen(false)}>About Us</Link></li>
