@@ -24,7 +24,7 @@ const heroSlides = [
   {
     image: "/hero-bg-2.jpg",
     headline: "Designing With People, Not Just for Them",
-    subheadline: "Our design process is rooted in participation and deep listening. We believe there’s a designer in everyone — and every perspective brings unique value. That’s why we don’t see ourselves as mere consultants, but as facilitators of your vision. By co-creating with users, students, citizens, and stakeholders, we build shared ownership of spaces that belong to everyone.",
+    subheadline: "Our design process centers on participation and deep listening. We see ourselves as facilitators, not just consultants—co-creating with users and stakeholders to build spaces everyone can truly own.",
     buttons: [
       { label: "Our Philosophy", href: "/about", style: "bg-[#e7a77e] hover:bg-[#e38d5f] text-white" },
     ],
@@ -32,7 +32,7 @@ const heroSlides = [
   {
     image: "/hero-bg-3.jpg",
     headline: "Smarter Design for a Changing World",
-    subheadline: "We use tools like AI, GIS, and spatial data to design spaces that are not just faster — but smarter and more responsive. From mapping flood zones to simulating microclimates, technology helps us create designs that are resilient, people-centric, and future-ready. We actively seek collaborations with technologists, urban researchers, and data scientists to co-create tools and platforms that can shape more responsive public spaces, sustainable landscapes, and inclusive cities.",
+    subheadline: "We use AI, GIS, and spatial data to design smarter, more responsive spaces. Technology lets us map, simulate, and create resilient, people-centric environments. By collaborating with technologists and researchers, we co-create tools for sustainable, inclusive cities and landscapes.",
     buttons: [
       { label: "Let's Collaborate", href: "/contact", style: "bg-transparent border border-black text-[#232323] hover:bg-[#f2ede7]" },
     ],
@@ -134,13 +134,13 @@ export default function Home() {
 
       {/* Vision Statement */}
       <motion.section
-        className="w-full bg-[#f6f2ed] min-h-screen flex items-center justify-center px-4 py-8 md:py-0"
+        className="w-full bg-[#f0ebe6] min-h-screen flex items-center justify-center px-4 py-16 md:py-24"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <div className="max-w-4xl mx-auto text-center w-full px-4">
+        <div className="max-w-4xl xl:max-w-7xl mx-auto text-center w-full px-4">
           {/* Decorative element */}
           <div className="flex justify-center mb-8">
             <div className="w-20 h-1 bg-gradient-to-r from-[#e7a77e] to-[#f59e42] rounded-full"></div>
@@ -174,7 +174,7 @@ export default function Home() {
         </div>
       </motion.section>
       {/* Section Divider */}
-      <div className="w-full flex justify-center py-4">
+      <div className="w-full flex justify-center py-8">
         <div className="h-1 w-32 bg-gradient-to-r from-[#e7d8c9]/0 via-[#e7d8c9] to-[#e7d8c9]/0 rounded-full" />
       </div>
 
@@ -183,13 +183,13 @@ export default function Home() {
 
       {/* What We Do / Project Showcase Section */}
       <motion.section
-        className="w-full bg-white min-h-screen flex items-center justify-center px-4 py-8 md:py-0 border-y border-[#e7d8c9]"
+        className="w-full bg-white min-h-screen flex items-center justify-center px-4 py-16 md:py-24 border-y border-[#e7d8c9]"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
       >
-        <div className="max-w-6xl mx-auto w-full px-4">
+        <div className="max-w-6xl xl:max-w-7xl mx-auto w-full px-4">
           {/* Decorative element */}
           <div className="flex justify-center mb-8">
             <div className="w-20 h-1 bg-gradient-to-r from-[#e7a77e] to-[#f59e42] rounded-full"></div>
@@ -207,75 +207,60 @@ export default function Home() {
           <p className="text-base sm:text-lg text-[#6b7280] mb-12 text-center max-w-3xl mx-auto leading-relaxed">
             From landscape-led masterplans to co-designed public spaces, these stories show our design thinking in action. Click through to dive deeper into each discipline — and see how design becomes a tool for equity, ecology, and everyday life.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
             {/* Landscape Architecture */}
-            <div className="bg-[#f6f2ed] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center">
-              <div className="mb-6">
-                <svg width="40" height="40" fill="none" stroke="#232323" strokeWidth="2" viewBox="0 0 40 40">
-                  <ellipse cx="20" cy="32" rx="16" ry="6" />
-                  <path d="M20 32V8M20 8c-2 4-8 8-8 12s6 8 8 8 8-4 8-8-6-8-8-12z" />
-                </svg>
+            <div className="bg-[#f6f2ed] rounded-2xl shadow-2xl p-8 flex flex-col items-center text-center">
+              <div className="relative w-full mb-8">
+                <img src="/projects/Texas-us-main.jpg" alt="Frontyard Park Design" className="w-full h-80 object-cover rounded-xl" />
+                <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-sm px-4 py-2 rounded-b-xl flex items-center justify-center">
+                  Frontyard Park Design, Texas, USA
+                </div>
               </div>
-              <img src="/projects/Texas-us-main.jpg" alt="Frontyard Park Design" className="w-full h-48 object-cover rounded-xl mb-6" />
               <h3 className="text-2xl font-bold text-[#232323] mb-2">Landscape Architecture</h3>
-              <div className="text-[#6b7280] mb-4">Frontyard Park Design, Texas, USA</div>
               <a href="/projects" className="inline-block mt-2 bg-gradient-to-r from-[#e7a77e] to-[#f59e42] text-white font-semibold rounded-full px-6 py-2 transition-all duration-300 shadow hover:shadow-lg text-sm">Explore Landscape Design →</a>
             </div>
             {/* Interior Environments */}
-            <div className="bg-[#f6f2ed] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center">
-              <div className="mb-6">
-                <svg width="40" height="40" fill="none" stroke="#232323" strokeWidth="2" viewBox="0 0 40 40">
-                  <rect x="8" y="20" width="24" height="12" rx="2" />
-                  <rect x="14" y="12" width="12" height="8" rx="2" />
-                </svg>
+            <div className="bg-[#f6f2ed] rounded-2xl shadow-2xl p-8 flex flex-col items-center text-center">
+              <div className="relative w-full mb-8">
+                <img src="/projects/qsr-gurgaon.jpg" alt="A Studio that Breathes" className="w-full h-80 object-cover rounded-xl" />
+                <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-sm px-4 py-2 rounded-b-xl flex items-center justify-center">
+                  A Studio that Breathes, QSR Outlet, Gurgaon
+                </div>
               </div>
-              <img src="/projects/qsr-gurgaon.jpg" alt="A Studio that Breathes" className="w-full h-48 object-cover rounded-xl mb-6" />
               <h3 className="text-2xl font-bold text-[#232323] mb-2">Interior Environments</h3>
-              <div className="text-[#6b7280] mb-1">A Studio that Breathes, QSR Outlet, Gurgaon</div>
-              <div className="text-sm text-[#232323] mb-2">Passive cooling, modular layouts, material reuse.</div>
               <a href="/projects#interiors" className="inline-block mt-2 bg-gradient-to-r from-[#e7a77e] to-[#f59e42] text-white font-semibold rounded-full px-6 py-2 transition-all duration-300 shadow hover:shadow-lg text-sm">Explore Interior Design →</a>
             </div>
             {/* Brand & Visual Communication */}
-            <div className="bg-[#f6f2ed] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center">
-              <div className="mb-6">
-                <svg width="40" height="40" fill="none" stroke="#232323" strokeWidth="2" viewBox="0 0 40 40">
-                  <rect x="8" y="8" width="24" height="24" rx="4" />
-                  <path d="M12 28l16-16M12 16h16M20 12v16" />
-                </svg>
+            <div className="bg-[#f6f2ed] rounded-2xl shadow-2xl p-8 flex flex-col items-center text-center">
+              <div className="relative w-full mb-8">
+                <img src="/projects/voices-of-the-city.jpg" alt="Voices of the City" className="w-full h-80 object-cover rounded-xl" />
+                <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-sm px-4 py-2 rounded-b-xl flex items-center justify-center">
+                  Voices of the City
+                </div>
               </div>
-              <img src="/projects/voices-of-the-city.jpg" alt="Voices of the City" className="w-full h-48 object-cover rounded-xl mb-6" />
               <h3 className="text-2xl font-bold text-[#232323] mb-2">Brand & Visual Communication</h3>
-              <div className="text-[#6b7280] mb-1">Voices of the City</div>
-              <div className="text-sm text-[#232323] mb-2">Designing for awareness, inclusion, and collective memory.</div>
               <a href="/projects#visual-communication" className="inline-block mt-2 bg-gradient-to-r from-[#e7a77e] to-[#f59e42] text-white font-semibold rounded-full px-6 py-2 transition-all duration-300 shadow hover:shadow-lg text-sm">Explore Visual Communication →</a>
             </div>
             {/* Workshops & Co-Design Labs */}
-            <div className="bg-[#f6f2ed] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center">
-              <div className="mb-6">
-                <svg width="40" height="40" fill="none" stroke="#232323" strokeWidth="2" viewBox="0 0 40 40">
-                  <circle cx="14" cy="20" r="6" />
-                  <circle cx="26" cy="20" r="6" />
-                  <path d="M8 32c0-4 4-8 12-8s12 4 12 8" />
-                </svg>
+            <div className="bg-[#f6f2ed] rounded-2xl shadow-2xl p-8 flex flex-col items-center text-center">
+              <div className="relative w-full mb-8">
+                <img src="/projects/workshop-placeholder.jpg" alt="Imagining Public Spaces with Communities" className="w-full h-80 object-cover rounded-xl" />
+                <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-sm px-4 py-2 rounded-b-xl flex items-center justify-center">
+                  Imagining Public Spaces with Communities
+                </div>
               </div>
-              <img src="/projects/workshop-placeholder.jpg" alt="Imagining Public Spaces with Communities" className="w-full h-48 object-cover rounded-xl mb-6" />
               <h3 className="text-2xl font-bold text-[#232323] mb-2">Workshops & Co-Design Labs</h3>
-              <div className="text-[#6b7280] mb-1">Imagining Public Spaces with Communities</div>
-              <div className="text-sm text-[#232323] mb-2">Participatory tools for spatial justice and local agency.</div>
               <a href="/think-tank" className="inline-block mt-2 bg-gradient-to-r from-[#e7a77e] to-[#f59e42] text-white font-semibold rounded-full px-6 py-2 transition-all duration-300 shadow hover:shadow-lg text-sm">Explore Think tank and collaborations →</a>
             </div>
             {/* Emerging Tech / Speculative Futures */}
-            <div className="bg-[#f6f2ed] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center md:col-span-2">
-              <div className="mb-6">
-                <svg width="40" height="40" fill="none" stroke="#232323" strokeWidth="2" viewBox="0 0 40 40">
-                  <rect x="10" y="10" width="20" height="20" rx="6" />
-                  <path d="M20 10v20M10 20h20" />
-                </svg>
+            <div className="bg-[#f6f2ed] rounded-2xl shadow-2xl p-8 flex flex-col items-center text-center md:col-span-2">
+              <div className="relative w-full mb-8">
+                <img src="/projects/ranthambore-ai.jpg" alt="AI-Enabled Green Infrastructure Planning" className="w-full h-80 object-cover rounded-xl" />
+                <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-sm px-4 py-2 rounded-b-xl flex items-center justify-center">
+                  AI-Enabled Green Infrastructure Planning, Ranthambore
+                </div>
               </div>
-              <img src="/projects/ranthambore-ai.jpg" alt="AI-Enabled Green Infrastructure Planning" className="w-full h-48 object-cover rounded-xl mb-6" />
               <h3 className="text-2xl font-bold text-[#232323] mb-2">Emerging Tech / Speculative Futures</h3>
-              <div className="text-[#6b7280] mb-1">AI-Enabled Green Infrastructure Planning, Ranthambore</div>
-              <div className="text-sm text-[#232323] mb-2">Using data to imagine climate-resilient futures.</div>
               <a href="/futures-lab" className="inline-block mt-2 bg-gradient-to-r from-[#e7a77e] to-[#f59e42] text-white font-semibold rounded-full px-6 py-2 transition-all duration-300 shadow hover:shadow-lg text-sm">Explore Futures Lab →</a>
             </div>
           </div>
@@ -284,13 +269,13 @@ export default function Home() {
 
       {/* Clients & Stats Section */}
       <motion.section
-        className="w-full bg-white min-h-screen flex items-center justify-center px-4 py-8 md:py-0 border-y border-[#e7d8c9]"
+        className="w-full bg-white min-h-screen flex items-center justify-center px-4 py-16 md:py-24 border-y border-[#e7d8c9]"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
       >
-        <div className="max-w-6xl mx-auto text-center w-full px-4">
+        <div className="max-w-6xl xl:max-w-7xl mx-auto text-center w-full px-4">
           {/* Decorative element */}
           <div className="flex justify-center mb-8">
             <div className="w-20 h-1 bg-gradient-to-r from-[#e7a77e] to-[#f59e42] rounded-full"></div>
@@ -363,13 +348,13 @@ export default function Home() {
 
       {/* Media Recognition Section */}
       <motion.section
-        className="w-full bg-white min-h-screen flex items-center justify-center px-4 py-8 md:py-0 border-y border-[#e7d8c9]"
+        className="w-full bg-[#f0ebe6] min-h-screen flex items-center justify-center px-4 py-16 md:py-24 border-y border-[#e7d8c9]"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
       >
-        <div className="max-w-6xl mx-auto text-center w-full px-4">
+        <div className="max-w-6xl xl:max-w-7xl mx-auto text-center w-full px-4">
           {/* Decorative element */}
           <div className="flex justify-center mb-8">
             <div className="w-20 h-1 bg-gradient-to-r from-[#e7a77e] to-[#f59e42] rounded-full"></div>
@@ -441,13 +426,13 @@ export default function Home() {
 
       {/* Rooted in India. Open to the world. Section */}
       <motion.section
-        className="w-full bg-[#f6f2ed] min-h-screen flex items-center justify-center px-4 py-8 md:py-0"
+        className="w-full bg-[#f0ebe6] min-h-screen flex items-center justify-center px-4 py-16 md:py-24"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
       >
-        <div className="max-w-4xl mx-auto text-center w-full px-4">
+        <div className="max-w-4xl xl:max-w-7xl mx-auto text-center w-full px-4">
           {/* Decorative element */}
           <div className="flex justify-center mb-6">
             <div className="w-16 h-1 bg-gradient-to-r from-[#e7a77e] to-[#f59e42] rounded-full"></div>

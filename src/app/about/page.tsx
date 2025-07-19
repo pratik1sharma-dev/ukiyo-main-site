@@ -138,24 +138,77 @@ export default function About() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-16">
-              {/* Founder 1 */}
-              <div className="bg-gradient-to-br from-[#f6f2ed] to-white rounded-2xl shadow-xl p-10 text-center transform hover:scale-105 transition-all duration-300">
-                <div className="w-40 h-40 bg-gradient-to-br from-orange-100 to-orange-200 rounded-full mx-auto mb-8 flex items-center justify-center shadow-lg">
-                  <span className="text-6xl">👤</span>
+              {/* Founder 1 - Garima Dubey */}
+              <div className="bg-gradient-to-br from-[#f6f2ed] to-white rounded-2xl shadow-xl p-10 transform hover:scale-105 transition-all duration-300">
+                <div className="text-center mb-8">
+                  <div className="w-40 h-40 bg-gradient-to-br from-orange-100 to-orange-200 rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
+                    <span className="text-6xl">👤</span>
+                  </div>
+                  <h3 className="text-3xl font-bold text-gray-900 mb-2">Garima Dubey</h3>
+                  <p className="text-xl text-orange-600 font-semibold mb-4">Landscape Architect & Urban Ecologist</p>
+                  <div className="w-16 h-1 bg-orange-400 mx-auto mb-6"></div>
                 </div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-3">Garima Dubey</h3>
-                <p className="text-xl text-orange-600 font-semibold mb-6">Founder</p>
-                <div className="w-16 h-1 bg-orange-400 mx-auto"></div>
+                
+                <div className="text-left space-y-4">
+                  <p className="text-gray-700 leading-relaxed">
+                    Garima Dubey is a landscape architect and urban ecologist based in Jabalpur, Madhya Pradesh. She focuses on designing climate-responsive, inclusive, and ecologically grounded public spaces. As the Co-founder of Ukiyo Habitat, she works at the intersection of spatial planning, ecology, and community placemaking, crafting resilient and meaningful environments.
+                  </p>
+                  
+                  <p className="text-gray-700 leading-relaxed">
+                    Garima has led or contributed to projects across several Indian cities, including Indore (MP), Pune (Maharashtra), Hyderabad (Telangana), and Ahmedabad (Gujarat)—each rooted in local ecological contexts and community needs. Her work integrates urban green infrastructure, blue-green systems, and nature-based design solutions to enhance both environmental and social well-being.
+                  </p>
+                  
+                  <p className="text-gray-700 leading-relaxed">
+                    She also teaches design at Dr. B.R. Ambedkar University Delhi and Netaji Subhash University of Technology (NSUT). Her research interests include urban resilience, water-sensitive planning, and public spaces as democratic and ecological commons.
+                  </p>
+                  
+                  <div className="pt-4">
+                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Expertise Areas:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Landscape Architecture</span>
+                      <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Urban Ecology</span>
+                      <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Climate-Responsive Design</span>
+                      <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Public Space Design</span>
+                      <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Blue-Green Systems</span>
+                      <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Urban Resilience</span>
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              {/* Founder 2 */}
-              <div className="bg-gradient-to-br from-[#f6f2ed] to-white rounded-2xl shadow-xl p-10 text-center transform hover:scale-105 transition-all duration-300">
-                <div className="w-40 h-40 bg-gradient-to-br from-orange-100 to-orange-200 rounded-full mx-auto mb-8 flex items-center justify-center shadow-lg">
-                  <span className="text-6xl">👤</span>
+              {/* Founder 2 - Vidushi Singh */}
+              <div className="bg-gradient-to-br from-[#f6f2ed] to-white rounded-2xl shadow-xl p-10 transform hover:scale-105 transition-all duration-300">
+                <div className="text-center mb-8">
+                  <div className="w-40 h-40 bg-gradient-to-br from-orange-100 to-orange-200 rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
+                    <span className="text-6xl">👤</span>
+                  </div>
+                  <h3 className="text-3xl font-bold text-gray-900 mb-2">Vidushi Singh</h3>
+                  <p className="text-xl text-orange-600 font-semibold mb-4">Architect, Urban Designer & Design Educator</p>
+                  <div className="w-16 h-1 bg-orange-400 mx-auto mb-6"></div>
                 </div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-3">Aarav Mehta</h3>
-                <p className="text-xl text-orange-600 font-semibold mb-6">Co-Founder</p>
-                <div className="w-16 h-1 bg-orange-400 mx-auto"></div>
+                
+                <div className="text-left space-y-4">
+                  <p className="text-gray-700 leading-relaxed">
+                    Vidushi Singh is an architect, urban designer, and design educator with over five years of professional experience in architecture, interior design, and urban planning. She is the Co-founder of Ukiyo Habitat, a Delhi-based design studio known for its work in urban resilience, adaptive reuse, and child-friendly public spaces.
+                  </p>
+                  
+                  <p className="text-gray-700 leading-relaxed">
+                    Vidushi has contributed to a variety of residential, commercial, institutional, and government architecture projects—including work for the Indian Navy in New Delhi. She teaches architectural design at Vastu Kala Academy and NSUT, Delhi. Her approach combines contextual sensitivity with spatial empathy to create inclusive, sustainable, and locally rooted built environments.
+                  </p>
+                  
+                  <div className="pt-4">
+                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Expertise Areas:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Architecture</span>
+                      <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Urban Design</span>
+                      <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Interior Design</span>
+                      <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Urban Planning</span>
+                      <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Adaptive Reuse</span>
+                      <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Child-Friendly Spaces</span>
+                      <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Sustainable Design</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
