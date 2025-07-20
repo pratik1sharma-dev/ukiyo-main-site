@@ -222,9 +222,9 @@ export default function Home() {
             {/* Interior Environments */}
             <div className="bg-[#f6f2ed] rounded-2xl shadow-2xl p-8 flex flex-col items-center text-center">
               <div className="relative w-full mb-8">
-                <img src="/projects/qsr-gurgaon.jpg" alt="A Studio that Breathes" className="w-full h-80 object-cover rounded-xl" />
+                <img src="/projects/mansion/OP1 P2.jpg" alt="Chevella Mansion Interior" className="w-full h-80 object-cover rounded-xl" />
                 <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-sm px-4 py-2 rounded-b-xl flex items-center justify-center">
-                  A Studio that Breathes, QSR Outlet, Gurgaon
+                  Chevella Mansion, near Hyderabad
                 </div>
               </div>
               <h3 className="text-2xl font-bold text-[#232323] mb-2">Interior Environments</h3>
@@ -244,9 +244,9 @@ export default function Home() {
             {/* Workshops & Co-Design Labs */}
             <div className="bg-[#f6f2ed] rounded-2xl shadow-2xl p-8 flex flex-col items-center text-center">
               <div className="relative w-full mb-8">
-                <img src="/projects/workshop-placeholder.jpg" alt="Imagining Public Spaces with Communities" className="w-full h-80 object-cover rounded-xl" />
+                <img src="/projects/vastrapur lake/Vastrapur-Lake.jpg" alt="Vastrapur Lake Workshop" className="w-full h-80 object-cover rounded-xl" />
                 <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-sm px-4 py-2 rounded-b-xl flex items-center justify-center">
-                  Imagining Public Spaces with Communities
+                  Vastrapur Lake, Ahmedabad
                 </div>
               </div>
               <h3 className="text-2xl font-bold text-[#232323] mb-2">Workshops & Co-Design Labs</h3>
@@ -254,10 +254,15 @@ export default function Home() {
             </div>
             {/* Emerging Tech / Speculative Futures */}
             <div className="bg-[#f6f2ed] rounded-2xl shadow-2xl p-8 flex flex-col items-center text-center md:col-span-2">
-              <div className="relative w-full mb-8">
-                <img src="/projects/ranthambore-ai.jpg" alt="AI-Enabled Green Infrastructure Planning" className="w-full h-80 object-cover rounded-xl" />
+              <div className="relative w-full mb-8 flex gap-2">
+                <div className="flex-1 bg-white rounded-xl flex items-center justify-center aspect-[3/2] overflow-hidden">
+                  <img src="/projects/bandhavgarh/front.png" alt="Bandhavgarh Landscape 1" className="object-contain w-full h-full" />
+                </div>
+                <div className="flex-1 bg-white rounded-xl flex items-center justify-center aspect-[3/2] overflow-hidden">
+                  <img src="/projects/bandhavgarh/1.png" alt="Bandhavgarh Landscape 2" className="object-contain w-full h-full" />
+                </div>
                 <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-sm px-4 py-2 rounded-b-xl flex items-center justify-center">
-                  AI-Enabled Green Infrastructure Planning, Ranthambore
+                  Bandhavgarh Landscape, Madhya Pradesh
                 </div>
               </div>
               <h3 className="text-2xl font-bold text-[#232323] mb-2">Emerging Tech / Speculative Futures</h3>

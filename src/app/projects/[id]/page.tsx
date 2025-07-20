@@ -67,6 +67,21 @@ const projects = [
     fullDescription: "A sophisticated restaurant interior design project that creates an inviting atmosphere while maximizing space efficiency in a mall setting. The design balances traditional Indian hospitality with modern dining expectations, creating a memorable experience for guests.",
     images: ["/projects/kake-da-hotel.jpg"],
     cta: { label: "View Gallery", href: "https://drive.google.com/drive/folders/1TcTZLvz9bbA3-CqAUxjz2vLAW6QK_Ove?usp=drive_link" }
+  },
+  {
+    id: "chevella-mansion-interior",
+    category: "Architecture & Interior",
+    title: "Chevella Mansion — Interior Design",
+    mainImage: "/projects/mansion/OP1 P2.jpg",
+    shortDescription: "A luxurious private residence near Hyderabad, blending contemporary elegance with traditional warmth.",
+    fullDescription: "Located in Chevella, near Hyderabad, this mansion interior project reimagines residential luxury. The design harmonizes modern aesthetics with regional influences, creating inviting spaces filled with natural light, bespoke finishes, and a sense of timeless comfort.",
+    images: [
+      "/projects/mansion/OP1 P2.jpg",
+      "/projects/mansion/OP2 P2.jpg",
+      "/projects/mansion/OP3 P2.jpg",
+      "/projects/mansion/ROOM INTERIOR P2.jpg"
+    ],
+    cta: null
   }
 ];
 
