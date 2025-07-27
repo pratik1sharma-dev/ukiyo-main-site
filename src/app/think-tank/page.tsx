@@ -4,13 +4,24 @@ import Image from 'next/image';
 // Think tank content data
 const thinkTankContent = [
   {
+    id: 'ooh-urban-design',
+    title: 'Research: OOH Advertising as Urban Design',
+    category: 'Urban Experience Research',
+    shortDescription: 'Exploring how Out-of-Home advertising can be reimagined as an integral part of urban design and public space experience.',
+    mainImage: '/ooh-garima.jpg',
+    date: '2024-01-15',
+    author: 'Garima Dubey',
+    readTime: '8 min read'
+  },
+  {
     id: 'ahmedabad-haat-street',
     title: 'Research: Ahmedabad Haat Street Revitalization',
     category: 'Urban Design Research',
     shortDescription: 'An in-depth analysis of urban street revitalization through the lens of Ahmedabad\'s Haat Street transformation.',
     mainImage: '/projects/haat/9.png',
     date: '2023-11-20',
-    author: 'Ukiyo Research Team'
+    author: 'Ukiyo Research Team',
+    readTime: '10 min read'
   },
   {
     id: 'vastrapur-lake',
@@ -19,8 +30,10 @@ const thinkTankContent = [
     shortDescription: 'A comprehensive analysis of urban lake revitalization strategies through the case study of Vastrapur Lake, Ahmedabad.',
     mainImage: '/projects/vastrapur lake/1.png',
     date: '2023-12-10',
-    author: 'Ukiyo Research Team'
-  }];
+    author: 'Ukiyo Research Team',
+    readTime: '12 min read'
+  }
+];
 
 export default function ThinkTank() {
   return (

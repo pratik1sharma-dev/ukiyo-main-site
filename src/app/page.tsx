@@ -86,13 +86,17 @@ export default function Home() {
       <div className="w-full relative">
         {/* Carousel Background Images */}
         {heroSlides.map((slide, i) => (
-          <img
+          <Image
             key={slide.image}
             src={slide.image}
-            alt="Hero background"
+            alt={`${slide.headline} - ${slide.subheadline}`}
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${i === bgIndex ? 'opacity-100 z-0' : 'opacity-0 z-0'}`}
             style={{ pointerEvents: 'none' }}
             aria-hidden="true"
+            fill
+            priority={i === 0} // Only preload the first image
+            sizes="100vw"
+            quality={90}
           />
         ))}
         {/* Hero Section - Fullscreen Carousel */}
@@ -211,7 +215,16 @@ export default function Home() {
             {/* Landscape Architecture */}
             <div className="bg-[#f6f2ed] rounded-2xl shadow-2xl p-8 flex flex-col items-center text-center">
               <div className="relative w-full mb-8">
-                <img src="/projects/Texas-us-main.jpg" alt="Frontyard Park Design" className="w-full h-80 object-cover rounded-xl" />
+                <div className="relative w-full h-80">
+                  <Image
+                    src="/projects/Texas-us-main.jpg"
+                    alt="Frontyard Park Design in Texas, USA showing sustainable landscape architecture"
+                    className="rounded-xl object-cover"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    quality={85}
+                  />
+                </div>
                 <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-sm px-4 py-2 rounded-b-xl flex items-center justify-center">
                   Frontyard Park Design, Texas, USA
                 </div>
@@ -222,7 +235,16 @@ export default function Home() {
             {/* Interior Environments */}
             <div className="bg-[#f6f2ed] rounded-2xl shadow-2xl p-8 flex flex-col items-center text-center">
               <div className="relative w-full mb-8">
-                <img src="/projects/kake.jpg" alt="Kaka Ka Hotel Ambience Mall Delhi" className="w-full h-80 object-cover rounded-xl" />
+                <div className="relative w-full h-80">
+                  <Image
+                    src="/projects/kake.jpg"
+                    alt="Interior view of Kaka Ka Hotel at Ambience Mall Delhi featuring modern design elements"
+                    className="rounded-xl object-cover"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    quality={85}
+                  />
+                </div>
                 <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-sm px-4 py-2 rounded-b-xl flex items-center justify-center">
                   Kaka Ka Hotel, Ambience Mall Delhi
                 </div>
@@ -233,9 +255,18 @@ export default function Home() {
             {/* Brand & Visual Communication */}
             <div className="bg-[#f6f2ed] rounded-2xl shadow-2xl p-8 flex flex-col items-center text-center">
               <div className="relative w-full mb-8">
-                <img src="/projects/harit-setu.jpg" alt="Voices of the City" className="w-full h-80 object-cover rounded-xl" />
+                <div className="relative w-full h-80">
+                  <Image
+                    src="/projects/haat/9.png"
+                    alt="Ahmedabad Haat Street urban renewal project showcasing traditional Indian market design"
+                    className="rounded-xl object-cover"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    quality={85}
+                  />
+                </div>
                 <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-sm px-4 py-2 rounded-b-xl flex items-center justify-center">
-                  Voices of the City
+                  Ahmedabad Haat Street, Gujarat
                 </div>
               </div>
               <h3 className="text-2xl font-bold text-[#232323] mb-2">Brand & Visual Communication</h3>
