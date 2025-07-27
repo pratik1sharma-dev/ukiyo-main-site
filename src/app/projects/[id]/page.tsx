@@ -38,34 +38,15 @@ const projects = [
     ],
     cta: null
   },
-  {
-    id: "ahmedabad-haat-street",
-    category: "Urban Design",
-    title: "Activating Ahmedabad Haat Street",
-    mainImage: "/projects/ahmedabad-haat.jpg",
-    shortDescription: "Revitalizing urban spaces through innovative street design and community engagement.",
-    fullDescription: "A comprehensive urban design project focused on activating and revitalizing public spaces in Ahmedabad's historic district. This project demonstrates our commitment to creating inclusive, accessible urban environments that celebrate local culture while meeting modern needs.",
-    images: ["/projects/ahmedabad-haat.jpg"],
-    cta: { label: "View Gallery", href: "https://drive.google.com/drive/folders/1bqp8SCVMZchSg8D_61d3UI-Jp9IDczvZ?usp=drive_link" }
-  },
-  {
-    id: "vastrapur-lake",
-    category: "Urban Design",
-    title: "Vastrapur Lake",
-    mainImage: "/projects/vastrapur lake/1.png",
-    shortDescription: "Transforming a neglected urban lake into a vibrant community space and ecological asset.",
-    fullDescription: "An urban renewal project that transforms Vastrapur Lake into a sustainable, accessible community space while preserving its ecological value. The design incorporates walking paths, seating areas, and native vegetation to create a welcoming environment for all visitors.",
-    images: ["/projects/vastrapur lake/1.png"],
-    cta: { label: "View Gallery", href: "https://drive.google.com/drive/folders/1yI6cRDBEAVhhYixb9SaLcXdThOYIqYDX?usp=drive_link" }
-  },
+
   {
     id: "kake-da-hotel",
     category: "Architecture & Interior",
     title: "Kake Da Hotel in Ambience Mall",
-    mainImage: "/projects/kake-da-hotel.jpg",
+    mainImage: "/projects/kake.jpg",
     shortDescription: "Modern restaurant design that blends traditional aesthetics with contemporary functionality.",
-    fullDescription: "A sophisticated restaurant interior design project that creates an inviting atmosphere while maximizing space efficiency in a mall setting. The design balances traditional Indian hospitality with modern dining expectations, creating a memorable experience for guests.",
-    images: ["/projects/kake-da-hotel.jpg"],
+    fullDescription: "The Kake Da Hotel project at Ambience Mall, Vasant Kunj, New Delhi, is a 3,200 square foot contemporary restaurant design that reimagines traditional Punjabi dhaba culture for a luxury retail environment. Located on the mall's food court level, our design seamlessly blends rustic Punjabi elements with modern aesthetics through the use of warm terracotta tones, handcrafted jali work, and custom brass lighting fixtures. The space features an open kitchen concept with a live tandoors section, creating an interactive dining experience. We incorporated sustainable materials like reclaimed wood and local sandstone, while optimizing the layout to accommodate 85 covers without compromising comfort. The design includes a dedicated bar area with a backlit onyx counter and a private dining zone with traditional 'charpai' seating reinterpreted in modern materials. The project was completed in 2023 and has since become one of the mall's most Instagrammed dining destinations, praised for its authentic yet elevated take on North Indian cuisine culture.",
+    images: ["/projects/kake.jpg"],
     cta: { label: "View Gallery", href: "https://drive.google.com/drive/folders/1TcTZLvz9bbA3-CqAUxjz2vLAW6QK_Ove?usp=drive_link" }
   },
   {

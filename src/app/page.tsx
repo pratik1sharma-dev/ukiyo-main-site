@@ -222,9 +222,9 @@ export default function Home() {
             {/* Interior Environments */}
             <div className="bg-[#f6f2ed] rounded-2xl shadow-2xl p-8 flex flex-col items-center text-center">
               <div className="relative w-full mb-8">
-                <img src="/projects/mansion/OP1 P2.jpg" alt="Chevella Mansion Interior" className="w-full h-80 object-cover rounded-xl" />
+                <img src="/projects/kake.jpg" alt="Kaka Ka Hotel Ambience Mall Delhi" className="w-full h-80 object-cover rounded-xl" />
                 <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-sm px-4 py-2 rounded-b-xl flex items-center justify-center">
-                  Chevella Mansion, near Hyderabad
+                  Kaka Ka Hotel, Ambience Mall Delhi
                 </div>
               </div>
               <h3 className="text-2xl font-bold text-[#232323] mb-2">Interior Environments</h3>
@@ -233,7 +233,7 @@ export default function Home() {
             {/* Brand & Visual Communication */}
             <div className="bg-[#f6f2ed] rounded-2xl shadow-2xl p-8 flex flex-col items-center text-center">
               <div className="relative w-full mb-8">
-                <img src="/projects/voices-of-the-city.jpg" alt="Voices of the City" className="w-full h-80 object-cover rounded-xl" />
+                <img src="/projects/harit-setu.jpg" alt="Voices of the City" className="w-full h-80 object-cover rounded-xl" />
                 <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-sm px-4 py-2 rounded-b-xl flex items-center justify-center">
                   Voices of the City
                 </div>
@@ -244,9 +244,9 @@ export default function Home() {
             {/* Workshops & Co-Design Labs */}
             <div className="bg-[#f6f2ed] rounded-2xl shadow-2xl p-8 flex flex-col items-center text-center">
               <div className="relative w-full mb-8">
-                <img src="/projects/vastrapur lake/Vastrapur-Lake.jpg" alt="Vastrapur Lake Workshop" className="w-full h-80 object-cover rounded-xl" />
+                <img src="/projects/codesign.jpg" alt="Vastrapur Lake Workshop" className="w-full h-80 object-cover rounded-xl" />
                 <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-sm px-4 py-2 rounded-b-xl flex items-center justify-center">
-                  Vastrapur Lake, Ahmedabad
+                  Participatory Design
                 </div>
               </div>
               <h3 className="text-2xl font-bold text-[#232323] mb-2">Workshops & Co-Design Labs</h3>
@@ -431,7 +431,7 @@ export default function Home() {
 
       {/* Rooted in India. Open to the world. Section */}
       <motion.section
-        className="w-full bg-[#f0ebe6] min-h-screen flex items-center justify-center px-4 py-16 md:py-24"
+        className="w-full bg-[#f0ebe6] min-h-screen flex items-center justify-center px-4 py-8 md:py-12"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
@@ -439,12 +439,12 @@ export default function Home() {
       >
         <div className="max-w-4xl xl:max-w-7xl mx-auto text-center w-full px-4">
           {/* Decorative element */}
-          <div className="flex justify-center mb-6">
+          <div className="flex justify-center mb-2">
             <div className="w-16 h-1 bg-gradient-to-r from-[#e7a77e] to-[#f59e42] rounded-full"></div>
           </div>
           
           {/* Main heading with enhanced typography */}
-          <h3 className="text-2xl sm:text-4xl font-bold text-[#232323] mb-6 font-[var(--font-cormorant)] leading-tight">
+          <h3 className="text-2xl sm:text-4xl font-bold text-[#232323] mb-4 font-[var(--font-cormorant)] leading-tight">
             Rooted in India.
             <br />
             <span className="text-[#e7a77e]">Open to the world.</span>

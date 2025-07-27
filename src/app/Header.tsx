@@ -34,7 +34,7 @@ export default function Header() {
           <li><Link href="/projects" className="hover:underline">Our Work</Link></li>
           <li><Link href="/about" className="hover:underline">About Us</Link></li>
           <li><Link href="/services" className="hover:underline">Services</Link></li>
-          <li><Link href="/projects" className="hover:underline">Think Tank</Link></li>
+          <li><Link href="/think-tank" className="hover:underline">Think Tank</Link></li>
           <li><Link href="/contact" className="hover:underline">Contact</Link></li>
         </ul>
         {/* Hamburger Icon for Mobile */}
@@ -53,7 +53,7 @@ export default function Header() {
         <div className="fixed inset-0 bg-black/70 z-50 flex flex-col items-center justify-center sm:hidden transition-all">
           <ul className="flex flex-col gap-8 font-semibold text-white font-inter" style={{ fontSize: '1.2rem' }}>
             <li><Link href="/projects" onClick={() => setMenuOpen(false)}>Our work</Link></li>
-            <li><Link href="/projects" onClick={() => setMenuOpen(false)}>Think Tank</Link></li>
+            <li><Link href="/think-tank" onClick={() => setMenuOpen(false)}>Think Tank</Link></li>
             <li><Link href="/about" onClick={() => setMenuOpen(false)}>About Us</Link></li>
             <li><Link href="/services" onClick={() => setMenuOpen(false)}>Services</Link></li>
             <li><Link href="/contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
