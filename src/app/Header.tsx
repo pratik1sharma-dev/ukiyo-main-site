@@ -32,7 +32,14 @@ export default function Header() {
         style={floating ? { background: 'rgba(0,0,0,0.0)' } : { background: 'transparent' }}
       >
         <Link href="/" className="flex items-center -ml-34">
-          <Image src="/logo.png" alt="Ukiyo Habitat Logo" width={150} height={75} priority className="mr-2" />
+          <Image
+            src="/logo.png"
+            alt="Ukiyo Habitat Logo"
+            width={150}
+            height={75}
+            priority
+            className="mr-2 w-28 h-14 sm:w-32 sm:h-16 md:w-[150px] md:h-[75px] object-contain"
+          />
           <span className="sr-only">Ukiyo Habitat</span>
         </Link>
         {/* Desktop Nav */}
