@@ -25,10 +25,7 @@ const nextConfig = {
   experimental: {
     // Enable optimized package imports
     optimizePackageImports: ['react-icons', 'framer-motion'],
-    // Configure file tracing exclusions
-    outputFileTracingExcludes: {
-      '*': ['**node_modules/**']
-    }
+
   },
   
   // Disable static optimization to prevent permission issues
