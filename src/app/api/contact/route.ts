@@ -2,14 +2,18 @@ import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
 
+// ---- Resend configuration ----
+// ---- Resend configuration ----
+const RESEND_API_KEY   = process.env.RESEND_API_KEY!;
+const RESEND_FROM_EMAIL = process.env.RESEND_FROM_EMAIL!;
+const RESEND_TO_EMAIL   = process.env.RESEND_TO_EMAIL!;
+
 console.log('ALL ENV:', process.env);
 
 // Initialize Resend only if API key is available
 const getResendClient = () => {
-  const apiKey = process.env.RESEND_API_KEY;
-  console.log('Resend API Key exists:', !!apiKey);
-  console.log('RESEND_FROM_EMAIL:', process.env.RESEND_FROM_EMAIL);
-  console.log('RESEND_TO_EMAIL:', process.env.RESEND_TO_EMAIL);
+  const apiKey = RESEND_API_KEY;
+  console.log('Using hard-coded Resend API key, exists:', !!apiKey);
   
   if (!apiKey) {
     console.warn('RESEND_API_KEY is not set. Email functionality will be disabled.');
@@ -66,8 +70,8 @@ export async function POST(request: Request) {
     }
 
     const data = await resend.emails.send({
-      from: `Contact Form <${process.env.RESEND_FROM_EMAIL}>`,
-      to: process.env.RESEND_TO_EMAIL!,
+      from: `Contact Form <${RESEND_FROM_EMAIL}>`,
+      to: RESEND_TO_EMAIL,
       subject: `New Contact Form Submission from ${name}`,
       text: `
         Name: ${name}
