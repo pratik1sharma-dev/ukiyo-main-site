@@ -20,6 +20,14 @@ const getResendClient = () => {
 
 const resend = getResendClient();
 
+export async function OPTIONS() {
+  return NextResponse.json({}, { status: 204 });
+}
+
+export async function GET() {
+  return NextResponse.json({ error: 'Method Not Allowed' }, { status: 405 });
+}
+
 const contactFormSchema = z.object({
   name: z.string().min(2, 'Name is required'),
   email: z.string().email('Invalid email address'),
