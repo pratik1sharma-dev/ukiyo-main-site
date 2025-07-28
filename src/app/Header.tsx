@@ -2,12 +2,17 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Header() {
   const pathname = usePathname();
   const floating = pathname === '/';
   const [menuOpen, setMenuOpen] = useState(false);
+
+  // Close mobile menu automatically when route changes
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
   return (
     <header
       className={
@@ -39,7 +44,7 @@ export default function Header() {
         </ul>
         {/* Hamburger Icon for Mobile */}
         <button
-          className={`sm:hidden flex flex-col justify-center items-center w-10 h-10 rounded focus:outline-none focus:ring-2 focus:ring-[#e7a77e] ${floating ? 'text-white' : 'text-white'}`}
+          className={`sm:hidden flex flex-col justify-center items-center w-10 h-10 rounded focus:outline-none focus:ring-2 focus:ring-[#e7a77e] ${floating ? 'text-white' : 'text-white'} z-50`}
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           onClick={() => setMenuOpen((open) => !open)}
         >
@@ -50,7 +55,7 @@ export default function Header() {
       </nav>
       {/* Mobile Menu Overlay */}
       {menuOpen && (
-        <div className="fixed inset-0 bg-black/70 z-50 flex flex-col items-center justify-center sm:hidden transition-all">
+        <div className="fixed inset-0 bg-black/70 z-40 flex flex-col items-center justify-center sm:hidden transition-all">
           <ul className="flex flex-col gap-8 font-semibold text-white font-inter" style={{ fontSize: '1.2rem' }}>
             <li><Link href="/projects" onClick={() => setMenuOpen(false)}>Our work</Link></li>
             <li><Link href="/think-tank" onClick={() => setMenuOpen(false)}>Think Tank</Link></li>
