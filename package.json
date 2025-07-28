@@ -19,6 +19,7 @@
     "react-hook-form": "^7.61.1",
     "react-masonry-css": "^1.0.16",
     "resend": "^4.7.0",
+    "styled-jsx": "^5.1.7",
     "zod": "^4.0.10"
   },
   "devDependencies": {
