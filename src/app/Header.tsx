@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 
 export default function Header() {
   const pathname = usePathname();
@@ -54,8 +55,9 @@ export default function Header() {
         </button>
       </nav>
       {/* Mobile Menu Overlay */}
-      {menuOpen && (
-        <div className="fixed inset-0 bg-black/70 z-60 flex flex-col items-center justify-center sm:hidden transition-all">
+      {/* Mobile Menu Overlay (portal) */}
+      {menuOpen && typeof window !== 'undefined' && createPortal(
+        <div className="fixed inset-0 bg-black/70 z-[999] flex flex-col items-center justify-center sm:hidden transition-all">
           <ul className="flex flex-col gap-8 font-semibold text-white font-inter" style={{ fontSize: '1.2rem' }}>
             <li><Link href="/projects" onClick={() => setMenuOpen(false)}>Our work</Link></li>
             <li><Link href="/think-tank" onClick={() => setMenuOpen(false)}>Think Tank</Link></li>
@@ -63,7 +65,8 @@ export default function Header() {
             <li><Link href="/services" onClick={() => setMenuOpen(false)}>Services</Link></li>
             <li><Link href="/contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
           </ul>
-        </div>
+        </div>,
+        document.body
       )}
     </header>
   );
