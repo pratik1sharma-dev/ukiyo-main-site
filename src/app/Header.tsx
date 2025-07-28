@@ -38,7 +38,7 @@ export default function Header() {
             width={150}
             height={75}
             priority
-            className="mr-2 w-28 h-14 sm:w-32 sm:h-16 md:w-[150px] md:h-[75px] object-contain"
+            className="mr-2 w-auto h-16 sm:h-20 md:h-24 object-contain"
           />
           <span className="sr-only">Ukiyo Habitat</span>
         </Link>
