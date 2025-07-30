@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import Image from 'next/image';
 
 export default function Projects() {
   // Project data (grouped by category)
@@ -137,10 +138,13 @@ export default function Projects() {
             {filteredProjects.map((project) => (
               <div key={project.id} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 overflow-hidden">
                 <div className="aspect-video bg-gray-200 relative overflow-hidden">
-                  <img
+                  <Image
                     src={project.mainImage}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                    fill
+                    className="object-cover transition-transform duration-300 hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    quality={75}
                   />
                   <div className="absolute top-4 left-4">
                     <span className="bg-[#e7a77e] text-white px-3 py-1 rounded-full text-sm font-semibold">

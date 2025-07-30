@@ -5,6 +5,9 @@ import { ReactNode } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { Cormorant_Garamond } from "next/font/google";
+import PerformanceMonitor from "./components/PerformanceMonitor";
+import Analytics from "./components/Analytics";
+import SEOOptimizer from "./components/SEOOptimizer";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -99,6 +102,7 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href={siteUrl} />
+        <SEOOptimizer />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -143,11 +147,13 @@ export default function RootLayout({
         />
       </head>
       <body className={`${cormorant.variable} bg-[#f6f2ed] min-h-screen flex flex-col`}>
+        <PerformanceMonitor />
         <Header />
         <main className="flex-1 w-full">
           {children}
         </main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
