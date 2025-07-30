@@ -3,9 +3,26 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from 'next/image';
 
+// Define TypeScript interfaces
+interface CTA {
+  href: string;
+  label: string;
+}
+
+interface Project {
+  id: string;
+  category: string;
+  title: string;
+  mainImage: string;
+  shortDescription: string;
+  fullDescription: string;
+  images: string[];
+  cta: CTA | null;
+}
+
 export default function Projects() {
   // Project data (grouped by category)
-  const projects = [
+  const projects: Project[] = [
     {
       id: "bandhavgarh-landscape",
       category: "Landscape",
@@ -20,7 +37,8 @@ export default function Projects() {
         "/projects/bandhavgarh/3.png",
         "/projects/bandhavgarh/4.png"
       ],
-      cta: null},
+      cta: null
+    },
     {
       id: "haldiram-landscape",
       category: "Landscape",
