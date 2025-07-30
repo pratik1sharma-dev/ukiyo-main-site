@@ -34,7 +34,7 @@ const thinkTankContent: ThinkTankItem[] = [
       { type: 'paragraph', text: 'Garima Dubey, Co-Founder of Ukiyo Habitat LLP, recently spoke at South India Talks OOH 2025, held on April 30 at the Hilton Hotel, Chennai. Her talk, titled "OOH as an Integral Part of Public Space Design", redefined how out-of-home (OOH) media can integrate with public spaces to serve both design and communication goals.' },
       { 
         type: 'image', 
-        src: '/ooh-garima.jpg', 
+        src: '/ooh-garima-1.jpg', 
         alt: 'Garima Dubey presenting at South India Talks OOH 2025',
         caption: 'Presentation at South India Talks OOH 2025, Hilton Hotel, Chennai'
       },
@@ -142,20 +142,36 @@ export default function ThinkTankArticle({ params }: { params: { id: string } })
         return <p className="text-[#6b7280] leading-relaxed mb-4">{item.text}</p>;
       case 'image':
         return (
-          <div className="my-6">
-            <div className="relative h-80 w-full rounded-lg overflow-hidden">
-              <Image
-                src={item.src}
-                alt={item.alt}
-                fill
-                className="object-cover"
-              />
+          <div className="my-8">
+            <div className="grid md:grid-cols-3 gap-8 items-center">
+              <div className="md:col-span-1">
+                <div className="relative w-full rounded-lg overflow-hidden shadow-lg">
+                  <div className="aspect-[3/4] relative">
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+                {item.caption && (
+                  <p className="text-sm text-gray-500 text-center mt-3 italic">
+                    {item.caption}
+                  </p>
+                )}
+              </div>
+              <div className="md:col-span-2">
+                <div className="bg-gradient-to-br from-[#f6f2ed] to-[#f0ebe6] rounded-lg p-6">
+                  <h3 className="text-lg font-semibold text-[#232323] mb-3">
+                    Presentation Highlights
+                  </h3>
+                  <p className="text-[#6b7280] leading-relaxed">
+                    Garima's keynote presentation at South India Talks OOH 2025 focused on integrating out-of-home media with public space design, emphasizing climate-sensitive approaches and democratic placemaking principles.
+                  </p>
+                </div>
+              </div>
             </div>
-            {item.caption && (
-              <p className="text-sm text-gray-500 text-center mt-2">
-                {item.caption}
-              </p>
-            )}
           </div>
         );
       case 'list':
@@ -193,14 +209,16 @@ export default function ThinkTankArticle({ params }: { params: { id: string } })
 
   return (
     <article className="bg-white rounded-xl shadow-md overflow-hidden">
-      <div className="relative h-96 w-full">
+      <div className="relative w-full">
         {article.mainImage && (
-          <Image
-            src={article.mainImage}
-            alt={article.title || 'Article image'}
-            fill
-            className="object-cover"
-          />
+          <div className="aspect-[16/9] md:aspect-[21/9] relative">
+            <Image
+              src={article.mainImage}
+              alt={article.title || 'Article image'}
+              fill
+              className="object-cover"
+            />
+          </div>
         )}
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
           <span className="text-sm text-white bg-[#e7a77e] px-3 py-1 rounded-full">
@@ -236,21 +254,37 @@ export default function ThinkTankArticle({ params }: { params: { id: string } })
               case 'image':
                 return (
                   <div key={index} className="my-8">
-                    <div className="relative h-80 w-full rounded-lg overflow-hidden">
-                      {item.src && (
-                        <Image
-                          src={item.src}
-                          alt={item.alt || 'Content image'}
-                          fill
-                          className="object-cover"
-                        />
-                      )}
+                    <div className="grid md:grid-cols-3 gap-8 items-center">
+                      <div className="md:col-span-1">
+                        <div className="relative w-full rounded-lg overflow-hidden shadow-lg">
+                          {item.src && (
+                            <div className="aspect-[3/4] relative">
+                              <Image
+                                src={item.src}
+                                alt={item.alt || 'Content image'}
+                                fill
+                                className="object-cover"
+                              />
+                            </div>
+                          )}
+                        </div>
+                        {item.caption && (
+                          <p className="text-sm text-gray-500 text-center mt-3 italic">
+                            {item.caption}
+                          </p>
+                        )}
+                      </div>
+                      <div className="md:col-span-2">
+                        <div className="bg-gradient-to-br from-[#f6f2ed] to-[#f0ebe6] rounded-lg p-6">
+                          <h3 className="text-lg font-semibold text-[#232323] mb-3">
+                            Presentation Highlights
+                          </h3>
+                          <p className="text-[#6b7280] leading-relaxed">
+                            Garima's keynote presentation at South India Talks OOH 2025 focused on integrating out-of-home media with public space design, emphasizing climate-sensitive approaches and democratic placemaking principles.
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                    {item.caption && (
-                      <p className="text-sm text-gray-500 text-center mt-2">
-                        {item.caption}
-                      </p>
-                    )}
                   </div>
                 );
               default:

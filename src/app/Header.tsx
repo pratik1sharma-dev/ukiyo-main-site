@@ -7,58 +7,106 @@ import { createPortal } from "react-dom";
 
 export default function Header() {
   const pathname = usePathname();
-  const floating = pathname === '/';
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  // Handle scroll effects
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 50;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Close mobile menu automatically when route changes
   useEffect(() => {
     setMenuOpen(false);
   }, [pathname]);
+
   return (
     <header
-      className={
-        floating
-          ? "w-full absolute top-0 left-0 z-100 bg-transparent transition-all"
-          : "w-full border-b border-[#b7c9c9] sticky top-0 z-100 shadow-sm"
-      }
-      style={floating ? { background: 'transparent', boxShadow: 'none' } : { background: 'linear-gradient(90deg, rgba(231,167,126,1) 0%, rgba(231,167,126,0.7) 30%, rgba(231,167,126,0.7) 100%)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)' }}
+      className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${
+        scrolled ? 'py-2' : 'py-4'
+      }`}
+      style={{ 
+        background: 'transparent', 
+        boxShadow: 'none',
+        marginTop: scrolled ? '0.5rem' : '1.5rem',
+        marginLeft: '2rem',
+        marginRight: '2rem'
+      }}
     >
       <nav
-        className={
-          floating
-            ? "max-w-6xl mx-auto flex items-center justify-between px-4 py-3 bg-transparent"
-            : "max-w-6xl mx-auto flex items-center justify-between px-4 py-3"
-        }
-        style={floating ? { background: 'rgba(0,0,0,0.0)' } : { background: 'transparent' }}
+        className={`max-w-6xl mx-auto flex items-center justify-between px-8 py-3 rounded-full border transition-all duration-300 ${
+          scrolled 
+            ? 'bg-white/98 backdrop-blur-md shadow-xl border-gray-200 py-2' 
+            : 'bg-white/95 backdrop-blur-sm shadow-lg border-gray-100'
+        }`}
+        style={{ 
+          backdropFilter: scrolled ? 'blur(15px)' : 'blur(10px)',
+          WebkitBackdropFilter: scrolled ? 'blur(15px)' : 'blur(10px)',
+          boxShadow: scrolled 
+            ? '0 8px 32px 0 rgba(0, 0, 0, 0.15), 0 2px 8px 0 rgba(0, 0, 0, 0.1)' 
+            : '0 4px 20px 0 rgba(0, 0, 0, 0.1)',
+          transform: scrolled ? 'scale(0.98)' : 'scale(1)'
+        }}
       >
-        <Link href="/" className="flex items-center md:-ml-34">
+        <Link href="/" className="flex items-center transition-transform duration-300 hover:scale-105">
           <Image
             src="/logo.png"
             alt="Ukiyo Habitat Logo"
-            width={150}
-            height={75}
+            width={100}
+            height={50}
             priority
-            className="mr-2 w-auto h-16 sm:h-20 md:h-24 object-contain"
+            className={`w-auto object-contain transition-all duration-300 ${
+              scrolled ? 'h-8 sm:h-10' : 'h-10 sm:h-12'
+            }`}
           />
           <span className="sr-only">Ukiyo Habitat</span>
         </Link>
         {/* Desktop Nav */}
-        <ul className={(floating ? "flex gap-6 font-medium text-white font-inter" : "flex gap-6 font-medium text-white font-inter") + " hidden sm:flex"} style={{ fontSize: '1.2rem' }}>
-          <li><Link href="/projects" className="hover:underline">Our Work</Link></li>
-          <li><Link href="/about" className="hover:underline">About Us</Link></li>
-          <li><Link href="/services" className="hover:underline">Services</Link></li>
-          <li><Link href="/think-tank" className="hover:underline">Think Tank</Link></li>
-          <li><Link href="/contact" className="hover:underline">Contact</Link></li>
+        <ul className={`flex gap-8 font-medium text-[#232323] font-inter hidden sm:flex transition-all duration-300 ${
+          scrolled ? 'gap-6' : 'gap-8'
+        }`} style={{ 
+          fontSize: scrolled ? '0.9rem' : '0.95rem', 
+          letterSpacing: '0.3px' 
+        }}>
+          <li><Link href="/projects" className="hover:text-[#e7a77e] transition-all duration-300 font-semibold relative group hover:scale-105">Our Work
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#e7a77e] transition-all duration-300 group-hover:w-full"></span>
+          </Link></li>
+          <li><Link href="/about" className="hover:text-[#e7a77e] transition-all duration-300 font-semibold relative group hover:scale-105">About Us
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#e7a77e] transition-all duration-300 group-hover:w-full"></span>
+          </Link></li>
+          <li><Link href="/services" className="hover:text-[#e7a77e] transition-all duration-300 font-semibold relative group hover:scale-105">Services
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#e7a77e] transition-all duration-300 group-hover:w-full"></span>
+          </Link></li>
+          <li><Link href="/think-tank" className="hover:text-[#e7a77e] transition-all duration-300 font-semibold relative group hover:scale-105">Think Tank
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#e7a77e] transition-all duration-300 group-hover:w-full"></span>
+          </Link></li>
+          <li><Link href="/contact" className="hover:text-[#e7a77e] transition-all duration-300 font-semibold relative group hover:scale-105">Contact
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#e7a77e] transition-all duration-300 group-hover:w-full"></span>
+          </Link></li>
         </ul>
         {/* Hamburger Icon for Mobile */}
         <button
-          className={`sm:hidden flex flex-col justify-center items-center w-10 h-10 rounded focus:outline-none focus:ring-2 focus:ring-[#e7a77e] ${floating ? 'text-white' : 'text-white'} z-70`}
+          className={`sm:hidden flex flex-col justify-center items-center rounded-full focus:outline-none focus:ring-2 focus:ring-[#e7a77e] text-[#232323] z-70 transition-all duration-300 ${
+            scrolled ? 'w-7 h-7' : 'w-8 h-8'
+          }`}
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           onClick={() => setMenuOpen((open) => !open)}
         >
-          <span className={`block w-6 h-0.5 bg-current mb-1 transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
-          <span className={`block w-6 h-0.5 bg-current mb-1 transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`}></span>
-          <span className={`block w-6 h-0.5 bg-current transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
+          <span className={`block bg-current mb-1 transition-all duration-300 ${
+            scrolled ? 'w-4 h-0.5' : 'w-5 h-0.5'
+          } ${menuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
+          <span className={`block bg-current mb-1 transition-all duration-300 ${
+            scrolled ? 'w-4 h-0.5' : 'w-5 h-0.5'
+          } ${menuOpen ? 'opacity-0' : ''}`}></span>
+          <span className={`block bg-current transition-all duration-300 ${
+            scrolled ? 'w-4 h-0.5' : 'w-5 h-0.5'
+          } ${menuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
         </button>
       </nav>
       {/* Mobile Menu Overlay */}

@@ -96,99 +96,105 @@ export default function Projects() {
       : projects.filter((p) => p.category === selectedCategory);
 
   return (
-    <section className="max-w-7xl mx-auto py-16 px-4">
-      <h1 className="text-4xl font-bold mb-12 text-[#232323] text-center">Our Work</h1>
-      
-      {/* Filter Tabs/Chips */}
-      <div className="flex justify-center gap-4 mb-16 flex-wrap">
-        {categories.map((cat) => (
-          <button
-            key={cat}
-            onClick={() => setSelectedCategory(cat)}
-            className={`px-6 py-3 rounded-full font-semibold border transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#e7a77e] text-base shadow-sm
-              ${selectedCategory === cat
-                ? "bg-gradient-to-r from-[#e7a77e] to-[#f59e42] text-white border-transparent shadow-lg"
-                : "bg-white text-[#232323] border-[#e7a77e] hover:bg-[#f6f2ed] hover:shadow-md"}
-            `}
-            aria-pressed={selectedCategory === cat}
-          >
-            {cat}
-          </button>
-        ))}
-      </div>
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-[#f6f2ed] to-[#f0ebe6] py-24 relative overflow-hidden">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="mb-8">
+            <div className="w-32 h-1 bg-gradient-to-r from-[#e7a77e] to-[#f59e42] mx-auto mb-8 rounded-full"></div>
+          </div>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#232323] mb-8 leading-tight">
+            Our <span className="text-[#e7a77e]">Work</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-[#6b7280] leading-relaxed max-w-4xl mx-auto">
+            Each project is a conversation — with land, with people, and with possibility. Explore how our work translates values into space, and vision into impact.
+          </p>
+        </div>
+      </section>
 
-      {/* CSS Grid Layout */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {filteredProjects.map((project, idx) => (
-          <div
-            key={project.title + idx}
-            className="bg-white rounded-3xl shadow-xl overflow-hidden opacity-0 animate-fadeIn hover:shadow-2xl transition-all duration-300 flex flex-col h-full"
-            style={{ animationDelay: `${idx * 100}ms`, animationFillMode: 'forwards' }}
-          >
-            {/* Hero Image */}
-            <div className="relative flex-shrink-0">
-              <img
-                src={project.mainImage}
-                alt={`${project.title} - Main view`}
-                className="w-full h-64 object-cover"
-                loading="lazy"
-              />
-              {/* Dark overlay for better text visibility */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
-              {/* Category Badge */}
-              <div className="absolute top-4 left-4">
-                <span className="bg-white/90 backdrop-blur-sm text-[#232323] px-3 py-1 rounded-full text-sm font-medium">
-                  {project.category}
-                </span>
+      {/* Projects Section */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Category Filter */}
+          <div className="flex flex-wrap justify-center gap-4 mb-16">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                  selectedCategory === category
+                    ? 'bg-gradient-to-r from-[#e7a77e] to-[#f59e42] text-white shadow-lg'
+                    : 'bg-[#f6f2ed] text-[#6b7280] hover:bg-[#e7a77e]/10 hover:text-[#e7a77e]'
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+
+          {/* Projects Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredProjects.map((project) => (
+              <div key={project.id} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 overflow-hidden">
+                <div className="aspect-video bg-gray-200 relative overflow-hidden">
+                  <img
+                    src={project.mainImage}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-[#e7a77e] text-white px-3 py-1 rounded-full text-sm font-semibold">
+                      {project.category}
+                    </span>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-[#232323] mb-3 leading-tight">
+                    {project.title}
+                  </h3>
+                  <p className="text-[#6b7280] leading-relaxed mb-4">
+                    {project.shortDescription}
+                  </p>
+                  {project.cta && (
+                    <a
+                      href={project.cta.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-[#e7a77e] font-semibold hover:text-[#e38d5f] transition-colors duration-200 group"
+                    >
+                      {project.cta.label}
+                      <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                      </svg>
+                    </a>
+                  )}
+                </div>
               </div>
-            </div>
+            ))}
+          </div>
 
-            {/* Content */}
-            <div className="p-6 flex flex-col flex-grow">
-              {/* Title */}
-              <h3 className="text-xl font-bold mb-3 text-[#232323] leading-tight min-h-[3rem]">
-                {project.title}
-              </h3>
-              
-              {/* Short Description */}
-              <p className="text-[#6b7280] mb-6 text-sm leading-relaxed flex-grow">
-                {project.shortDescription}
+          {/* CTA Section */}
+          <div className="text-center mt-16">
+            <div className="bg-gradient-to-br from-[#f6f2ed] to-[#f0ebe6] rounded-2xl p-12 border border-[#e7d8c9]">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#232323] mb-6">
+                Ready to Start Your Project?
+              </h2>
+              <p className="text-xl text-[#6b7280] mb-8 max-w-2xl mx-auto">
+                Let's discuss how we can bring your vision to life with sustainable, innovative design solutions.
               </p>
-
-              {/* Action Button */}
-              <div className="mt-auto">
-                <Link
-                  href={`/projects/${project.id}`}
-                  className="w-full bg-gradient-to-r from-[#e7a77e] to-[#f59e42] text-white font-semibold rounded-full px-6 py-3 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 text-sm text-center block"
-                >
-                  View Details
-                </Link>
-              </div>
+              <Link 
+                href="/contact" 
+                className="inline-flex items-center px-10 py-4 bg-gradient-to-r from-[#e7a77e] to-[#f59e42] text-white font-semibold rounded-full hover:from-[#e38d5f] hover:to-[#ea580c] transition-all duration-300 shadow-lg hover:shadow-xl text-lg group"
+              >
+                Start a Conversation
+                <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+              </Link>
             </div>
           </div>
-        ))}
-      </div>
-
-      {/* Animation styles */}
-      <style jsx global>{`
-        @keyframes fadeIn {
-          to {
-            opacity: 1;
-            transform: none;
-          }
-        }
-        .animate-fadeIn {
-          opacity: 0;
-          transform: translateY(30px);
-          animation: fadeIn 0.6s ease forwards;
-        }
-        .line-clamp-3 {
-          display: -webkit-box;
-          -webkit-line-clamp: 3;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
-        }
-      `}</style>
-    </section>
+        </div>
+      </section>
+    </div>
   );
 } 

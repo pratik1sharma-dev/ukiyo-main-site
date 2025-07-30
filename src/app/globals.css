@@ -3,6 +3,18 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  
+  /* Brand Colors */
+  --color-primary: #e7a77e;
+  --color-primary-dark: #e38d5f;
+  --color-secondary: #f59e42;
+  --color-secondary-dark: #ea580c;
+  --color-accent: #f6f2ed;
+  --color-accent-light: #f0ebe6;
+  --color-text: #232323;
+  --color-text-light: #6b7280;
+  --color-border: #b7c9c9;
+  --color-border-light: #e7d8c9;
 }
 
 @theme inline {
@@ -22,5 +34,83 @@
 body {
   /* Remove background so layout can control it */
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e7a77e;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e38d5f;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+*:focus {
+  outline: 2px solid #e7a77e;
+  outline-offset: 2px;
+}
+
+/* Button hover effects */
+.btn-primary {
+  @apply bg-gradient-to-r from-[#e7a77e] to-[#f59e42] hover:from-[#e38d5f] hover:to-[#ea580c] text-white font-semibold rounded-full px-6 py-3 transition-all duration-300 shadow-lg hover:shadow-xl;
+}
+
+.btn-secondary {
+  @apply bg-transparent border border-[#e7a77e] text-[#e7a77e] hover:bg-[#e7a77e] hover:text-white font-semibold rounded-full px-6 py-3 transition-all duration-300;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100;
+}
+
+.card-hover {
+  @apply transform hover:-translate-y-2 transition-all duration-300;
+}
+
+/* Section styles */
+.section-padding {
+  @apply py-16 md:py-24;
+}
+
+.container-width {
+  @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Typography */
+.heading-1 {
+  @apply text-4xl md:text-5xl lg:text-6xl font-bold text-[#232323] leading-tight;
+}
+
+.heading-2 {
+  @apply text-3xl md:text-4xl font-bold text-[#232323] leading-tight;
+}
+
+.heading-3 {
+  @apply text-2xl md:text-3xl font-bold text-[#232323] leading-tight;
+}
+
+.body-text {
+  @apply text-lg text-[#6b7280] leading-relaxed;
+}
+
+.body-text-large {
+  @apply text-xl text-[#6b7280] leading-relaxed;
 }
