@@ -22,53 +22,29 @@ interface ThinkTankItem {
 const thinkTankContent: ThinkTankItem[] = [
   {
     id: 'ooh-urban-design',
-    title: 'OOH as an Integral Part of Public Space Design',
-    category: 'Urban Experience Research',
-    shortDescription: 'Exploring how Out-of-Home advertising can be reimagined as an integral part of urban design and public space experience.',
+    title: 'Reimagining OOH in Public Space Design',
+    category: 'Keynote Presentation',
+    shortDescription: 'Garima Dubey at South India Talks OOH 2025 on integrating OOH media with public spaces for better urban experiences.',
     mainImage: '/ooh-garima.jpg',
-    date: '2024-05-03',
+    date: '2025-04-30',
     author: 'Garima Dubey',
-    readTime: '8 min read',
+    readTime: '5 min read',
     content: [
-      { type: 'heading', text: 'Research Overview' },
-      { type: 'paragraph', text: 'This research paper, originally presented at the Third South India Talks OOH event, explores the transformative potential of Out-of-Home (OOH) advertising as a fundamental element of urban design. Our study challenges the conventional view of OOH as mere commercial messaging, instead positioning it as a dynamic component of the urban experience that can enhance public spaces when thoughtfully integrated with architectural and landscape design principles.' },
+      { type: 'heading', text: 'Keynote at South India Talks OOH 2025' },
+      { type: 'paragraph', text: 'Garima Dubey, Co-Founder of Ukiyo Habitat LLP, recently spoke at South India Talks OOH 2025, held on April 30 at the Hilton Hotel, Chennai. Her talk, titled "OOH as an Integral Part of Public Space Design", redefined how out-of-home (OOH) media can integrate with public spaces to serve both design and communication goals.' },
       { 
         type: 'image', 
         src: '/ooh-garima.jpg', 
-        alt: 'Garima Dubey presenting at South India Talks OOH',
-        caption: 'Presentation at the Third South India Talks OOH event, May 2024'
+        alt: 'Garima Dubey presenting at South India Talks OOH 2025',
+        caption: 'Presentation at South India Talks OOH 2025, Hilton Hotel, Chennai'
       },
-      { type: 'paragraph', text: 'The presentation painted a picture where advertising transcends its traditional disruptive role, becoming an enriching element of the urban experience. We explored how OOH can evolve from an interruption to a resumption, like "that white character in a movie that doesn\'t say much, but changes the entire plot."' },
-      { type: 'heading', text: 'Research Methodology' },
-      { type: 'paragraph', text: 'Our research team conducted a comprehensive analysis through:' },
-      { type: 'list', items: [
-        'Case studies of 15 international cities with innovative OOH integration',
-        'Interviews with urban designers, advertising professionals, and public space users',
-        'Behavioral mapping of public interactions with OOH installations',
-        'Analysis of regulatory frameworks governing urban advertising',
-        'Evaluation of material sustainability and environmental impact'
-      ]},
-      { type: 'heading', text: 'Key Research Findings' },
-      { type: 'paragraph', text: 'Our analysis revealed several critical insights about OOH in urban contexts:' },
-      { type: 'list', items: [
-        'OOH can serve as wayfinding elements when integrated with urban furniture',
-        'Digital OOH displays can enhance public safety through real-time information sharing',
-        'Thoughtfully designed OOH can create micro-public spaces and gathering points',
-        'The line between advertising and public art is increasingly blurred in successful implementations',
-        'Community-engaged OOH projects show higher levels of public acceptance and engagement'
-      ]},
-      { type: 'heading', text: 'Case Study: Singapore\'s Smart OOH Network' },
-      { type: 'paragraph', text: 'Singapore\'s approach to integrating digital OOH with urban infrastructure demonstrates how advertising can serve multiple urban functions. The city-state has transformed bus shelters and pedestrian walkways into interactive information hubs that combine commercial messaging with public service announcements and environmental monitoring.' },
-      { type: 'heading', text: 'Recommendations for Urban Practitioners' },
-      { type: 'paragraph', text: 'Based on our research, we propose the following framework for integrating OOH into urban design:' },
-      { type: 'list', items: [
-        'Develop design guidelines that treat OOH as urban furniture',
-        'Create public-private partnerships for funding and maintenance',
-        'Incorporate community input in OOH placement and content',
-        'Use sustainable materials and energy-efficient technologies',
-        'Design for flexibility to accommodate changing urban needs'
-      ]},
-      { type: 'paragraph', text: 'This research was presented at the 2024 International Urban Design Conference and has been featured in several urban planning publications.' }
+      { type: 'paragraph', text: 'Drawing on her expertise as a landscape architect and urban ecologist, Garima offered a bold perspective on how OOH can contribute positively to the urban realm. Her approach blends climate-sensitive design with democratic placemaking—highlighting how civic infrastructure, when designed thoughtfully, can balance brand presence with environmental and social needs.' },
+      { type: 'paragraph', text: 'Garima\'s work at Ukiyo Habitat LLP focuses on ecology-driven, community-centric public space design. Her session delved into the possibilities of integrating OOH seamlessly into urban landscapes to enhance user experience, support city narratives, and ensure inclusivity.' },
+      { type: 'heading', text: 'About the Speaker' },
+      { type: 'paragraph', text: 'Garima brings a rich academic background as a design educator at Dr. B.R. Ambedkar University and Netaji Subhash University of Technology in Delhi, where she focuses on blue-green infrastructure and sustainable cities.' },
+      { type: 'heading', text: 'Event Details' },
+      { type: 'paragraph', text: 'The event, organised by Thoughtshows & Events Pvt. Ltd., revolved around the theme "Beyond Billboards: Reimagining OOH"—gathering designers, policymakers, and media professionals to shape the future of the medium.' },
+      { type: 'paragraph', text: '📰 Read the event announcement on Media4Growth' }
     ]
   },
   {

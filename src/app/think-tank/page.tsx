@@ -5,7 +5,7 @@ import Image from 'next/image';
 const thinkTankContent = [
   {
     id: 'ooh-urban-design',
-    title: 'Research: OOH Advertising as Urban Design',
+    title: 'OOH Advertising as Urban Design',
     category: 'Urban Experience Research',
     shortDescription: 'Exploring how Out-of-Home advertising can be reimagined as an integral part of urban design and public space experience.',
     mainImage: '/ooh-garima.jpg',
@@ -15,7 +15,7 @@ const thinkTankContent = [
   },
   {
     id: 'ahmedabad-haat-street',
-    title: 'Research: Ahmedabad Haat Street Revitalization',
+    title: 'Ahmedabad Haat Street Revitalization',
     category: 'Urban Design Research',
     shortDescription: 'An in-depth analysis of urban street revitalization through the lens of Ahmedabad\'s Haat Street transformation.',
     mainImage: '/projects/haat/9.png',
@@ -25,7 +25,7 @@ const thinkTankContent = [
   },
   {
     id: 'vastrapur-lake',
-    title: 'Research: Vastrapur Lake Revitalization',
+    title: 'Vastrapur Lake Revitalization',
     category: 'Urban Design Research',
     shortDescription: 'A comprehensive analysis of urban lake revitalization strategies through the case study of Vastrapur Lake, Ahmedabad.',
     mainImage: '/projects/vastrapur lake/1.png',
