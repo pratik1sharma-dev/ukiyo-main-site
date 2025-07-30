@@ -93,19 +93,19 @@ export default function Footer() {
             <div className="space-y-4">
               <h3 className="text-xl font-bold text-[#232323] mb-4">Recognitions</h3>
               <div className="space-y-3">
-                                 {/* Startup India */}
-                 <div className="flex items-center gap-3">
-                   <img 
-                     src="/startup-logo.webp" 
-                     alt="Startup India Logo" 
-                     className="w-16 h-16 object-contain"
-                     loading="lazy"
-                   />
-                   <div>
-                     <p className="text-sm font-semibold text-[#232323]">Startup India</p>
-                     <p className="text-xs text-[#6b7280]">Government of India</p>
-                   </div>
-                 </div>
+                                                                   {/* Startup India */}
+                  <div className="flex items-center gap-3">
+                    <img 
+                      src="/startup-logo.webp" 
+                      alt="Startup India Logo" 
+                      className="w-20 h-20 object-contain"
+                      loading="lazy"
+                    />
+                    <div>
+                      <p className="text-sm font-semibold text-[#232323]">Startup India</p>
+                      <p className="text-xs text-[#6b7280]">Government of India</p>
+                    </div>
+                  </div>
 
                                                                    {/* IPI University */}
                   <a 
