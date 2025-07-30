@@ -66,12 +66,26 @@ export const metadata: Metadata = {
   },
   manifest: '/site.webmanifest',
   keywords: [
-    'landscape architecture',
-    'urban design',
-    'sustainable design',
-    'ecological design',
-    'architecture firm',
-    'Ukiyo Habitat'
+    'landscape architecture India',
+    'urban design Delhi',
+    'sustainable architecture firm',
+    'ecological design studio',
+    'climate-responsive design',
+    'participatory urbanism',
+    'blue-green infrastructure',
+    'public space design',
+    'urban resilience',
+    'community placemaking',
+    'water-sensitive design',
+    'adaptive reuse architecture',
+    'child-friendly spaces',
+    'Ukiyo Habitat',
+    'architectural firm Delhi',
+    'landscape architect India',
+    'urban ecologist',
+    'sustainable urban design',
+    'ecological landscape architecture',
+    'climate-adaptive design'
   ],
 };
 
@@ -129,10 +143,10 @@ export default function RootLayout({
         />
       </head>
       <body className={`${cormorant.variable} bg-[#f6f2ed] min-h-screen flex flex-col`}>
-        <div className="relative w-full min-h-screen">
-          <Header />
-          <main className="flex-1">{children}</main>
-        </div>
+        <Header />
+        <main className="flex-1 w-full">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

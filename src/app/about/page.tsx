@@ -6,17 +6,31 @@ export const metadata = {
   description: "A studio built on imagination, ecology, and urgency. Discover Ukiyo Habitat's story, philosophy, and work in climate-responsive, people-centric design.",
   keywords: [
     "about Ukiyo Habitat",
-    "ecological design studio",
+    "ecological design studio India",
     "founding philosophy architecture",
     "climate-responsive design India",
     "participatory urbanism",
-    "design for the future"
+    "design for the future",
+    "Garima Dubey landscape architect",
+    "Vidushi Singh architect",
+    "urban ecology Delhi",
+    "sustainable design philosophy",
+    "ecological design approach",
+    "community-driven design",
+    "urban resilience India",
+    "blue-green infrastructure Delhi",
+    "water-sensitive planning",
+    "public spaces democratic",
+    "ecological commons",
+    "landscape architecture studio",
+    "urban design education",
+    "sustainable cities India"
   ],
 };
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white pt-24">
       {/* Main Content */}
       <main>
         {/* 1. Hero Section - Origin Story + Design Philosophy */}
@@ -28,7 +42,7 @@ export default function About() {
           
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <div className="mb-8">
-              <div className="w-32 h-1 bg-gradient-to-r from-[#e7a77e] to-[#f59e42] mx-auto mb-8 rounded-full"></div>
+              <div className="divider-primary mx-auto mb-8"></div>
             </div>
             
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#232323] mb-8 leading-tight">
@@ -39,7 +53,7 @@ export default function About() {
               Ukiyo Habitat was born from a shared restlessness — with the way cities were being shaped, with landscapes being reduced to visuals, and with the silence around ecological time.
             </p>
             
-            <div className="w-24 h-1 bg-gradient-to-r from-[#e7a77e] to-[#f59e42] mx-auto mb-12 rounded-full"></div>
+            <div className="divider-primary mx-auto mb-12"></div>
             
             <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-[#e7d8c9]">
               <h2 className="text-2xl md:text-3xl font-bold text-[#232323] mb-6">
@@ -59,7 +73,7 @@ export default function About() {
               <h2 className="text-3xl md:text-4xl font-bold text-[#232323] mb-6">
                 Our Approach
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-[#e7a77e] to-[#f59e42] mx-auto rounded-full"></div>
+              <div className="divider-primary mx-auto"></div>
             </div>
             
             <div className="space-y-12">
@@ -88,7 +102,7 @@ export default function About() {
               <p className="text-xl text-[#6b7280] mb-8 max-w-3xl mx-auto">
                 Observe, Collaborate, Reimagine
               </p>
-              <div className="w-32 h-1 bg-gradient-to-r from-[#e7a77e] to-[#f59e42] mx-auto rounded-full"></div>
+              <div className="divider-primary mx-auto"></div>
             </div>
 
             <div className="grid md:grid-cols-3 gap-12">
@@ -142,7 +156,7 @@ export default function About() {
               <h2 className="text-4xl md:text-5xl font-bold text-[#232323] mb-6">
                 Our Founders
               </h2>
-              <div className="w-32 h-1 bg-gradient-to-r from-[#e7a77e] to-[#f59e42] mx-auto rounded-full"></div>
+              <div className="divider-primary mx-auto"></div>
             </div>
 
             <div className="space-y-20">
@@ -180,12 +194,12 @@ export default function About() {
                     <div className="pt-4">
                       <h4 className="text-lg font-semibold text-[#232323] mb-3">Expertise Areas:</h4>
                       <div className="flex flex-wrap gap-2">
-                        <span className="bg-[#e7a77e]/10 text-[#e7a77e] px-3 py-1 rounded-full text-sm">Landscape Architecture</span>
-                        <span className="bg-[#e7a77e]/10 text-[#e7a77e] px-3 py-1 rounded-full text-sm">Urban Ecology</span>
-                        <span className="bg-[#e7a77e]/10 text-[#e7a77e] px-3 py-1 rounded-full text-sm">Climate-Responsive Design</span>
-                        <span className="bg-[#e7a77e]/10 text-[#e7a77e] px-3 py-1 rounded-full text-sm">Public Space Design</span>
-                        <span className="bg-[#e7a77e]/10 text-[#e7a77e] px-3 py-1 rounded-full text-sm">Blue-Green Systems</span>
-                        <span className="bg-[#e7a77e]/10 text-[#e7a77e] px-3 py-1 rounded-full text-sm">Urban Resilience</span>
+                        <span className="tag-primary">Landscape Architecture</span>
+                        <span className="tag-primary">Urban Ecology</span>
+                        <span className="tag-primary">Climate-Responsive Design</span>
+                        <span className="tag-secondary">Public Space Design</span>
+                        <span className="tag-secondary">Blue-Green Systems</span>
+                        <span className="tag-accent">Urban Resilience</span>
                       </div>
                     </div>
                   </div>
@@ -222,13 +236,13 @@ export default function About() {
                     <div className="pt-4">
                       <h4 className="text-lg font-semibold text-[#232323] mb-3">Expertise Areas:</h4>
                       <div className="flex flex-wrap gap-2">
-                        <span className="bg-[#e7a77e]/10 text-[#e7a77e] px-3 py-1 rounded-full text-sm">Architecture</span>
-                        <span className="bg-[#e7a77e]/10 text-[#e7a77e] px-3 py-1 rounded-full text-sm">Urban Design</span>
-                        <span className="bg-[#e7a77e]/10 text-[#e7a77e] px-3 py-1 rounded-full text-sm">Interior Design</span>
-                        <span className="bg-[#e7a77e]/10 text-[#e7a77e] px-3 py-1 rounded-full text-sm">Urban Planning</span>
-                        <span className="bg-[#e7a77e]/10 text-[#e7a77e] px-3 py-1 rounded-full text-sm">Adaptive Reuse</span>
-                        <span className="bg-[#e7a77e]/10 text-[#e7a77e] px-3 py-1 rounded-full text-sm">Child-Friendly Spaces</span>
-                        <span className="bg-[#e7a77e]/10 text-[#e7a77e] px-3 py-1 rounded-full text-sm">Sustainable Design</span>
+                        <span className="tag-primary">Architecture</span>
+                        <span className="tag-primary">Urban Design</span>
+                        <span className="tag-secondary">Interior Design</span>
+                        <span className="tag-secondary">Urban Planning</span>
+                        <span className="tag-accent">Adaptive Reuse</span>
+                        <span className="tag-accent">Child-Friendly Spaces</span>
+                        <span className="tag-primary">Sustainable Design</span>
                       </div>
                     </div>
                   </div>
@@ -277,7 +291,7 @@ export default function About() {
             <div className="text-center mt-16">
               <Link 
                 href="/projects" 
-                className="inline-flex items-center px-10 py-4 bg-gradient-to-r from-[#e7a77e] to-[#f59e42] text-white font-semibold rounded-full hover:from-[#f59e42] hover:to-[#f59e42]/90 transition-all duration-300 shadow-lg hover:shadow-xl text-lg group"
+                className="btn-primary inline-flex items-center text-lg group"
               >
                 See All Projects →
                 <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -304,7 +318,7 @@ export default function About() {
               
               <Link 
                 href="/contact" 
-                className="inline-flex items-center px-12 py-5 bg-gradient-to-r from-[#e7a77e] to-[#f59e42] text-white font-semibold rounded-full hover:from-[#f59e42] hover:to-[#f59e42]/90 transition-all duration-300 shadow-lg hover:shadow-xl text-xl group"
+                className="btn-primary inline-flex items-center text-xl group"
               >
                 Start a Conversation →
                 <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

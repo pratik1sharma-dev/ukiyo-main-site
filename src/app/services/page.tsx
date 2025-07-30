@@ -4,18 +4,37 @@ export const metadata = {
   title: "Services | Ukiyo Habitat",
   description: "Discover the range of architectural and design services offered by Ukiyo Habitat, including landscape architecture, urban design, interior design, and branding.",
   keywords: [
-    "landscape architecture services",
-    "urban design India",
-    "interior environments",
-    "brand communication",
+    "landscape architecture services India",
+    "urban design Delhi",
+    "interior environments design",
+    "brand communication design",
     "speculative futures workshops",
-    "ecological design services"
+    "ecological design services",
+    "sustainable landscape architecture",
+    "public space design services",
+    "campus landscape design",
+    "streetscape design India",
+    "water-sensitive landscape design",
+    "climate-responsive architecture",
+    "participatory design workshops",
+    "urban planning services",
+    "adaptive reuse design",
+    "child-friendly space design",
+    "blue-green infrastructure design",
+    "urban resilience planning",
+    "community placemaking services",
+    "ecological restoration design",
+    "sustainable urban development",
+    "landscape-led masterplans",
+    "co-designed public spaces",
+    "environmental design services",
+    "social impact design"
   ],
 };
 
 export default function Services() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white pt-24">
       {/* Main Content */}
       <main>
         {/* Hero Section */}

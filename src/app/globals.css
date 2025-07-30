@@ -15,6 +15,12 @@
   --color-text-light: #6b7280;
   --color-border: #b7c9c9;
   --color-border-light: #e7d8c9;
+  
+  /* Enhanced Accent Colors */
+  --color-accent-brown: #8B7355;
+  --color-accent-slate: #2F4F4F;
+  --color-accent-warm: #D2691E;
+  --color-accent-cool: #4682B4;
 }
 
 @theme inline {
@@ -67,16 +73,20 @@ html {
   outline-offset: 2px;
 }
 
-/* Button hover effects */
+/* Enhanced Button Styles */
 .btn-primary {
-  @apply bg-gradient-to-r from-[#e7a77e] to-[#f59e42] hover:from-[#e38d5f] hover:to-[#ea580c] text-white font-semibold rounded-full px-6 py-3 transition-all duration-300 shadow-lg hover:shadow-xl;
+  @apply bg-gradient-to-r from-[#e7a77e] via-[#f59e42] to-[#ea580c] hover:from-[#e38d5f] hover:via-[#ea580c] hover:to-[#d18e64] text-white font-semibold rounded-full px-6 py-3 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1;
 }
 
 .btn-secondary {
-  @apply bg-transparent border border-[#e7a77e] text-[#e7a77e] hover:bg-[#e7a77e] hover:text-white font-semibold rounded-full px-6 py-3 transition-all duration-300;
+  @apply bg-transparent border border-[#e7a77e] text-[#e7a77e] hover:bg-gradient-to-r hover:from-[#e7a77e] hover:to-[#f59e42] hover:text-white font-semibold rounded-full px-6 py-3 transition-all duration-300 transform hover:-translate-y-1;
 }
 
-/* Card styles */
+.btn-accent {
+  @apply bg-gradient-to-r from-[#8B7355] to-[#2F4F4F] hover:from-[#2F4F4F] hover:to-[#8B7355] text-white font-semibold rounded-full px-6 py-3 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1;
+}
+
+/* Enhanced Card Styles */
 .card {
   @apply bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100;
 }
@@ -85,7 +95,11 @@ html {
   @apply transform hover:-translate-y-2 transition-all duration-300;
 }
 
-/* Section styles */
+.card-accent {
+  @apply bg-gradient-to-br from-[#f6f2ed] via-[#f0ebe6] to-[#e7d8c9] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-[#8B7355]/20;
+}
+
+/* Enhanced Section Styles */
 .section-padding {
   @apply py-16 md:py-24;
 }
@@ -94,7 +108,15 @@ html {
   @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
 }
 
-/* Typography */
+.section-gradient {
+  @apply bg-gradient-to-br from-[#f6f2ed] via-[#f0ebe6] to-[#e7d8c9];
+}
+
+.section-gradient-reverse {
+  @apply bg-gradient-to-br from-[#e7d8c9] via-[#f0ebe6] to-[#f6f2ed];
+}
+
+/* Enhanced Typography */
 .heading-1 {
   @apply text-4xl md:text-5xl lg:text-6xl font-bold text-[#232323] leading-tight;
 }
@@ -107,10 +129,76 @@ html {
   @apply text-2xl md:text-3xl font-bold text-[#232323] leading-tight;
 }
 
+.heading-accent {
+  @apply text-2xl md:text-3xl font-bold text-[#2F4F4F] leading-tight;
+}
+
 .body-text {
   @apply text-lg text-[#6b7280] leading-relaxed;
 }
 
 .body-text-large {
   @apply text-xl text-[#6b7280] leading-relaxed;
+}
+
+/* Enhanced Decorative Elements */
+.divider-primary {
+  @apply w-24 h-1 bg-gradient-to-r from-[#e7a77e] via-[#f59e42] to-[#ea580c] rounded-full;
+}
+
+.divider-accent {
+  @apply w-24 h-1 bg-gradient-to-r from-[#8B7355] to-[#2F4F4F] rounded-full;
+}
+
+.divider-subtle {
+  @apply w-32 h-1 bg-gradient-to-r from-transparent via-[#e7d8c9] to-transparent rounded-full;
+}
+
+/* Enhanced Background Patterns */
+.bg-pattern-dots {
+  background-image: radial-gradient(circle, #e7a77e 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-color: #f6f2ed;
+}
+
+.bg-pattern-lines {
+  background-image: linear-gradient(45deg, #e7d8c9 25%, transparent 25%), linear-gradient(-45deg, #e7d8c9 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #e7d8c9 75%), linear-gradient(-45deg, transparent 75%, #e7d8c9 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  background-color: #f6f2ed;
+}
+
+/* Enhanced Hover Effects */
+.hover-lift {
+  @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-xl;
+}
+
+.hover-glow {
+  @apply transition-all duration-300 hover:shadow-lg hover:shadow-[#e7a77e]/20;
+}
+
+.hover-accent {
+  @apply transition-all duration-300 hover:text-[#e7a77e] hover:scale-105;
+}
+
+/* Enhanced Form Elements */
+.input-enhanced {
+  @apply border border-[#b7c9c9] focus:border-[#e7a77e] focus:ring-2 focus:ring-[#e7a77e]/20 rounded-lg px-4 py-3 transition-all duration-300;
+}
+
+.input-accent {
+  @apply border border-[#8B7355]/30 focus:border-[#2F4F4F] focus:ring-2 focus:ring-[#2F4F4F]/20 rounded-lg px-4 py-3 transition-all duration-300;
+}
+
+/* Enhanced Tag/Badge Styles */
+.tag-primary {
+  @apply bg-gradient-to-r from-[#e7a77e]/10 to-[#f59e42]/10 text-[#e7a77e] px-3 py-1 rounded-full text-sm border border-[#e7a77e]/20;
+}
+
+.tag-accent {
+  @apply bg-gradient-to-r from-[#8B7355]/10 to-[#2F4F4F]/10 text-[#2F4F4F] px-3 py-1 rounded-full text-sm border border-[#8B7355]/20;
+}
+
+.tag-secondary {
+  @apply bg-gradient-to-r from-[#f59e42]/10 to-[#ea580c]/10 text-[#ea580c] px-3 py-1 rounded-full text-sm border border-[#f59e42]/20;
 }

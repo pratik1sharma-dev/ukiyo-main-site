@@ -4,7 +4,8 @@ import Link from 'next/link';
 type ContentItem = 
   | { type: 'heading' | 'paragraph'; text: string }
   | { type: 'image'; src: string; alt: string; caption?: string }
-  | { type: 'list'; items: string[] };
+  | { type: 'list'; items: string[] }
+  | { type: 'link'; text: string; label: string };
 
 interface ThinkTankItem {
   id: string;
@@ -44,7 +45,8 @@ const thinkTankContent: ThinkTankItem[] = [
       { type: 'paragraph', text: 'Garima brings a rich academic background as a design educator at Dr. B.R. Ambedkar University and Netaji Subhash University of Technology in Delhi, where she focuses on blue-green infrastructure and sustainable cities.' },
       { type: 'heading', text: 'Event Details' },
       { type: 'paragraph', text: 'The event, organised by Thoughtshows & Events Pvt. Ltd., revolved around the theme "Beyond Billboards: Reimagining OOH"—gathering designers, policymakers, and media professionals to shape the future of the medium.' },
-      { type: 'paragraph', text: '📰 Read the event announcement on Media4Growth' }
+      { type: 'paragraph', text: '📰 Read the event announcement on Media4Growth' },
+      { type: 'link', text: 'https://www.media4growth.com/events/talks-ooh-news/garima-dubey-co-founder-of-ukiyo-habitat-llp-to-address-south-india-talks-ooh-2025-76386', label: 'Media4Growth Article' }
     ]
   },
   {
@@ -162,11 +164,11 @@ export default function ThinkTankArticle({ params }: { params: { id: string } })
                 )}
               </div>
               <div className="md:col-span-2">
-                <div className="bg-gradient-to-br from-[#f6f2ed] to-[#f0ebe6] rounded-lg p-6">
-                  <h3 className="text-lg font-semibold text-[#232323] mb-3">
+                <div className="card-accent p-6">
+                  <h3 className="heading-accent mb-3">
                     Presentation Highlights
                   </h3>
-                  <p className="text-[#6b7280] leading-relaxed">
+                  <p className="body-text">
                     Garima's keynote presentation at South India Talks OOH 2025 focused on integrating out-of-home media with public space design, emphasizing climate-sensitive approaches and democratic placemaking principles.
                   </p>
                 </div>
@@ -181,6 +183,22 @@ export default function ThinkTankArticle({ params }: { params: { id: string } })
               <li key={i} className="mb-2">{listItem}</li>
             ))}
           </ul>
+        );
+      case 'link':
+        return (
+          <div className="my-4">
+            <a 
+              href={item.text} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-[#e7a77e] hover:text-[#d18e64] transition-colors font-semibold"
+            >
+              {item.label} →
+              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+              </svg>
+            </a>
+          </div>
         );
       default:
         return null;
@@ -208,7 +226,8 @@ export default function ThinkTankArticle({ params }: { params: { id: string } })
   }
 
   return (
-    <article className="bg-white rounded-xl shadow-md overflow-hidden">
+    <div className="pt-24">
+      <article className="bg-white rounded-xl shadow-md overflow-hidden">
       <div className="relative w-full">
         {article.mainImage && (
           <div className="aspect-[16/9] md:aspect-[21/9] relative">
@@ -254,9 +273,9 @@ export default function ThinkTankArticle({ params }: { params: { id: string } })
               case 'image':
                 return (
                   <div key={index} className="my-8">
-                    <div className="grid md:grid-cols-3 gap-8 items-center">
-                      <div className="md:col-span-1">
-                        <div className="relative w-full rounded-lg overflow-hidden shadow-lg">
+                    <div className="flex flex-col md:flex-row md:gap-10 items-center md:items-start">
+                      <div className="w-full md:w-auto flex-shrink-0 flex flex-col items-center">
+                        <div className="relative w-full max-w-xs md:max-w-md rounded-lg overflow-hidden shadow-lg">
                           {item.src && (
                             <div className="aspect-[3/4] relative">
                               <Image
@@ -269,22 +288,38 @@ export default function ThinkTankArticle({ params }: { params: { id: string } })
                           )}
                         </div>
                         {item.caption && (
-                          <p className="text-sm text-gray-500 text-center mt-3 italic">
+                          <p className="text-sm text-gray-500 text-center mt-3 italic max-w-xs md:max-w-md">
                             {item.caption}
                           </p>
                         )}
                       </div>
-                      <div className="md:col-span-2">
-                        <div className="bg-gradient-to-br from-[#f6f2ed] to-[#f0ebe6] rounded-lg p-6">
-                          <h3 className="text-lg font-semibold text-[#232323] mb-3">
+                      <div className="w-full md:flex-1 mt-8 md:mt-0">
+                        <div className="card-accent p-6 h-full flex flex-col justify-center max-w-xl mx-auto md:mx-0">
+                          <h3 className="heading-accent mb-3">
                             Presentation Highlights
                           </h3>
-                          <p className="text-[#6b7280] leading-relaxed">
+                          <p className="body-text">
                             Garima's keynote presentation at South India Talks OOH 2025 focused on integrating out-of-home media with public space design, emphasizing climate-sensitive approaches and democratic placemaking principles.
                           </p>
                         </div>
                       </div>
                     </div>
+                  </div>
+                );
+              case 'link':
+                return (
+                  <div key={index} className="my-4">
+                    <a 
+                      href={item.text} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-[#e7a77e] hover:text-[#d18e64] transition-colors font-semibold"
+                    >
+                      {item.label} →
+                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                      </svg>
+                    </a>
                   </div>
                 );
               default:
@@ -306,5 +341,6 @@ export default function ThinkTankArticle({ params }: { params: { id: string } })
         </div>
       </div>
     </article>
+    </div>
   );
 }
