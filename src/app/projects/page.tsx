@@ -20,8 +20,7 @@ export default function Projects() {
         "/projects/bandhavgarh/3.png",
         "/projects/bandhavgarh/4.png"
       ],
-      cta: { label: "View Gallery", href: "https://drive.google.com/drive/folders/1K_qC4Nabxr6m7ge3Q8CYSjU1FQmyybdf?usp=sharing" }
-    },
+      cta: null},
     {
       id: "haldiram-landscape",
       category: "Landscape",
@@ -40,26 +39,6 @@ export default function Projects() {
       cta: null
     },
     {
-      id: "ahmedabad-haat-street",
-      category: "Urban Design",
-      title: "Activating Ahmedabad Haat Street",
-      mainImage: "/projects/haat/9.png",
-      shortDescription: "Revitalizing urban spaces through innovative street design and community engagement.",
-      fullDescription: "The Ahmedabad Haat Street project is a transformative urban design initiative located in the heart of Ahmedabad's historic district, Gujarat, India. This comprehensive public space revitalization project spans approximately 1.2 kilometers along the Sabarmati Riverfront, connecting key cultural landmarks including the famous Law Garden and CG Road. Our design approach focused on creating pedestrian-friendly zones, incorporating traditional Gujarati architectural elements, and integrating sustainable materials like local sandstone and reclaimed wood. The project features interactive public art installations, shaded seating areas with traditional 'chabutras,' and smart lighting solutions that enhance safety while highlighting the area's heritage structures. By working closely with local artisans and the municipal corporation, we've created a vibrant, inclusive space that preserves Ahmedabad's rich cultural heritage while serving as a model for sustainable urban renewal in India's rapidly developing cities.",
-      images: ["/projects/haat/9.png", "/projects/haat/10.png", "/projects/haat/11.png", "/projects/haat/12.png", "/projects/haat/13.png", "/projects/haat/14.png"],
-      cta: { label: "View Gallery", href: "https://drive.google.com/drive/folders/1bqp8SCVMZchSg8D_61d3UI-Jp9IDczvZ?usp=drive_link" }
-    },
-    {
-      id: "vastrapur-lake",
-      category: "Urban Design",
-      title: "Vastrapur Lake",
-      mainImage: "/projects/vastrapur lake/1.png",
-      shortDescription: "Transforming a neglected urban lake into a vibrant community space and ecological asset.",
-      fullDescription: "An urban renewal project that transforms Vastrapur Lake into a sustainable, accessible community space while preserving its ecological value.",
-      images: ["/projects/vastrapur lake/1.png"],
-      cta: { label: "View Gallery", href: "https://drive.google.com/drive/folders/1yI6cRDBEAVhhYixb9SaLcXdThOYIqYDX?usp=drive_link" }
-    },
-    {
       id: "kake-da-hotel",
       category: "Architecture & Interior",
       title: "Kake Da Hotel in Ambience Mall",
@@ -67,7 +46,7 @@ export default function Projects() {
       shortDescription: "Modern restaurant design that blends traditional aesthetics with contemporary functionality.",
       fullDescription: "The Kake Da Hotel project at Ambience Mall, Vasant Kunj, New Delhi, is a 3,200 square foot contemporary restaurant design that reimagines traditional Punjabi dhaba culture for a luxury retail environment. Located on the mall's food court level, our design seamlessly blends rustic Punjabi elements with modern aesthetics through the use of warm terracotta tones, handcrafted jali work, and custom brass lighting fixtures. The space features an open kitchen concept with a live tandoors section, creating an interactive dining experience. We incorporated sustainable materials like reclaimed wood and local sandstone, while optimizing the layout to accommodate 85 covers without compromising comfort. The design includes a dedicated bar area with a backlit onyx counter and a private dining zone with traditional 'charpai' seating reinterpreted in modern materials. The project was completed in 2023 and has since become one of the mall's most Instagrammed dining destinations, praised for its authentic yet elevated take on North Indian cuisine culture.",
       images: ["/projects/kake.jpg"],
-      cta: { label: "View Gallery", href: "https://drive.google.com/drive/folders/1TcTZLvz9bbA3-CqAUxjz2vLAW6QK_Ove?usp=drive_link" }
+      cta: null
     },
     {
       id: "chevella-mansion-interior",
