@@ -35,12 +35,12 @@ export default function Header() {
         background: 'transparent', 
         boxShadow: 'none',
         marginTop: scrolled ? '0.5rem' : '1.5rem',
-        marginLeft: '1rem',
-        marginRight: '1rem'
+        marginLeft: '0.5rem',
+        marginRight: '0.5rem'
       }}
     >
       <nav
-        className={`max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-8 py-3 rounded-full border transition-all duration-300 ${
+        className={`max-w-6xl mx-auto flex items-center justify-between px-3 sm:px-8 py-3 rounded-full border transition-all duration-300 ${
           scrolled 
             ? 'bg-white/98 backdrop-blur-md shadow-xl border-gray-200 py-2' 
             : 'bg-white/95 backdrop-blur-sm shadow-lg border-gray-100'
@@ -112,14 +112,39 @@ export default function Header() {
       {/* Mobile Menu Overlay */}
       {/* Mobile Menu Overlay (portal) */}
       {menuOpen && typeof window !== 'undefined' && createPortal(
-        <div className="fixed inset-0 bg-black/70 z-[999] flex flex-col items-center justify-center sm:hidden transition-all">
-          <ul className="flex flex-col gap-8 font-semibold text-white font-inter" style={{ fontSize: '1.2rem' }}>
-            <li><Link href="/projects" onClick={() => setMenuOpen(false)}>Our work</Link></li>
-            <li><Link href="/think-tank" onClick={() => setMenuOpen(false)}>Think Tank</Link></li>
-            <li><Link href="/about" onClick={() => setMenuOpen(false)}>About Us</Link></li>
-            <li><Link href="/services" onClick={() => setMenuOpen(false)}>Services</Link></li>
-            <li><Link href="/contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
-          </ul>
+        <div 
+          className="fixed inset-0 bg-black/70 z-[999] flex flex-col items-center justify-center sm:hidden transition-all"
+          onClick={() => setMenuOpen(false)}
+        >
+          {/* Close Button */}
+          <button
+            className="absolute top-6 right-6 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-black hover:bg-white transition-all duration-300 shadow-lg z-[1000]"
+            onClick={(e) => {
+              e.stopPropagation();
+              setMenuOpen(false);
+            }}
+            aria-label="Close menu"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          
+          {/* Menu Items */}
+          <div onClick={(e) => e.stopPropagation()}>
+            <ul className="flex flex-col gap-8 font-semibold text-white font-inter text-center" style={{ fontSize: '1.2rem' }}>
+              <li><Link href="/projects" onClick={() => setMenuOpen(false)} className="hover:text-[#e7a77e] transition-colors duration-300">Our Work</Link></li>
+              <li><Link href="/think-tank" onClick={() => setMenuOpen(false)} className="hover:text-[#e7a77e] transition-colors duration-300">Think Tank</Link></li>
+              <li><Link href="/about" onClick={() => setMenuOpen(false)} className="hover:text-[#e7a77e] transition-colors duration-300">About Us</Link></li>
+              <li><Link href="/services" onClick={() => setMenuOpen(false)} className="hover:text-[#e7a77e] transition-colors duration-300">Services</Link></li>
+              <li><Link href="/contact" onClick={() => setMenuOpen(false)} className="hover:text-[#e7a77e] transition-colors duration-300">Contact</Link></li>
+            </ul>
+          </div>
+          
+          {/* Additional Close Hint */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/60 text-sm">
+            Tap outside to close
+          </div>
         </div>,
         document.body
       )}
