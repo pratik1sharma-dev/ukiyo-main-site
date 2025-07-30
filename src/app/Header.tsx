@@ -35,12 +35,12 @@ export default function Header() {
         background: 'transparent', 
         boxShadow: 'none',
         marginTop: scrolled ? '0.5rem' : '1.5rem',
-        marginLeft: '2rem',
-        marginRight: '2rem'
+        marginLeft: '1rem',
+        marginRight: '1rem'
       }}
     >
       <nav
-        className={`max-w-6xl mx-auto flex items-center justify-between px-8 py-3 rounded-full border transition-all duration-300 ${
+        className={`max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-8 py-3 rounded-full border transition-all duration-300 ${
           scrolled 
             ? 'bg-white/98 backdrop-blur-md shadow-xl border-gray-200 py-2' 
             : 'bg-white/95 backdrop-blur-sm shadow-lg border-gray-100'

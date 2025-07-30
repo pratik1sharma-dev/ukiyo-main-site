@@ -35,6 +35,41 @@ const thinkTankContent = [
   }
 ];
 
+export const metadata = {
+  title: "Think Tank | Ukiyo Habitat",
+  description: "Research, insights, and thought leadership on sustainable design, urban ecology, and the future of our built environment.",
+  keywords: [
+    "Ukiyo Habitat think tank",
+    "sustainable design research",
+    "urban ecology insights",
+    "landscape architecture research",
+    "ecological design thought leadership",
+    "climate-responsive design insights",
+    "urban resilience research",
+    "public space design research",
+    "blue-green infrastructure insights",
+    "water-sensitive planning research",
+    "participatory urbanism insights",
+    "community placemaking research",
+    "sustainable cities research",
+    "ecological urban design",
+    "urban planning insights",
+    "environmental design research",
+    "social impact design insights",
+    "adaptive reuse research",
+    "child-friendly spaces research",
+    "urban renewal insights",
+    "landscape-led urbanism",
+    "ecological restoration research",
+    "sustainable development insights",
+    "urban design innovation",
+    "environmental architecture research",
+    "OOH public space design",
+    "South India Talks OOH 2025",
+    "Garima Dubey OOH presentation"
+  ],
+};
+
 export default function ThinkTank() {
   return (
     <div className="min-h-screen bg-white pt-24">

@@ -4,6 +4,38 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { useState } from 'react';
 
+export const metadata = {
+  title: "Contact | Ukiyo Habitat",
+  description: "Get in touch with Ukiyo Habitat for your architectural and design projects. Located in Delhi, India, we specialize in sustainable and ecological design solutions.",
+  keywords: [
+    "contact Ukiyo Habitat",
+    "architectural firm Delhi",
+    "landscape architect contact",
+    "urban design consultation",
+    "sustainable design services",
+    "ecological design studio Delhi",
+    "architecture consultation India",
+    "landscape architecture services",
+    "urban planning consultation",
+    "public space design consultation",
+    "climate-responsive design services",
+    "participatory design consultation",
+    "blue-green infrastructure design",
+    "water-sensitive planning services",
+    "adaptive reuse consultation",
+    "child-friendly space design",
+    "urban resilience planning",
+    "community placemaking services",
+    "ecological restoration consultation",
+    "sustainable urban development",
+    "Delhi architecture firm",
+    "India landscape architecture",
+    "architectural consultation Delhi",
+    "design studio contact India",
+    "sustainable architecture services"
+  ],
+};
+
 const formSchema = z.object({
   name: z.string().min(2, 'Name is required'),
   email: z.string().email('Invalid email address'),
