@@ -21,10 +21,18 @@ export const trackPerformance = () => {
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        console.log('FID:', entry.processingStart - entry.startTime);
-        
-        if (entry.processingStart - entry.startTime > 100) {
-          console.warn('FID is slow:', entry.processingStart - entry.startTime);
+        // Type guard for FirstInputEntry
+        if ('processingStart' in entry && 'startTime' in entry) {
+          const fidEntry = entry as PerformanceEntry & {
+            processingStart: number;
+            startTime: number;
+          };
+          const fid = fidEntry.processingStart - fidEntry.startTime;
+          console.log('FID:', fid);
+          
+          if (fid > 100) {
+            console.warn('FID is slow:', fid);
+          }
         }
       });
     });
@@ -78,12 +86,12 @@ export const trackImageLoad = (imageSrc: string) => {
 export const getBundleSize = () => {
   if (typeof window === 'undefined') return;
   
-  const resources = performance.getEntriesByType('resource');
+  const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
   const jsResources = resources.filter(r => r.name.includes('.js'));
   const cssResources = resources.filter(r => r.name.includes('.css'));
   
-  const totalJS = jsResources.reduce((sum, r) => sum + r.transferSize, 0);
-  const totalCSS = cssResources.reduce((sum, r) => sum + r.transferSize, 0);
+  const totalJS = jsResources.reduce((sum, r) => sum + (r.transferSize || 0), 0);
+  const totalCSS = cssResources.reduce((sum, r) => sum + (r.transferSize || 0), 0);
   
   console.log('Bundle sizes:', {
     js: `${(totalJS / 1024).toFixed(2)}KB`,

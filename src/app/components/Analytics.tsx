@@ -2,6 +2,24 @@
 import { useEffect } from 'react';
 import Script from 'next/script';
 
+// Type declarations for global gtag function
+declare global {
+  interface Window {
+    gtag: (
+      command: 'config' | 'event' | 'js',
+      targetId: string,
+      config?: {
+        page_path?: string;
+        page_title?: string;
+        page_location?: string;
+        send_page_view?: boolean;
+        [key: string]: any;
+      }
+    ) => void;
+    dataLayer: any[];
+  }
+}
+
 interface AnalyticsProps {
   googleAnalyticsId?: string;
   googleTagManagerId?: string;
@@ -18,7 +36,7 @@ export default function Analytics({
   useEffect(() => {
     // Track page views for SPA navigation
     const handleRouteChange = (url: string) => {
-      if (typeof window !== 'undefined' && window.gtag) {
+      if (typeof window !== 'undefined' && window.gtag && googleAnalyticsId) {
         window.gtag('config', googleAnalyticsId, {
           page_path: url,
         });
