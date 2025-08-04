@@ -139,12 +139,12 @@ NEXT_PUBLIC_FACEBOOK_PIXEL_ID=XXXXXXXXXX
 - [x] Set up Google Analytics 4
 - [x] Configure Google Tag Manager
 - [x] Install Vercel Speed Insights
-- [ ] Set up Hotjar tracking
+- [x] Set up Hotjar tracking
 - [ ] Configure Facebook Pixel
 
 ### Phase 2: SEO Implementation
 - [x] Submit sitemap to Google Search Console
-- [x ] Set up Google My Business
+- [x] Set up Google My Business
 - [x] Optimize meta descriptions
 - [x] Implement structured data
 - [ ] Set up local citations
