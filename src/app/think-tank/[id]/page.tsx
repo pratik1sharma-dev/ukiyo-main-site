@@ -427,18 +427,28 @@ export default function ThinkTankArticle({ params }: { params: { id: string } })
                           </p>
                         )}
                       </div>
-                      <div className="w-full md:flex-1 mt-8 md:mt-0">
-                        <div className="card-accent p-6 h-full flex flex-col justify-center max-w-xl mx-auto md:mx-0">
-                          <h3 className="heading-accent mb-3">
-                            Presentation Highlights
-                          </h3>
-                          <p className="body-text">
-                            Garima's keynote presentation at South India Talks OOH 2025 focused on integrating out-of-home media with public space design, emphasizing climate-sensitive approaches and democratic placemaking principles.
-                          </p>
+                      {article.id === 'ooh-urban-design' && (
+                        <div className="w-full md:flex-1 mt-8 md:mt-0">
+                          <div className="card-accent p-6 h-full flex flex-col justify-center max-w-xl mx-auto md:mx-0">
+                            <h3 className="heading-accent mb-3">
+                              Presentation Highlights
+                            </h3>
+                            <p className="body-text">
+                              Garima's keynote presentation at South India Talks OOH 2025 focused on integrating out-of-home media with public space design, emphasizing climate-sensitive approaches and democratic placemaking principles.
+                            </p>
+                          </div>
                         </div>
-                      </div>
+                      )}
                     </div>
                   </div>
+                );
+              case 'list':
+                return (
+                  <ul key={index} className="list-disc pl-6 mb-4 text-gray-700">
+                    {item.items.map((listItem, i) => (
+                      <li key={i} className="mb-2">{listItem}</li>
+                    ))}
+                  </ul>
                 );
               case 'link':
                 return (
