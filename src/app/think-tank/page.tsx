@@ -4,6 +4,16 @@ import Image from 'next/image';
 // Think tank content data
 const thinkTankContent = [
   {
+    id: 'villa-wellness-hub',
+    title: 'How to Make My Villa a Wellness Hub',
+    category: 'Residential Wellness Design',
+    shortDescription: 'Transform your villa into a comprehensive wellness sanctuary with sustainable design principles and holistic living spaces.',
+    mainImage: '/hero-bg-3.jpg',
+    date: '2024-12-15',
+    author: 'Ukiyo Design Team',
+    readTime: '15 min read'
+  },
+  {
     id: 'ooh-urban-design',
     title: 'OOH Advertising as Urban Design',
     category: 'Urban Experience Research',

@@ -22,6 +22,140 @@ interface ThinkTankItem {
 // Import the think tank content from the main page
 const thinkTankContent: ThinkTankItem[] = [
   {
+    id: 'villa-wellness-hub',
+    title: 'How to Make My Villa a Wellness Hub',
+    category: 'Residential Wellness Design',
+    shortDescription: 'Transform your villa into a comprehensive wellness sanctuary with sustainable design principles and holistic living spaces.',
+    mainImage: '/hero-bg-3.jpg',
+    date: '2024-12-15',
+    author: 'Ukiyo Design Team',
+    readTime: '15 min read',
+    content: [
+      { type: 'heading', text: 'Creating Your Personal Wellness Sanctuary' },
+      { type: 'paragraph', text: 'In today\'s fast-paced world, the concept of wellness has evolved beyond mere physical health to encompass mental, emotional, and spiritual well-being. Your villa can become more than just a residence—it can transform into a comprehensive wellness hub that nurtures every aspect of your life. This guide explores how to integrate sustainable design principles with holistic wellness concepts to create a truly transformative living environment.' },
+      { 
+        type: 'image', 
+        src: '/hero-bg-1.jpg', 
+        alt: 'Modern villa with wellness-focused outdoor spaces',
+        caption: 'A wellness-oriented villa design featuring natural materials and outdoor living spaces'
+      },
+      { type: 'heading', text: 'The Foundation: Biophilic Design Principles' },
+      { type: 'paragraph', text: 'Biophilic design—the practice of connecting people with nature through design—forms the cornerstone of any wellness-focused villa. This approach goes beyond simply adding plants; it creates a seamless integration between indoor and outdoor spaces that promotes mental clarity and reduces stress.' },
+      { type: 'list', items: [
+        'Natural light optimization through strategic window placement and skylights',
+        'Indoor-outdoor living spaces with retractable walls and sliding doors',
+        'Natural materials like wood, stone, and bamboo throughout the design',
+        'Water features that create soothing ambient sounds',
+        'Views of nature from every major living space'
+      ]},
+      { type: 'heading', text: 'Wellness Zones: Designing for Different Needs' },
+      { type: 'paragraph', text: 'A true wellness hub accommodates various activities and states of mind. Consider creating dedicated zones that support different aspects of well-being:' },
+      { type: 'list', items: [
+        'Meditation and Mindfulness Space: Quiet corner with comfortable seating, natural materials, and minimal distractions',
+        'Physical Wellness Area: Home gym with natural ventilation and views of nature',
+        'Social Connection Zone: Open living areas that encourage family interaction and social gatherings',
+        'Rest and Recovery Space: Bedroom designed for optimal sleep with blackout curtains and temperature control',
+        'Creative Expression Area: Studio or workspace with abundant natural light and inspiring views'
+      ]},
+      { 
+        type: 'image', 
+        src: '/hero-bg-2.jpg', 
+        alt: 'Peaceful meditation space with natural light and plants',
+        caption: 'A dedicated meditation space featuring natural materials and abundant natural light'
+      },
+      { type: 'heading', text: 'Sustainable Wellness: Environmental Considerations' },
+      { type: 'paragraph', text: 'True wellness extends beyond personal health to environmental responsibility. Sustainable design features not only reduce your carbon footprint but also create healthier indoor environments:' },
+      { type: 'list', items: [
+        'Solar panels for renewable energy generation',
+        'Rainwater harvesting systems for landscape irrigation',
+        'Natural ventilation systems that reduce reliance on air conditioning',
+        'Energy-efficient appliances and LED lighting',
+        'Local and sustainable building materials',
+        'Green roofs and living walls for improved air quality'
+      ]},
+      { type: 'heading', text: 'The Healing Power of Water' },
+      { type: 'paragraph', text: 'Water features play a crucial role in wellness design, offering both visual and auditory benefits. Consider incorporating:' },
+      { type: 'list', items: [
+        'Reflection pools that create calming visual effects',
+        'Water walls that provide white noise for relaxation',
+        'Natural swimming pools with chemical-free water treatment',
+        'Outdoor showers for connecting with nature',
+        'Hot tubs or plunge pools for hydrotherapy benefits'
+      ]},
+      { 
+        type: 'image', 
+        src: '/hero-bg-5.jpg', 
+        alt: 'Serene water feature with natural stone and plants',
+        caption: 'A natural water feature that creates both visual appeal and soothing sounds'
+      },
+      { type: 'heading', text: 'Technology Integration for Wellness' },
+      { type: 'paragraph', text: 'Smart home technology can enhance wellness when thoughtfully integrated. Consider systems that:' },
+      { type: 'list', items: [
+        'Monitor indoor air quality and automatically adjust ventilation',
+        'Control lighting to follow natural circadian rhythms',
+        'Manage temperature and humidity for optimal comfort',
+        'Provide ambient soundscapes for relaxation and focus',
+        'Track sleep patterns and adjust bedroom environment accordingly'
+      ]},
+      { type: 'heading', text: 'Landscape Design for Wellness' },
+      { type: 'paragraph', text: 'The outdoor environment is equally important in creating a wellness hub. Your landscape should include:' },
+      { type: 'list', items: [
+        'Walking paths that encourage daily movement and connection with nature',
+        'Herb gardens for fresh ingredients and aromatherapy',
+        'Seating areas for outdoor meditation and relaxation',
+        'Native plants that support local biodiversity',
+        'Outdoor yoga or exercise spaces',
+        'Fire pits for evening gatherings and warmth'
+      ]},
+      { 
+        type: 'image', 
+        src: '/hero-bg-6.jpg', 
+        alt: 'Lush wellness garden with walking paths and seating areas',
+        caption: 'A wellness garden featuring native plants, walking paths, and meditation spaces'
+      },
+      { type: 'heading', text: 'Material Selection for Health and Wellness' },
+      { type: 'paragraph', text: 'The materials you choose for your villa significantly impact indoor air quality and overall wellness. Prioritize:' },
+      { type: 'list', items: [
+        'Low-VOC paints and finishes that don\'t off-gas harmful chemicals',
+        'Natural flooring materials like hardwood, bamboo, or cork',
+        'Organic textiles for upholstery and bedding',
+        'Non-toxic insulation materials',
+        'Natural stone and clay tiles for bathrooms and kitchens'
+      ]},
+      { type: 'heading', text: 'Creating Daily Wellness Rituals' },
+      { type: 'paragraph', text: 'Beyond physical design, consider how your villa can support daily wellness practices. Design spaces that encourage:' },
+      { type: 'list', items: [
+        'Morning routines with east-facing windows for natural light',
+        'Evening wind-down rituals with dimmable lighting',
+        'Family meal preparation in well-designed kitchens',
+        'Regular exercise through accessible fitness spaces',
+        'Mindfulness practices through dedicated meditation areas'
+      ]},
+      { type: 'heading', text: 'The Financial and Health Benefits' },
+      { type: 'paragraph', text: 'Investing in a wellness-focused villa design offers both immediate and long-term benefits:' },
+      { type: 'list', items: [
+        'Reduced stress levels and improved mental health',
+        'Better sleep quality and recovery',
+        'Increased property value due to unique wellness features',
+        'Lower utility bills through sustainable design',
+        'Improved family relationships through shared wellness activities',
+        'Enhanced productivity and creativity in home workspaces'
+      ]},
+      { type: 'heading', text: 'Getting Started: A Step-by-Step Approach' },
+      { type: 'paragraph', text: 'Transforming your villa into a wellness hub doesn\'t happen overnight. Start with these foundational steps:' },
+      { type: 'list', items: [
+        'Assess your current space and identify wellness priorities',
+        'Work with architects and designers who understand wellness principles',
+        'Begin with one room or area as a pilot project',
+        'Gradually expand wellness features throughout your villa',
+        'Regularly evaluate and adjust based on your family\'s needs'
+      ]},
+      { type: 'heading', text: 'Conclusion: Your Wellness Journey Begins at Home' },
+      { type: 'paragraph', text: 'Creating a wellness hub in your villa is an investment in your family\'s health, happiness, and future. By combining sustainable design principles with holistic wellness concepts, you can create a living environment that not only meets your basic needs but actively supports your well-being goals. Remember, wellness is a journey, not a destination—your villa can evolve with your changing needs and priorities over time.' },
+      { type: 'paragraph', text: 'At Ukiyo Habitat, we believe that every home has the potential to become a wellness sanctuary. Our team of architects and designers specializes in creating spaces that nurture both people and the planet, helping you transform your villa into the wellness hub of your dreams.' }
+    ]
+  },
+  {
     id: 'ooh-urban-design',
     title: 'Reimagining OOH in Public Space Design',
     category: 'Keynote Presentation',
