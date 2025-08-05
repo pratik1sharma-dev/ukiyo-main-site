@@ -133,13 +133,17 @@ export default function Projects() {
           {/* Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project) => (
-              <div key={project.id} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 overflow-hidden">
+              <Link 
+                key={project.id} 
+                href={`/projects/${project.id}`}
+                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 overflow-hidden cursor-pointer group"
+              >
                 <div className="aspect-video bg-gray-200 relative overflow-hidden">
                   <Image
                     src={project.mainImage}
                     alt={project.title}
                     fill
-                    className="object-cover transition-transform duration-300 hover:scale-105"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     quality={75}
                   />
@@ -150,27 +154,20 @@ export default function Projects() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-[#232323] mb-3 leading-tight">
+                  <h3 className="text-xl font-bold text-[#232323] mb-3 leading-tight group-hover:text-[#e7a77e] transition-colors duration-200">
                     {project.title}
                   </h3>
                   <p className="text-[#6b7280] leading-relaxed mb-4">
                     {project.shortDescription}
                   </p>
-                  {project.cta && (
-                    <a
-                      href={project.cta.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-[#e7a77e] font-semibold hover:text-[#e38d5f] transition-colors duration-200 group"
-                    >
-                      {project.cta.label}
-                      <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                      </svg>
-                    </a>
-                  )}
+                  <div className="flex items-center text-[#e7a77e] font-semibold group-hover:text-[#e38d5f] transition-colors duration-200">
+                    View Project
+                    <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                  </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 
