@@ -34,24 +34,37 @@ export default function Analytics({
   facebookPixelId = process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID,
 }: AnalyticsProps) {
   useEffect(() => {
-    // Track page views for SPA navigation
-    const handleRouteChange = (url: string) => {
+    // Track page views on route changes in App Router
+    const sendPageView = () => {
       if (typeof window !== 'undefined' && window.gtag && googleAnalyticsId) {
         window.gtag('config', googleAnalyticsId, {
-          page_path: url,
+          page_path: window.location.pathname,
+          page_title: document.title,
+          page_location: window.location.href,
         });
       }
     };
 
-    // Listen for route changes
-    window.addEventListener('popstate', () => {
-      handleRouteChange(window.location.pathname);
-    });
+    // Listen to popstate and pushState/replaceState
+    const onPopState = () => sendPageView();
+    const origPushState = history.pushState.bind(window.history);
+    const origReplaceState = history.replaceState.bind(window.history);
+    (history as any).pushState = function (...args: [data: any, unused: string, url?: string | URL | null | undefined]) {
+      const ret = origPushState(args[0], args[1], args[2] as any);
+      sendPageView();
+      return ret;
+    } as typeof history.pushState;
+    (history as any).replaceState = function (...args: [data: any, unused: string, url?: string | URL | null | undefined]) {
+      const ret = origReplaceState(args[0], args[1], args[2] as any);
+      sendPageView();
+      return ret;
+    } as typeof history.replaceState;
+    window.addEventListener('popstate', onPopState);
 
     return () => {
-      window.removeEventListener('popstate', () => {
-        handleRouteChange(window.location.pathname);
-      });
+      history.pushState = origPushState;
+      history.replaceState = origReplaceState;
+      window.removeEventListener('popstate', onPopState);
     };
   }, [googleAnalyticsId]);
 

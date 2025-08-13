@@ -7,7 +7,6 @@ import Footer from "./Footer";
 import { Cormorant_Garamond } from "next/font/google";
 import PerformanceMonitor from "./components/PerformanceMonitor";
 import Analytics from "./components/Analytics";
-import SEOOptimizer from "./components/SEOOptimizer";
 import WhatsAppButton from "./components/WhatsAppButton";
 
 const cormorant = Cormorant_Garamond({
@@ -19,7 +18,7 @@ const cormorant = Cormorant_Garamond({
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ukiyohabitat.com';
 const siteName = 'Ukiyo Habitat';
 const siteDescription = 'Ukiyo Habitat is a cross-disciplinary design studio creating sustainable, immersive environments rooted in ecology and driven by innovation.';
-const siteImage = `${siteUrl}/images/og-image.jpg`;
+const siteImage = `${siteUrl}/logo.png`;
 
 // Define shared metadata
 export const metadata: Metadata = {
@@ -101,7 +100,6 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href={siteUrl} />
-        <SEOOptimizer />
         
         {/* Google Tag Manager */}
         {process.env.NEXT_PUBLIC_GTM_ID && (
@@ -119,48 +117,6 @@ export default function RootLayout({
         )}
         {/* End Google Tag Manager */}
         
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'ProfessionalService',
-              name: siteName,
-              image: siteImage,
-              '@id': siteUrl,
-              url: siteUrl,
-              telephone: '+91-XXXXXXXXXX',
-              address: {
-                '@type': 'PostalAddress',
-                streetAddress: 'Your Street Address',
-                addressLocality: 'City',
-                postalCode: 'XXXXXX',
-                addressCountry: 'IN',
-              },
-              geo: {
-                '@type': 'GeoCoordinates',
-                latitude: 0,
-                longitude: 0,
-              },
-              openingHoursSpecification: {
-                '@type': 'OpeningHoursSpecification',
-                dayOfWeek: [
-                  'Monday',
-                  'Tuesday',
-                  'Wednesday',
-                  'Thursday',
-                  'Friday',
-                ],
-                opens: '09:00',
-                closes: '18:00',
-              },
-              sameAs: [
-                'https://www.instagram.com/ukiyohabitat',
-                'https://www.linkedin.com/company/ukiyo-habitat',
-              ],
-            }),
-          }}
-        />
       </head>
       <body className={`${cormorant.variable} bg-[#f6f2ed] min-h-screen flex flex-col`}>
         <PerformanceMonitor />
