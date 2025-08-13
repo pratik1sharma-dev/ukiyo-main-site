@@ -299,7 +299,7 @@ export default function Home() {
                 </div>
               </div>
               <h3 className="text-2xl font-bold text-[#232323] mb-2">Emerging Tech / Speculative Futures</h3>
-              <a href="/futures-lab" className="inline-block mt-2 bg-gradient-to-r from-[#e7a77e] to-[#f59e42] text-white font-semibold rounded-full px-6 py-2 transition-all duration-300 shadow hover:shadow-lg text-sm">Explore Futures Lab →</a>
+              <a href="/think-tank" className="inline-block mt-2 bg-gradient-to-r from-[#e7a77e] to-[#f59e42] text-white font-semibold rounded-full px-6 py-2 transition-all duration-300 shadow hover:shadow-lg text-sm">Explore Futures Lab →</a>
             </div>
           </div>
         </div>
