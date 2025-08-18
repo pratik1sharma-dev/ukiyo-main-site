@@ -212,7 +212,7 @@ export default function About() {
                   <div className="text-center md:text-left order-2 md:order-1">
                     <div className="w-32 h-32 bg-gradient-to-br from-[#e7a77e]/20 to-[#f59e42]/20 rounded-full flex items-center justify-center mx-auto md:mx-0 mb-8 overflow-hidden">
                       <Image
-                        src="/founder.jpg"
+                        src="/founder2.jpeg"
                         alt="Vidushi Singh - Architect, Urban Designer & Design Educator"
                         width={128}
                         height={128}
