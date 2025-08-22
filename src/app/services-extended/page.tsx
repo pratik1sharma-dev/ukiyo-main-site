@@ -26,7 +26,23 @@ export const metadata = {
     "architecture workshops with community",
     "speculative design India",
     "urban future modeling",
-    "AI in landscape planning"
+    "AI in landscape planning",
+    // Geo variants
+    "landscape architecture firm Delhi NCR",
+    "landscape architecture firm Gurgaon",
+    "landscape architecture firm Noida",
+    "urban design consultancy Delhi NCR",
+    "urban design consultancy Gurgaon",
+    "urban design consultancy Noida",
+    "interior architecture Delhi NCR",
+    "interior architecture Gurgaon",
+    "interior architecture Noida",
+    // Requested cities
+    "landscape architect Jabalpur",
+    "landscape architect Indore",
+    "landscape architect Pushkar",
+    "landscape architect Bhopal",
+    "landscape architect Ayodhya"
   ],
 };
 

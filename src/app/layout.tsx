@@ -8,6 +8,7 @@ import { Cormorant_Garamond } from "next/font/google";
 import PerformanceMonitor from "./components/PerformanceMonitor";
 import Analytics from "./components/Analytics";
 import WhatsAppButton from "./components/WhatsAppButton";
+import SEOOptimizer from "./components/SEOOptimizer";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -86,7 +87,17 @@ export const metadata: Metadata = {
     'urban ecologist',
     'sustainable urban design',
     'ecological landscape architecture',
-    'climate-adaptive design'
+    'climate-adaptive design',
+    // Geo variants
+    'architectural firm Delhi NCR',
+    'architectural firm Gurgaon',
+    'architectural firm Noida',
+    'landscape architect Jabalpur',
+    'urban design Indore',
+    'landscape architect Bangalore',
+    'landscape architect Pushkar',
+    'landscape architect Bhopal',
+    'landscape architect Ayodhya'
   ],
 };
 
@@ -99,7 +110,6 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href={siteUrl} />
         
         {/* Google Tag Manager */}
         {process.env.NEXT_PUBLIC_GTM_ID && (
@@ -119,6 +129,7 @@ export default function RootLayout({
         
       </head>
       <body className={`${cormorant.variable} bg-[#f6f2ed] min-h-screen flex flex-col`}>
+        <SEOOptimizer />
         <PerformanceMonitor />
         <Header />
         <main className="flex-1 w-full">

@@ -28,7 +28,35 @@ export const metadata = {
     "landscape-led masterplans",
     "co-designed public spaces",
     "environmental design services",
-    "social impact design"
+    "social impact design",
+    // Geo service variants
+    "landscape architecture services Delhi NCR",
+    "landscape architecture services Gurgaon",
+    "landscape architecture services Noida",
+    "landscape architecture services Bangalore",
+    "landscape architecture services Hyderabad",
+    "landscape architecture services Ahmedabad",
+    "landscape architecture services Pune",
+    "urban design consultants Delhi NCR",
+    "urban design consultants Gurgaon",
+    "urban design consultants Noida",
+    "urban design consultants Bangalore",
+    "urban design consultants Hyderabad",
+    "urban design consultants Ahmedabad",
+    "urban design consultants Pune",
+    "interior design studio Delhi NCR",
+    "interior design studio Gurgaon",
+    "interior design studio Noida",
+    "interior design studio Bangalore",
+    "interior design studio Hyderabad",
+    "interior design studio Ahmedabad",
+    "interior design studio Pune",
+    // Requested cities
+    "landscape architect Jabalpur",
+    "landscape architect Indore",
+    "landscape architect Pushkar",
+    "landscape architect Bhopal",
+    "landscape architect Ayodhya"
   ],
 };
 
@@ -121,6 +149,24 @@ export default function Services() {
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Locations we serve */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold mb-6 text-[#232323]">Locations We Serve</h2>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/locations/jabalpur" className="tag-primary">Jabalpur</Link>
+              <Link href="/locations/indore" className="tag-primary">Indore</Link>
+              <Link href="/locations/bangalore" className="tag-primary">Bangalore</Link>
+              <Link href="/locations/pushkar" className="tag-primary">Pushkar</Link>
+              <Link href="/locations/bhopal" className="tag-primary">Bhopal</Link>
+              <Link href="/locations/ayodhya" className="tag-primary">Ayodhya</Link>
+              <Link href="/locations/delhi-ncr" className="tag-primary">Delhi NCR</Link>
+              <Link href="/locations/gurgaon" className="tag-primary">Gurgaon</Link>
+              <Link href="/locations/noida" className="tag-primary">Noida</Link>
             </div>
           </div>
         </section>

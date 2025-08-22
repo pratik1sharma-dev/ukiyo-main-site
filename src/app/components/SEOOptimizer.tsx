@@ -1,18 +1,20 @@
-"use client";
-import { useEffect } from 'react';
+'use client';
 
 interface SEOOptimizerProps {
   title?: string;
   description?: string;
   keywords?: string[];
   image?: string;
+  images?: string[];
   url?: string;
-  type?: 'website' | 'article' | 'profile';
+  type?: 'website' | 'article' | 'profile' | 'creativeWork' | 'professionalService';
   author?: string;
   publishedTime?: string;
   modifiedTime?: string;
   section?: string;
   tags?: string[];
+  city?: string;
+  region?: string;
 }
 
 export default function SEOOptimizer({
@@ -20,16 +22,19 @@ export default function SEOOptimizer({
   description = 'Ukiyo Habitat is a cross-disciplinary design studio creating sustainable, immersive environments rooted in ecology and driven by innovation.',
   keywords = [],
   image = '/logo.png',
-  url = typeof window !== 'undefined' ? window.location.href : 'https://ukiyohabitat.com',
+  images,
+  url = typeof window !== 'undefined' ? window.location.href : (process.env.NEXT_PUBLIC_SITE_URL || 'https://ukiyohabitat.com'),
   type = 'website',
   author = 'Ukiyo Habitat',
   publishedTime,
   modifiedTime,
   section,
-  tags = []
+  tags = [],
+  city,
+  region
 }: SEOOptimizerProps) {
   const siteName = 'Ukiyo Habitat';
-  const siteUrl = 'https://ukiyohabitat.com';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ukiyohabitat.com';
   const twitterHandle = '@ukiyohabitat';
 
   // Generate structured data
@@ -59,8 +64,8 @@ export default function SEOOptimizer({
         'https://www.facebook.com/ukiyohabitat'
       ],
       areaServed: {
-        '@type': 'Country',
-        name: 'India'
+        '@type': 'City',
+        name: city || 'Delhi'
       },
       serviceType: [
         'Landscape Architecture',
@@ -101,12 +106,67 @@ export default function SEOOptimizer({
       };
     }
 
+    if (type === 'creativeWork') {
+      const imageList = (images && images.length > 0)
+        ? images.map((img) => `${siteUrl}${img}`)
+        : [`${siteUrl}${image}`];
+
+      return {
+        '@context': 'https://schema.org',
+        '@type': 'CreativeWork',
+        name: title,
+        description: description,
+        image: imageList,
+        author: {
+          '@type': 'Organization',
+          name: author
+        },
+        url,
+        about: section,
+        keywords: keywords.join(', ')
+      };
+    }
+
+    if (type === 'professionalService') {
+      return {
+        '@context': 'https://schema.org',
+        '@type': 'ProfessionalService',
+        name: siteName,
+        description: description,
+        url,
+        logo: `${siteUrl}/logo.png`,
+        image: `${siteUrl}${image}`,
+        address: {
+          '@type': 'PostalAddress',
+          addressCountry: 'IN',
+          addressLocality: city || 'Delhi',
+          addressRegion: region || 'India'
+        },
+        areaServed: {
+          '@type': 'City',
+          name: city || 'Delhi'
+        },
+        sameAs: [
+          'https://www.instagram.com/ukiyohabitat',
+          'https://www.linkedin.com/company/ukiyo-habitat',
+          'https://www.facebook.com/ukiyohabitat'
+        ],
+        serviceType: [
+          'Landscape Architecture',
+          'Urban Design',
+          'Interior Environments',
+          'Brand & Visual Communication'
+        ]
+      };
+    }
+
     return baseData;
   };
 
-  useEffect(() => {
-    // No-op: metadata handled by Next.js Metadata API
-  }, []);
-
-  return null;
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(generateStructuredData()) }}
+    />
+  );
 } 
