@@ -7,12 +7,14 @@ interface SEOOptimizerProps {
   image?: string;
   images?: string[];
   url?: string;
-  type?: 'website' | 'article' | 'profile' | 'creativeWork';
+  type?: 'website' | 'article' | 'profile' | 'creativeWork' | 'professionalService';
   author?: string;
   publishedTime?: string;
   modifiedTime?: string;
   section?: string;
   tags?: string[];
+  city?: string;
+  region?: string;
 }
 
 export default function SEOOptimizer({
@@ -27,7 +29,9 @@ export default function SEOOptimizer({
   publishedTime,
   modifiedTime,
   section,
-  tags = []
+  tags = [],
+  city,
+  region
 }: SEOOptimizerProps) {
   const siteName = 'Ukiyo Habitat';
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ukiyohabitat.com';
@@ -60,8 +64,8 @@ export default function SEOOptimizer({
         'https://www.facebook.com/ukiyohabitat'
       ],
       areaServed: {
-        '@type': 'Country',
-        name: 'India'
+        '@type': 'City',
+        name: city || 'Delhi'
       },
       serviceType: [
         'Landscape Architecture',
@@ -120,6 +124,39 @@ export default function SEOOptimizer({
         url,
         about: section,
         keywords: keywords.join(', ')
+      };
+    }
+
+    if (type === 'professionalService') {
+      return {
+        '@context': 'https://schema.org',
+        '@type': 'ProfessionalService',
+        name: siteName,
+        description: description,
+        url,
+        logo: `${siteUrl}/logo.png`,
+        image: `${siteUrl}${image}`,
+        address: {
+          '@type': 'PostalAddress',
+          addressCountry: 'IN',
+          addressLocality: city || 'Delhi',
+          addressRegion: region || 'India'
+        },
+        areaServed: {
+          '@type': 'City',
+          name: city || 'Delhi'
+        },
+        sameAs: [
+          'https://www.instagram.com/ukiyohabitat',
+          'https://www.linkedin.com/company/ukiyo-habitat',
+          'https://www.facebook.com/ukiyohabitat'
+        ],
+        serviceType: [
+          'Landscape Architecture',
+          'Urban Design',
+          'Interior Environments',
+          'Brand & Visual Communication'
+        ]
       };
     }
 

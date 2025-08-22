@@ -1,3 +1,5 @@
+import SEOOptimizer from "../../components/SEOOptimizer";
+
 export const metadata = {
   title: "Locations | Ukiyo Habitat",
   description: "City-specific landing page for Ukiyo Habitat services across India.",
@@ -51,6 +53,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
 
   return (
     <div className="min-h-screen bg-white pt-24">
+      <SEOOptimizer type="professionalService" city={city} region="India" />
       <section className="py-16 bg-gradient-to-br from-[#f6f2ed] to-[#f0ebe6]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-[#232323] mb-6">{copy.h1}</h1>
