@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import SEOOptimizer from '../../components/SEOOptimizer';
 
 type ContentItem = 
   | { type: 'heading' | 'paragraph'; text: string }
@@ -342,6 +343,7 @@ export default function ThinkTankArticle({ params }: { params: { id: string } })
     id: '',
     title: '',
     category: '',
+    shortDescription: '',
     date: '',
     author: '',
     mainImage: '',
@@ -360,131 +362,144 @@ export default function ThinkTankArticle({ params }: { params: { id: string } })
   }
 
   return (
-    <div className="pt-24">
-      <article className="bg-white rounded-xl shadow-md overflow-hidden">
-      <div className="relative w-full">
-        {article.mainImage && (
-          <div className="aspect-[16/9] md:aspect-[21/9] relative">
-            <Image
-              src={article.mainImage}
-              alt={article.title || 'Article image'}
-              fill
-              className="object-cover"
-            />
+    <>
+      <SEOOptimizer
+        type="article"
+        title={article.title}
+        description={article.shortDescription}
+        image={article.mainImage}
+        author={article.author}
+        publishedTime={article.date}
+        modifiedTime={article.date}
+        section={article.category}
+        tags={[]}
+      />
+      <div className="pt-24">
+        <article className="bg-white rounded-xl shadow-md overflow-hidden">
+          <div className="relative w-full">
+            {article.mainImage && (
+              <div className="aspect-[16/9] md:aspect-[21/9] relative">
+                <Image
+                  src={article.mainImage}
+                  alt={article.title || 'Article image'}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            )}
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+              <span className="text-sm text-white bg-[#e7a77e] px-3 py-1 rounded-full">
+                {article.category}
+              </span>
+              <h1 className="text-3xl md:text-4xl font-bold text-white mt-4">
+                {article.title}
+              </h1>
+              <div className="flex items-center text-white/80 text-sm mt-2">
+                <span>{article.date}</span>
+                <span className="mx-2">•</span>
+                <span>By {article.author}</span>
+              </div>
+            </div>
           </div>
-        )}
-        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
-          <span className="text-sm text-white bg-[#e7a77e] px-3 py-1 rounded-full">
-            {article.category}
-          </span>
-          <h1 className="text-3xl md:text-4xl font-bold text-white mt-4">
-            {article.title}
-          </h1>
-          <div className="flex items-center text-white/80 text-sm mt-2">
-            <span>{article.date}</span>
-            <span className="mx-2">•</span>
-            <span>By {article.author}</span>
-          </div>
-        </div>
-      </div>
 
-      <div className="p-6 md:p-8 lg:p-12">
-        <div className="prose max-w-none">
-          {article.content.map((item, index) => {
-            switch (item.type) {
-              case 'heading':
-                return (
-                  <h2 key={index} className="text-2xl font-bold text-[#232323] mt-8 mb-4">
-                    {item.text}
-                  </h2>
-                );
-              case 'paragraph':
-                return (
-                  <p key={index} className="text-gray-700 mb-4 leading-relaxed">
-                    {item.text}
-                  </p>
-                );
-              case 'image':
-                return (
-                  <div key={index} className="my-8">
-                    <div className="flex flex-col md:flex-row md:gap-10 items-center md:items-start">
-                      <div className="w-full md:w-auto flex-shrink-0 flex flex-col items-center">
-                        <div className="relative w-full max-w-xs md:max-w-md rounded-lg overflow-hidden shadow-lg">
-                          {item.src && (
-                            <div className="aspect-[3/4] relative">
-                              <Image
-                                src={item.src}
-                                alt={item.alt || 'Content image'}
-                                fill
-                                className="object-cover"
-                              />
+          <div className="p-6 md:p-8 lg:p-12">
+            <div className="prose max-w-none">
+              {article.content.map((item, index) => {
+                switch (item.type) {
+                  case 'heading':
+                    return (
+                      <h2 key={index} className="text-2xl font-bold text-[#232323] mt-8 mb-4">
+                        {item.text}
+                      </h2>
+                    );
+                  case 'paragraph':
+                    return (
+                      <p key={index} className="text-gray-700 mb-4 leading-relaxed">
+                        {item.text}
+                      </p>
+                    );
+                  case 'image':
+                    return (
+                      <div key={index} className="my-8">
+                        <div className="flex flex-col md:flex-row md:gap-10 items-center md:items-start">
+                          <div className="w-full md:w-auto flex-shrink-0 flex flex-col items-center">
+                            <div className="relative w-full max-w-xs md:max-w-md rounded-lg overflow-hidden shadow-lg">
+                              {item.src && (
+                                <div className="aspect-[3/4] relative">
+                                  <Image
+                                    src={item.src}
+                                    alt={item.alt || 'Content image'}
+                                    fill
+                                    className="object-cover"
+                                  />
+                                </div>
+                              )}
+                            </div>
+                            {item.caption && (
+                              <p className="text-sm text-gray-500 text-center mt-3 italic max-w-xs md:max-w-md">
+                                {item.caption}
+                              </p>
+                            )}
+                          </div>
+                          {article.id === 'ooh-urban-design' && (
+                            <div className="w-full md:flex-1 mt-8 md:mt-0">
+                              <div className="card-accent p-6 h-full flex flex-col justify-center max-w-xl mx-auto md:mx-0">
+                                <h3 className="heading-accent mb-3">
+                                  Presentation Highlights
+                                </h3>
+                                <p className="body-text">
+                                  Garima's keynote presentation at South India Talks OOH 2025 focused on integrating out-of-home media with public space design, emphasizing climate-sensitive approaches and democratic placemaking principles.
+                                </p>
+                              </div>
                             </div>
                           )}
                         </div>
-                        {item.caption && (
-                          <p className="text-sm text-gray-500 text-center mt-3 italic max-w-xs md:max-w-md">
-                            {item.caption}
-                          </p>
-                        )}
                       </div>
-                      {article.id === 'ooh-urban-design' && (
-                        <div className="w-full md:flex-1 mt-8 md:mt-0">
-                          <div className="card-accent p-6 h-full flex flex-col justify-center max-w-xl mx-auto md:mx-0">
-                            <h3 className="heading-accent mb-3">
-                              Presentation Highlights
-                            </h3>
-                            <p className="body-text">
-                              Garima's keynote presentation at South India Talks OOH 2025 focused on integrating out-of-home media with public space design, emphasizing climate-sensitive approaches and democratic placemaking principles.
-                            </p>
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                );
-              case 'list':
-                return (
-                  <ul key={index} className="list-disc pl-6 mb-4 text-gray-700">
-                    {item.items.map((listItem, i) => (
-                      <li key={i} className="mb-2">{listItem}</li>
-                    ))}
-                  </ul>
-                );
-              case 'link':
-                return (
-                  <div key={index} className="my-4">
-                    <a 
-                      href={item.text} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-[#e7a77e] hover:text-[#d18e64] transition-colors font-semibold"
-                    >
-                      {item.label} →
-                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-                      </svg>
-                    </a>
-                  </div>
-                );
-              default:
-                return null;
-            }
-          })}
-        </div>
+                    );
+                  case 'list':
+                    return (
+                      <ul key={index} className="list-disc pl-6 mb-4 text-gray-700">
+                        {item.items.map((listItem, i) => (
+                          <li key={i} className="mb-2">{listItem}</li>
+                        ))}
+                      </ul>
+                    );
+                  case 'link':
+                    return (
+                      <div key={index} className="my-4">
+                        <a 
+                          href={item.text} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center text-[#e7a77e] hover:text-[#d18e64] transition-colors font-semibold"
+                        >
+                          {item.label} →
+                          <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                          </svg>
+                        </a>
+                      </div>
+                    );
+                  default:
+                    return null;
+                }
+              })}
+            </div>
 
-        <div className="mt-12 pt-6 border-t border-gray-200">
-          <Link 
-            href="/think-tank" 
-            className="inline-flex items-center text-[#e7a77e] hover:text-[#d18e64] transition-colors"
-          >
-            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-            </svg>
-            Back to Think Tank
-          </Link>
-        </div>
+            <div className="mt-12 pt-6 border-t border-gray-200">
+              <Link 
+                href="/think-tank" 
+                className="inline-flex items-center text-[#e7a77e] hover:text-[#d18e64] transition-colors"
+              >
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Back to Think Tank
+              </Link>
+            </div>
+          </div>
+        </article>
       </div>
-    </article>
-    </div>
+    </>
   );
 }

@@ -8,6 +8,7 @@ import { Cormorant_Garamond } from "next/font/google";
 import PerformanceMonitor from "./components/PerformanceMonitor";
 import Analytics from "./components/Analytics";
 import WhatsAppButton from "./components/WhatsAppButton";
+import SEOOptimizer from "./components/SEOOptimizer";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -118,6 +119,7 @@ export default function RootLayout({
         
       </head>
       <body className={`${cormorant.variable} bg-[#f6f2ed] min-h-screen flex flex-col`}>
+        <SEOOptimizer />
         <PerformanceMonitor />
         <Header />
         <main className="flex-1 w-full">

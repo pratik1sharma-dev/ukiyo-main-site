@@ -1,5 +1,4 @@
-"use client";
-import { useEffect } from 'react';
+'use client';
 
 interface SEOOptimizerProps {
   title?: string;
@@ -104,9 +103,10 @@ export default function SEOOptimizer({
     return baseData;
   };
 
-  useEffect(() => {
-    // No-op: metadata handled by Next.js Metadata API
-  }, []);
-
-  return null;
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(generateStructuredData()) }}
+    />
+  );
 } 
