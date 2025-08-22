@@ -28,7 +28,35 @@ export const metadata = {
     "landscape-led masterplans",
     "co-designed public spaces",
     "environmental design services",
-    "social impact design"
+    "social impact design",
+    // Geo service variants
+    "landscape architecture services Delhi NCR",
+    "landscape architecture services Gurgaon",
+    "landscape architecture services Noida",
+    "landscape architecture services Bangalore",
+    "landscape architecture services Hyderabad",
+    "landscape architecture services Ahmedabad",
+    "landscape architecture services Pune",
+    "urban design consultants Delhi NCR",
+    "urban design consultants Gurgaon",
+    "urban design consultants Noida",
+    "urban design consultants Bangalore",
+    "urban design consultants Hyderabad",
+    "urban design consultants Ahmedabad",
+    "urban design consultants Pune",
+    "interior design studio Delhi NCR",
+    "interior design studio Gurgaon",
+    "interior design studio Noida",
+    "interior design studio Bangalore",
+    "interior design studio Hyderabad",
+    "interior design studio Ahmedabad",
+    "interior design studio Pune",
+    // Requested cities
+    "landscape architect Jabalpur",
+    "landscape architect Indore",
+    "landscape architect Pushkar",
+    "landscape architect Bhopal",
+    "landscape architect Ayodhya"
   ],
 };
 

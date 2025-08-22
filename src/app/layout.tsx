@@ -87,7 +87,17 @@ export const metadata: Metadata = {
     'urban ecologist',
     'sustainable urban design',
     'ecological landscape architecture',
-    'climate-adaptive design'
+    'climate-adaptive design',
+    // Geo variants
+    'architectural firm Delhi NCR',
+    'architectural firm Gurgaon',
+    'architectural firm Noida',
+    'landscape architect Jabalpur',
+    'urban design Indore',
+    'landscape architect Bangalore',
+    'landscape architect Pushkar',
+    'landscape architect Bhopal',
+    'landscape architect Ayodhya'
   ],
 };
 
