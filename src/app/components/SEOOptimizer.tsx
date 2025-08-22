@@ -5,8 +5,9 @@ interface SEOOptimizerProps {
   description?: string;
   keywords?: string[];
   image?: string;
+  images?: string[];
   url?: string;
-  type?: 'website' | 'article' | 'profile';
+  type?: 'website' | 'article' | 'profile' | 'creativeWork';
   author?: string;
   publishedTime?: string;
   modifiedTime?: string;
@@ -19,6 +20,7 @@ export default function SEOOptimizer({
   description = 'Ukiyo Habitat is a cross-disciplinary design studio creating sustainable, immersive environments rooted in ecology and driven by innovation.',
   keywords = [],
   image = '/logo.png',
+  images,
   url = typeof window !== 'undefined' ? window.location.href : (process.env.NEXT_PUBLIC_SITE_URL || 'https://ukiyohabitat.com'),
   type = 'website',
   author = 'Ukiyo Habitat',
@@ -96,6 +98,27 @@ export default function SEOOptimizer({
           '@id': url
         },
         articleSection: section,
+        keywords: keywords.join(', ')
+      };
+    }
+
+    if (type === 'creativeWork') {
+      const imageList = (images && images.length > 0)
+        ? images.map((img) => `${siteUrl}${img}`)
+        : [`${siteUrl}${image}`];
+
+      return {
+        '@context': 'https://schema.org',
+        '@type': 'CreativeWork',
+        name: title,
+        description: description,
+        image: imageList,
+        author: {
+          '@type': 'Organization',
+          name: author
+        },
+        url,
+        about: section,
         keywords: keywords.join(', ')
       };
     }

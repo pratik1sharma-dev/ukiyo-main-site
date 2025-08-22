@@ -2,6 +2,7 @@
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, ExternalLink } from "lucide-react";
+import SEOOptimizer from "../../components/SEOOptimizer";
 
 // Project data (same as in the main projects page)
 const projects = [
@@ -89,7 +90,18 @@ export default function ProjectDetail() {
   }
 
   return (
-    <div className="min-h-screen bg-[#fafafa]">
+    <>
+      <SEOOptimizer
+        type="creativeWork"
+        title={project.title}
+        description={project.shortDescription}
+        image={project.mainImage}
+        images={project.images}
+        author={"Ukiyo Habitat"}
+        section={project.category}
+        tags={[]}
+      />
+      <div className="min-h-screen bg-[#fafafa]">
       {/* Back Button */}
       <div className="max-w-7xl mx-auto pt-8 px-4">
         <Link 
@@ -178,5 +190,6 @@ export default function ProjectDetail() {
         </div>
       </div>
     </div>
+    </>
   );
 } 
