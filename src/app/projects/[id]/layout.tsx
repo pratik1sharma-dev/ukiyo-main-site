@@ -3,7 +3,7 @@
 import { Metadata } from 'next';
 
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
-  const baseUrl = 'https://ukiyohabitat.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ukiyohabitat.com';
   const id = params.id;
   const titleMap: Record<string, { title: string; description: string; image?: string }> = {
     'bandhavgarh-landscape': {

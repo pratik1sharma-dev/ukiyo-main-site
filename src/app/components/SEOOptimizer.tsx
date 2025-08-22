@@ -20,7 +20,7 @@ export default function SEOOptimizer({
   description = 'Ukiyo Habitat is a cross-disciplinary design studio creating sustainable, immersive environments rooted in ecology and driven by innovation.',
   keywords = [],
   image = '/logo.png',
-  url = typeof window !== 'undefined' ? window.location.href : 'https://ukiyohabitat.com',
+  url = typeof window !== 'undefined' ? window.location.href : (process.env.NEXT_PUBLIC_SITE_URL || 'https://ukiyohabitat.com'),
   type = 'website',
   author = 'Ukiyo Habitat',
   publishedTime,
@@ -29,7 +29,7 @@ export default function SEOOptimizer({
   tags = []
 }: SEOOptimizerProps) {
   const siteName = 'Ukiyo Habitat';
-  const siteUrl = 'https://ukiyohabitat.com';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ukiyohabitat.com';
   const twitterHandle = '@ukiyohabitat';
 
   // Generate structured data
