@@ -69,6 +69,21 @@ export default function Footer() {
              </nav>
            </div>
 
+          {/* Locations */}
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold text-[#232323] mb-4">Locations</h3>
+            <nav>
+              <ul className="space-y-3">
+                <li><Link href="/locations/jabalpur" className="text-[#6b7280] hover:text-[#e7a77e] transition-colors duration-200">Jabalpur</Link></li>
+                <li><Link href="/locations/indore" className="text-[#6b7280] hover:text-[#e7a77e] transition-colors duration-200">Indore</Link></li>
+                <li><Link href="/locations/bangalore" className="text-[#6b7280] hover:text-[#e7a77e] transition-colors duration-200">Bangalore</Link></li>
+                <li><Link href="/locations/pushkar" className="text-[#6b7280] hover:text-[#e7a77e] transition-colors duration-200">Pushkar</Link></li>
+                <li><Link href="/locations/bhopal" className="text-[#6b7280] hover:text-[#e7a77e] transition-colors duration-200">Bhopal</Link></li>
+                <li><Link href="/locations/ayodhya" className="text-[#6b7280] hover:text-[#e7a77e] transition-colors duration-200">Ayodhya</Link></li>
+              </ul>
+            </nav>
+          </div>
+
            {/* Contact Info */}
            <div className="space-y-4">
              <h3 className="text-xl font-bold text-[#232323] mb-4">Get in Touch</h3>

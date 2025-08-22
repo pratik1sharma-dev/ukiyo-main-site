@@ -153,6 +153,24 @@ export default function Services() {
           </div>
         </section>
 
+        {/* Locations we serve */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold mb-6 text-[#232323]">Locations We Serve</h2>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/locations/jabalpur" className="tag-primary">Jabalpur</Link>
+              <Link href="/locations/indore" className="tag-primary">Indore</Link>
+              <Link href="/locations/bangalore" className="tag-primary">Bangalore</Link>
+              <Link href="/locations/pushkar" className="tag-primary">Pushkar</Link>
+              <Link href="/locations/bhopal" className="tag-primary">Bhopal</Link>
+              <Link href="/locations/ayodhya" className="tag-primary">Ayodhya</Link>
+              <Link href="/locations/delhi-ncr" className="tag-primary">Delhi NCR</Link>
+              <Link href="/locations/gurgaon" className="tag-primary">Gurgaon</Link>
+              <Link href="/locations/noida" className="tag-primary">Noida</Link>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-24 bg-gradient-to-br from-[#f6f2ed] to-[#f0ebe6]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
