@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: '/favicon.ico'
+    icon: '/logo.png'
   },
   manifest: '/site.webmanifest',
   keywords: [
