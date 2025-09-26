@@ -34,13 +34,34 @@ export default function Analytics({
   facebookPixelId = process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID,
 }: AnalyticsProps) {
   useEffect(() => {
+    // Debug logging
+    console.log('🔍 Analytics Debug Info:', {
+      googleAnalyticsId,
+      googleTagManagerId,
+      hotjarId,
+      facebookPixelId,
+      hasGtag: typeof window !== 'undefined' && !!window.gtag,
+      currentPath: typeof window !== 'undefined' ? window.location.pathname : 'SSR'
+    });
+
     // Track page views on route changes in App Router
     const sendPageView = () => {
       if (typeof window !== 'undefined' && window.gtag && googleAnalyticsId) {
+        console.log('📊 Sending GA page view:', {
+          page_path: window.location.pathname,
+          page_title: document.title,
+          page_location: window.location.href,
+        });
         window.gtag('config', googleAnalyticsId, {
           page_path: window.location.pathname,
           page_title: document.title,
           page_location: window.location.href,
+        });
+      } else {
+        console.warn('⚠️ GA page view not sent:', {
+          hasWindow: typeof window !== 'undefined',
+          hasGtag: typeof window !== 'undefined' && !!window.gtag,
+          hasAnalyticsId: !!googleAnalyticsId
         });
       }
     };
@@ -82,11 +103,17 @@ export default function Analytics({
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
+              
+              console.log('🚀 GA Script loaded, ID: ${googleAnalyticsId}');
+              
               gtag('config', '${googleAnalyticsId}', {
                 page_title: document.title,
                 page_location: window.location.href,
-                send_page_view: true
+                send_page_view: true,
+                debug_mode: true
               });
+              
+              console.log('✅ GA configured with ID: ${googleAnalyticsId}');
             `}
           </Script>
         </>
