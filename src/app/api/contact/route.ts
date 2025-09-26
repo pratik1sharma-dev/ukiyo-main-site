@@ -1,28 +1,6 @@
-import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
-
-// ---- Resend configuration ----
-// ---- Resend configuration ----
-const RESEND_API_KEY   = process.env.RESEND_API_KEY!;
-const RESEND_FROM_EMAIL = process.env.RESEND_FROM_EMAIL!;
-const RESEND_TO_EMAIL   = process.env.RESEND_TO_EMAIL!;
-
-console.log('ALL ENV:', process.env);
-
-// Initialize Resend only if API key is available
-const getResendClient = () => {
-  const apiKey = RESEND_API_KEY;
-  console.log('Using hard-coded Resend API key, exists:', !!apiKey);
-  
-  if (!apiKey) {
-    console.warn('RESEND_API_KEY is not set. Email functionality will be disabled.');
-    return null;
-  }
-  return new Resend(apiKey);
-};
-
-const resend = getResendClient();
+import { sendEmail, createEmailResponse } from '@/lib/email';
 
 export async function OPTIONS() {
   return NextResponse.json({}, { status: 204 });
@@ -46,32 +24,8 @@ export async function POST(request: Request) {
     // Log incoming request data
     console.log('Received contact form submission:', { name, email, message });
 
-    // If Resend is not initialized (missing API key), return success in development
-    if (!resend) {
-      const message = 'Email functionality is disabled - RESEND_API_KEY is not set';
-      console.warn(message);
-      
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Email would be sent in production with data:', { name, email, message });
-        return NextResponse.json({ 
-          success: true, 
-          message: 'Email would be sent in production',
-          debug: { name, email, message }
-        });
-      }
-      
-      return NextResponse.json(
-        { 
-          error: 'Email service is not configured',
-          debug: { message: 'RESEND_API_KEY is missing from environment variables' }
-        },
-        { status: 500 }
-      );
-    }
-
-    const data = await resend.emails.send({
-      from: `Contact Form <${RESEND_FROM_EMAIL}>`,
-      to: RESEND_TO_EMAIL,
+    const result = await sendEmail({
+      from: `Contact Form <${process.env.RESEND_FROM_EMAIL}>`,
       subject: `New Contact Form Submission from ${name}`,
       text: `
         Name: ${name}
@@ -89,7 +43,7 @@ export async function POST(request: Request) {
       `,
     });
 
-    return NextResponse.json({ success: true, data });
+    return createEmailResponse(result);
   } catch (error) {
     console.error('Error sending email:', error);
     return NextResponse.json(
