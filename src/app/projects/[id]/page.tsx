@@ -27,8 +27,8 @@ const projects = [
     category: "Landscape",
     title: "Haldiram Landscape",
     mainImage: "/projects/haldiram/1.jpg",
-    shortDescription: "A comprehensive landscape design project for Haldiram's corporate campus, creating sustainable outdoor spaces.",
-    fullDescription: "Project details coming soon.",
+    shortDescription: "A flagship landscape design proposal for Haldiram at Modi Mall, Noida, built around safety, sustainability, accessibility, and commercial impact.",
+    fullDescription: "A flagship landscape design proposal for Haldiram at Modi Mall, Noida, built around safety, sustainability, accessibility, and commercial impact. The concept blends thoughtful design with brand building—creating an environment that is safe, inclusive, eco-conscious, and visually iconic. The layout features non-slip pathways, secure railings, gentle level changes, and barrier-free movement, ensuring effortless navigation for senior citizens, children, and differently-abled visitors. High-performance drainage and smart water-management systems eliminate waterlogging and muddy slush (kichad), keeping the site clean and accessible even during peak monsoon. A dedicated kids' play zone designed with strict safety standards adds family appeal, while curated visual elements create Instagram-worthy backdrops that naturally boost the Haldiram brand's visibility and footfall. The planting palette focuses on native, low-maintenance species, integrated water-saving systems, and eco-friendly materials to strengthen sustainability credentials and reduce long-term operational costs. The overall strategy increases store engagement by crafting a warm, walkable, and photogenic public space that encourages families to visit, stay longer, and return frequently. Every component strikes a balance between functionality, aesthetics, accessibility, and commercial value, turning the outdoor area into a signature, future-ready landscape that elevates both customer experience and brand identity.",
     images: [
       "/projects/haldiram/1.jpg",
       "/projects/haldiram/2.png",

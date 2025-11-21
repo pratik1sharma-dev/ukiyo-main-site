@@ -20,13 +20,19 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
     },
     'haldiram-landscape': {
       title: 'Haldiram Landscape | Ukiyo Habitat',
-      description: 'Sustainable corporate campus landscape design for Haldiram.',
+      description: 'Premium landscape design for Haldiram at Modi Mall, Noida—safe, sustainable, accessible, and Instagram-worthy spaces that boost footfall and brand identity.',
       image: '/projects/haldiram/1.jpg',
       keywords: [
-        'corporate campus landscape Delhi NCR',
-        'sustainable corporate landscape India',
-        'workplace landscape design',
-        'Delhi landscape architect'
+        'Landscape design Noida',
+        'Commercial landscape architecture India',
+        'Sustainable landscape solutions',
+        'Public space design for malls',
+        'Barrier-free landscape design',
+        'Waterlogging prevention landscape',
+        'Kids play area landscape design',
+        'Haldiram landscape project',
+        'Eco-friendly materials in landscaping',
+        'Native plantation landscape India'
       ]
     },
     'kake-da-hotel': {
