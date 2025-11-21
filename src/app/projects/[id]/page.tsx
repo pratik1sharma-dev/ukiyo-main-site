@@ -26,16 +26,16 @@ const projects = [
     id: "haldiram-landscape",
     category: "Landscape",
     title: "Haldiram Landscape",
-    mainImage: "/projects/haldiram/13.png",
+    mainImage: "/projects/haldiram/1.jpg",
     shortDescription: "A comprehensive landscape design project for Haldiram's corporate campus, creating sustainable outdoor spaces.",
     fullDescription: "Project details coming soon.",
     images: [
-      "/projects/haldiram/13.png",
-      "/projects/haldiram/9.png",
-      "/projects/haldiram/12.png",
-      "/projects/haldiram/14.png",
-      "/projects/haldiram/11.png",
-      "/projects/haldiram/10.png"
+      "/projects/haldiram/1.jpg",
+      "/projects/haldiram/2.png",
+      "/projects/haldiram/3.png",
+      "/projects/haldiram/4.png",
+      "/projects/haldiram/5.jpg",
+      "/projects/haldiram/6.png"
     ],
     cta: null
   },

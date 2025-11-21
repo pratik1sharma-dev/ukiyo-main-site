@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
     'haldiram-landscape': {
       title: 'Haldiram Landscape | Ukiyo Habitat',
       description: 'Sustainable corporate campus landscape design for Haldiram.',
-      image: '/projects/haldiram/13.png',
+      image: '/projects/haldiram/1.jpg',
       keywords: [
         'corporate campus landscape Delhi NCR',
         'sustainable corporate landscape India',
