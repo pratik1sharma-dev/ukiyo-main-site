@@ -66,6 +66,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'ooh-urban-design',
     'sustainable-architecture-india',
     'landscape-design-trends',
+    'haldiram-commercial-landscape',
   ];
 
   const articlePages = thinkTankArticles.map((article) => ({

@@ -257,6 +257,122 @@ const thinkTankContent: ThinkTankItem[] = [
       { type: 'heading', text: 'Implications for Urban Planning' },
       { type: 'paragraph', text: 'This research provides valuable insights for urban planners and policymakers, demonstrating how integrated water management strategies can transform underutilized urban water bodies into valuable community assets while addressing climate resilience.' }
     ]
+  },
+  {
+    id: 'haldiram-commercial-landscape',
+    title: 'Designing Commercial Landscapes: Safety, Sustainability, and Brand Impact',
+    category: 'Commercial Landscape Design',
+    shortDescription: 'A case study of the Haldiram landscape design at Modi Mall, Noida, exploring how thoughtful design creates safe, sustainable, and commercially successful spaces.',
+    mainImage: '/projects/haldiram/1.jpg',
+    date: '2024-12-20',
+    author: 'Ukiyo Design Team',
+    readTime: '12 min read',
+    content: [
+      { type: 'heading', text: 'Introduction: The New Paradigm of Commercial Landscape Design' },
+      { type: 'paragraph', text: 'Commercial landscape design has evolved beyond mere aesthetics. Today\'s successful retail and commercial spaces require landscapes that balance safety, sustainability, accessibility, and commercial impact. The Haldiram landscape design at Modi Mall, Noida, exemplifies this integrated approach—creating an environment that is safe, inclusive, eco-conscious, and visually iconic while driving brand visibility and footfall.' },
+      { 
+        type: 'image', 
+        src: '/projects/haldiram/1.jpg', 
+        alt: 'Haldiram landscape design at Modi Mall, Noida',
+        caption: 'The flagship landscape design for Haldiram at Modi Mall, Noida, demonstrates how thoughtful design creates safe, sustainable, and commercially successful spaces'
+      },
+      { type: 'heading', text: 'Safety First: Designing for All Ages and Abilities' },
+      { type: 'paragraph', text: 'The foundation of the Haldiram landscape design prioritizes safety through meticulous attention to pathway detailing. Non-slip surfaces, secure railings, and gentle level changes ensure effortless navigation for senior citizens, children, and differently-abled visitors. This approach prevents falls and creates a sense of security that encourages longer visits.' },
+      { type: 'list', items: [
+        'Non-slip pathway materials that maintain grip even during monsoon seasons',
+        'Secure railings at appropriate heights for both adults and children',
+        'Gentle level changes with ramps instead of steps where possible',
+        'Barrier-free movement ensuring wheelchair accessibility throughout',
+        'Clear visual markers and wayfinding for easy navigation',
+        'Adequate lighting for evening safety and visibility'
+      ]},
+      { 
+        type: 'image', 
+        src: '/projects/haldiram/2.png', 
+        alt: 'Safe pathway design with non-slip surfaces and railings',
+        caption: 'Pathway design emphasizing safety with non-slip surfaces, secure railings, and barrier-free movement'
+      },
+      { type: 'heading', text: 'Water Management: Eliminating Waterlogging and Mud' },
+      { type: 'paragraph', text: 'One of the most critical challenges in Indian commercial landscapes is managing water during monsoon seasons. The Haldiram design addresses this through high-performance drainage systems and smart water-management solutions that eliminate waterlogging and muddy slush (kichad), keeping the site clean and accessible even during peak monsoon.' },
+      { type: 'list', items: [
+        'Advanced drainage systems with proper slope gradients',
+        'Permeable paving materials that allow water infiltration',
+        'Strategic placement of drainage points to prevent pooling',
+        'Smart water-management systems that collect and reuse rainwater',
+        'Maintenance-friendly design that prevents mud accumulation',
+        'Year-round accessibility regardless of weather conditions'
+      ]},
+      { 
+        type: 'image', 
+        src: '/projects/haldiram/3.png', 
+        alt: 'Water management systems preventing waterlogging',
+        caption: 'Smart water-management systems ensure the landscape remains accessible and clean throughout the year'
+      },
+      { type: 'heading', text: 'Family-Friendly Design: Kids Play Zones and Social Spaces' },
+      { type: 'paragraph', text: 'A dedicated kids\' play zone designed with strict safety standards adds significant family appeal to the commercial space. This creates an environment where families can spend extended time, naturally increasing dwell time and potential sales. The play area is carefully integrated with the overall design, maintaining visual coherence while prioritizing child safety.' },
+      { type: 'list', items: [
+        'Age-appropriate play equipment with safety-certified materials',
+        'Soft-fall surfaces to prevent injury',
+        'Shaded areas to protect children from sun exposure',
+        'Parental supervision zones with comfortable seating',
+        'Integration with overall landscape design for visual harmony',
+        'Regular safety audits and maintenance protocols'
+      ]},
+      { 
+        type: 'image', 
+        src: '/projects/haldiram/4.png', 
+        alt: 'Kids play area with safety-focused design',
+        caption: 'A dedicated kids\' play zone designed with strict safety standards, encouraging family visits and extended stays'
+      },
+      { type: 'heading', text: 'Brand Building Through Visual Design' },
+      { type: 'paragraph', text: 'Curated visual elements create Instagram-worthy backdrops that naturally boost the Haldiram brand\'s visibility and footfall. In today\'s social media-driven world, photogenic spaces become marketing assets, with visitors sharing their experiences online and organically promoting the brand.' },
+      { type: 'list', items: [
+        'Strategic placement of visually striking elements',
+        'Color palettes that complement brand identity',
+        'Unique architectural features that become photo destinations',
+        'Seasonal planting that maintains visual interest year-round',
+        'Lighting design that enhances evening photography',
+        'Integration of brand elements without overwhelming the space'
+      ]},
+      { 
+        type: 'image', 
+        src: '/projects/haldiram/5.jpg', 
+        alt: 'Instagram-worthy landscape design elements',
+        caption: 'Curated visual elements create photogenic backdrops that enhance brand visibility and encourage social media sharing'
+      },
+      { type: 'heading', text: 'Sustainability: Native Plantings and Eco-Friendly Materials' },
+      { type: 'paragraph', text: 'The planting palette focuses on native, low-maintenance species, integrated water-saving systems, and eco-friendly materials. This approach strengthens sustainability credentials while reducing long-term operational costs—a win-win for both environmental responsibility and business efficiency.' },
+      { type: 'list', items: [
+        'Native plant species adapted to local climate conditions',
+        'Low-maintenance planting schemes that reduce water and care requirements',
+        'Integrated water-saving systems including drip irrigation',
+        'Eco-friendly materials with low environmental impact',
+        'Carbon-sequestering plant selections',
+        'Biodiversity support through native species selection'
+      ]},
+      { 
+        type: 'image', 
+        src: '/projects/haldiram/6.png', 
+        alt: 'Sustainable native planting and eco-friendly materials',
+        caption: 'Native, low-maintenance plantings and eco-friendly materials create sustainable landscapes that reduce operational costs'
+      },
+      { type: 'heading', text: 'Commercial Impact: Increasing Footfall and Dwell Time' },
+      { type: 'paragraph', text: 'The overall strategy increases store engagement by crafting a warm, walkable, and photogenic public space that encourages families to visit, stay longer, and return frequently. Every component strikes a balance between functionality, aesthetics, accessibility, and commercial value.' },
+      { type: 'list', items: [
+        'Extended dwell time through comfortable, engaging spaces',
+        'Increased repeat visits due to positive experience',
+        'Higher footfall from word-of-mouth and social media sharing',
+        'Enhanced brand perception through quality design',
+        'Differentiation from competitors through unique landscape experience',
+        'Long-term value creation through sustainable design practices'
+      ]},
+      { type: 'heading', text: 'The Future of Commercial Landscape Design' },
+      { type: 'paragraph', text: 'The Haldiram landscape design represents a new standard for commercial spaces—one that recognizes landscapes as integral to business success. By prioritizing safety, sustainability, accessibility, and visual appeal, this approach creates spaces that serve multiple purposes: protecting visitors, supporting the environment, building brand identity, and driving commercial success.' },
+      { type: 'paragraph', text: 'As commercial spaces continue to evolve, the integration of thoughtful landscape design will become increasingly important. The outdoor area becomes a signature, future-ready landscape that elevates both customer experience and brand identity, turning what was once considered mere exterior decoration into a strategic business asset.' },
+      { type: 'heading', text: 'Conclusion: Design That Delivers' },
+      { type: 'paragraph', text: 'The Haldiram landscape design at Modi Mall, Noida, demonstrates how commercial landscapes can successfully balance multiple objectives. By creating safe, sustainable, accessible, and visually compelling spaces, the design not only enhances the customer experience but also contributes to business success through increased footfall, extended dwell time, and enhanced brand perception.' },
+      { type: 'paragraph', text: 'At Ukiyo Habitat, we believe that every commercial landscape should be designed with this integrated approach—where safety, sustainability, accessibility, and commercial impact work together to create spaces that are both beautiful and beneficial. The future of commercial design lies in recognizing landscapes as essential components of business strategy, not just aesthetic additions.' }
+    ]
   }
   // Add other think tank content here
 ];

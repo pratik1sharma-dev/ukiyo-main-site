@@ -42,6 +42,16 @@ const thinkTankContent = [
     date: '2023-12-10',
     author: 'Ukiyo Research Team',
     readTime: '12 min read'
+  },
+  {
+    id: 'haldiram-commercial-landscape',
+    title: 'Designing Commercial Landscapes: Safety, Sustainability, and Brand Impact',
+    category: 'Commercial Landscape Design',
+    shortDescription: 'A case study of the Haldiram landscape design at Modi Mall, Noida, exploring how thoughtful design creates safe, sustainable, and commercially successful spaces.',
+    mainImage: '/projects/haldiram/1.jpg',
+    date: '2024-12-20',
+    author: 'Ukiyo Design Team',
+    readTime: '12 min read'
   }
 ];
 

@@ -24,6 +24,11 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
       description: 'Insights on urban lake revitalization and climate resilience in Ahmedabad.',
       image: '/projects/vastrapur lake/1.png',
     },
+    'haldiram-commercial-landscape': {
+      title: 'Designing Commercial Landscapes: Safety, Sustainability, and Brand Impact | Ukiyo Habitat',
+      description: 'A case study of the Haldiram landscape design at Modi Mall, Noida, exploring how thoughtful design creates safe, sustainable, and commercially successful spaces.',
+      image: '/projects/haldiram/1.jpg',
+    },
   };
 
   const entry = titleMap[id];
