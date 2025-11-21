@@ -181,7 +181,9 @@ const thinkTankContent: ThinkTankItem[] = [
       { type: 'heading', text: 'Event Details' },
       { type: 'paragraph', text: 'The event, organised by Thoughtshows & Events Pvt. Ltd., revolved around the theme "Beyond Billboards: Reimagining OOH"—gathering designers, policymakers, and media professionals to shape the future of the medium.' },
       { type: 'paragraph', text: '📰 Read the event announcement on Media4Growth' },
-      { type: 'link', text: 'https://www.media4growth.com/events/talks-ooh-news/garima-dubey-co-founder-of-ukiyo-habitat-llp-to-address-south-india-talks-ooh-2025-76386', label: 'Media4Growth Article' }
+      { type: 'link', text: 'https://www.media4growth.com/events/talks-ooh-news/garima-dubey-co-founder-of-ukiyo-habitat-llp-to-address-south-india-talks-ooh-2025-76386', label: 'Media4Growth Article' },
+      { type: 'paragraph', text: '📖 Read the detailed coverage of Garima\'s presentation' },
+      { type: 'link', text: 'https://www.media4growth.com/events/talks-ooh-news/ooh-as-an-integral-part-of-public-space-design-garima-dubeys-vision-at-south-india-talks-ooh-76554', label: 'Garima Dubey\'s Vision at South India Talks OOH' }
     ]
   },
   {

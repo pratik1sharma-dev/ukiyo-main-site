@@ -19,7 +19,7 @@ const thinkTankContent = [
     category: 'Urban Experience Research',
     shortDescription: 'Exploring how Out-of-Home advertising can be reimagined as an integral part of urban design and public space experience.',
     mainImage: '/ooh-garima.jpg',
-    date: '2024-01-15',
+    date: '2025-04-30',
     author: 'Garima Dubey',
     readTime: '8 min read'
   },
@@ -114,7 +114,7 @@ export default function ThinkTank() {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {thinkTankContent.map((item) => (
+            {thinkTankContent.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).map((item) => (
               <Link href={`/think-tank/${item.id}`} key={item.id} className="group">
                 <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 h-full flex flex-col">
                   <div className="relative h-64 w-full">
