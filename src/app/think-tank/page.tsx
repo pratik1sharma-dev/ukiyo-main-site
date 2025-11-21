@@ -49,7 +49,7 @@ const thinkTankContent = [
     category: 'Commercial Landscape Design',
     shortDescription: 'A case study of the Haldiram landscape design at Modi Mall, Noida, exploring how thoughtful design creates safe, sustainable, and commercially successful spaces.',
     mainImage: '/projects/haldiram/1.jpg',
-    date: '2024-12-20',
+    date: '2025-11-21',
     author: 'Ukiyo Design Team',
     readTime: '12 min read'
   }
