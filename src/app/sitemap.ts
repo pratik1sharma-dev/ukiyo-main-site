@@ -52,6 +52,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'vastrapur-lake',
     'kake-da-hotel',
     'chevella-mansion-interior',
+    'gurgaon-residential-interior',
   ];
 
   const projectPages = projects.map((project) => ({

@@ -56,6 +56,18 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
         'bespoke interior design India'
       ]
     },
+    'gurgaon-residential-interior': {
+      title: 'Luxury Residential Interior Design — Gurgaon | Ukiyo Habitat',
+      description: 'A luxury residential interior design project in Gurgaon, creating sophisticated modern living spaces with premium finishes and thoughtful functionality.',
+      image: '/projects/gurgaon-residential/2.jpg',
+      keywords: [
+        'luxury residential interior design Gurgaon',
+        'luxury home interior design Delhi NCR',
+        'premium interior design Gurgaon',
+        'luxury residential interior architect Gurgaon',
+        'high-end home design India'
+      ]
+    },
   };
 
   const entry = titleMap[id];
