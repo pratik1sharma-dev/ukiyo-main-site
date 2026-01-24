@@ -65,9 +65,9 @@ export default function CityPage({ params }: { params: { city: string } }) {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-[#232323] mb-4">What we do</h2>
           <ul className="list-disc pl-6 text-[#6b7280] space-y-2">
-            <li>Landscape Architecture: campuses, streetscapes, parks, waterfronts</li>
+            <li>Landscape Architecture: campuses, streetscapes, parks, waterfronts, commercial landscape, ecological parks</li>
             <li>Urban Design: public spaces, TOD edges, resilience-focused interventions</li>
-            <li>Interior Environments: hospitality, workplace, residential</li>
+            <li>Interior Environments: hospitality, workplace, residential, restaurant design, residential complexes</li>
             <li>Brand & Communication for place-based initiatives</li>
           </ul>
 

@@ -27,7 +27,7 @@ export default function Footer() {
                  </svg>
                </a>
                <a 
-                 href="https://linkedin.com/company/ukiyo-habitat" 
+                 href="https://www.linkedin.com/company/ukiyo-habitat-design/people/" 
                  target="_blank" 
                  rel="noopener noreferrer" 
                  aria-label="LinkedIn"
@@ -74,6 +74,9 @@ export default function Footer() {
             <h3 className="text-xl font-bold text-[#232323] mb-4">Locations</h3>
             <nav>
               <ul className="space-y-3">
+                <li><Link href="/locations/delhi-ncr" className="text-[#6b7280] hover:text-[#e7a77e] transition-colors duration-200">Delhi NCR</Link></li>
+                <li><Link href="/locations/gurgaon" className="text-[#6b7280] hover:text-[#e7a77e] transition-colors duration-200">Gurgaon</Link></li>
+                <li><Link href="/locations/noida" className="text-[#6b7280] hover:text-[#e7a77e] transition-colors duration-200">Noida</Link></li>
                 <li><Link href="/locations/jabalpur" className="text-[#6b7280] hover:text-[#e7a77e] transition-colors duration-200">Jabalpur</Link></li>
                 <li><Link href="/locations/indore" className="text-[#6b7280] hover:text-[#e7a77e] transition-colors duration-200">Indore</Link></li>
                 <li><Link href="/locations/bangalore" className="text-[#6b7280] hover:text-[#e7a77e] transition-colors duration-200">Bangalore</Link></li>

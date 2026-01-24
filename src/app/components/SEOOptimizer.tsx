@@ -60,12 +60,12 @@ export default function SEOOptimizer({
       },
       sameAs: [
         'https://www.instagram.com/ukiyohabitat',
-        'https://www.linkedin.com/company/ukiyo-habitat',
+        'https://www.linkedin.com/company/ukiyo-habitat-design/people/',
         'https://www.facebook.com/ukiyohabitat'
       ],
       areaServed: {
         '@type': 'City',
-        name: city || 'Delhi'
+        name: city || 'Delhi NCR'
       },
       serviceType: [
         'Landscape Architecture',
@@ -139,16 +139,16 @@ export default function SEOOptimizer({
         address: {
           '@type': 'PostalAddress',
           addressCountry: 'IN',
-          addressLocality: city || 'Delhi',
+          addressLocality: city || 'Delhi NCR',
           addressRegion: region || 'India'
         },
         areaServed: {
           '@type': 'City',
-          name: city || 'Delhi'
+          name: city || 'Delhi NCR'
         },
         sameAs: [
           'https://www.instagram.com/ukiyohabitat',
-          'https://www.linkedin.com/company/ukiyo-habitat',
+          'https://www.linkedin.com/company/ukiyo-habitat-design/people/',
           'https://www.facebook.com/ukiyohabitat'
         ],
         serviceType: [
