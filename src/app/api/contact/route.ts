@@ -13,32 +13,70 @@ export async function GET() {
 const contactFormSchema = z.object({
   name: z.string().min(2, 'Name is required'),
   email: z.string().email('Invalid email address'),
+  phone: z.string().min(10, 'Mobile number must be at least 10 digits').regex(/^[0-9+\-\s()]+$/, 'Invalid mobile number format'),
+  projectType: z.string().min(1, 'Please select a project type'),
+  location: z.string().min(2, 'Location is required'),
   message: z.string().min(10, 'Message must be at least 10 characters'),
 });
 
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, email, message } = contactFormSchema.parse(body);
+    const { name, email, phone, projectType, location, message } = contactFormSchema.parse(body);
 
     // Log incoming request data
-    console.log('Received contact form submission:', { name, email, message });
+    console.log('Received contact form submission:', { name, email, phone, projectType, location, message });
+
+    const projectTypeLabels: Record<string, string> = {
+      landscape: 'Landscape Design',
+      interior: 'Interior Design',
+      urban: 'Urban Design',
+      architecture: 'Architecture',
+      commercial: 'Commercial Landscape',
+      residential: 'Residential Design',
+      other: 'Other'
+    };
 
     const result = await sendEmail({
       from: `Contact Form <${process.env.RESEND_FROM_EMAIL}>`,
-      subject: `New Contact Form Submission from ${name}`,
+      subject: `New Contact Form Submission: ${projectTypeLabels[projectType] || projectType} - ${location}`,
       text: `
         Name: ${name}
         Email: ${email}
+        Mobile: ${phone}
+        Project Type: ${projectTypeLabels[projectType] || projectType}
+        Location: ${location}
         Message: ${message}
       `,
       html: `
-        <div>
-          <h2>New Contact Form Submission</h2>
-          <p><strong>Name:</strong> ${name}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Message:</strong></p>
-          <p>${message.replace(/\n/g, '<br>')}</p>
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #232323; border-bottom: 2px solid #e7a77e; padding-bottom: 10px;">New Contact Form Submission</h2>
+          <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+            <tr>
+              <td style="padding: 10px; background-color: #f6f2ed; font-weight: bold; width: 150px;">Name:</td>
+              <td style="padding: 10px;">${name}</td>
+            </tr>
+            <tr>
+              <td style="padding: 10px; background-color: #f6f2ed; font-weight: bold;">Email:</td>
+              <td style="padding: 10px;"><a href="mailto:${email}">${email}</a></td>
+            </tr>
+            <tr>
+              <td style="padding: 10px; background-color: #f6f2ed; font-weight: bold;">Mobile:</td>
+              <td style="padding: 10px;"><a href="tel:${phone}">${phone}</a></td>
+            </tr>
+            <tr>
+              <td style="padding: 10px; background-color: #f6f2ed; font-weight: bold;">Project Type:</td>
+              <td style="padding: 10px;">${projectTypeLabels[projectType] || projectType}</td>
+            </tr>
+            <tr>
+              <td style="padding: 10px; background-color: #f6f2ed; font-weight: bold;">Location:</td>
+              <td style="padding: 10px;">${location}</td>
+            </tr>
+            <tr>
+              <td style="padding: 10px; background-color: #f6f2ed; font-weight: bold; vertical-align: top;">Message:</td>
+              <td style="padding: 10px;">${message.replace(/\n/g, '<br>')}</td>
+            </tr>
+          </table>
         </div>
       `,
     });
