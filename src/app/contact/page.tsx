@@ -7,7 +7,11 @@ import { useState } from 'react';
 const formSchema = z.object({
   name: z.string().min(2, 'Name is required'),
   email: z.string().email('Invalid email address'),
-  phone: z.string().min(10, 'Mobile number must be at least 10 digits').regex(/^[0-9+\-\s()]+$/, 'Invalid mobile number format'),
+  phone: z.string().optional().refine((val) => !val || val.length >= 10, {
+    message: 'Mobile number must be at least 10 digits'
+  }).refine((val) => !val || /^[0-9+\-\s()]+$/.test(val), {
+    message: 'Invalid mobile number format'
+  }),
   projectType: z.string().min(1, 'Please select a project type'),
   location: z.string().min(2, 'Location is required'),
   message: z.string().min(10, 'Message must be at least 10 characters'),
@@ -56,7 +60,6 @@ export default function Contact() {
       console.log('Form submitted successfully');
       setIsSuccess(true);
       reset();
-      setTimeout(() => setIsSuccess(false), 5000);
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : 'Something went wrong';
       console.error('Form submission error:', errorMessage, err);
@@ -148,7 +151,8 @@ export default function Contact() {
               </div>
             )}
 
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
+            {!isSuccess && (
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-semibold text-[#232323] mb-2">
@@ -192,7 +196,7 @@ export default function Contact() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="phone" className="block text-sm font-semibold text-[#232323] mb-2">
-                    Mobile Number *
+                    Mobile Number <span className="text-[#6b7280] font-normal">(Optional)</span>
                   </label>
                   <input
                     id="phone"
@@ -204,6 +208,12 @@ export default function Contact() {
                     placeholder="+91 9876543210"
                     disabled={isSubmitting}
                   />
+                  <p className="mt-2 text-xs text-[#6b7280] flex items-center">
+                    <svg className="w-4 h-4 mr-1 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                    </svg>
+                    We guarantee we will not spam you. Your number helps us respond faster.
+                  </p>
                   {errors.phone && (
                     <p className="mt-2 text-sm text-red-600">{errors.phone.message}</p>
                   )}
@@ -299,6 +309,7 @@ export default function Contact() {
                 </button>
               </div>
             </form>
+            )}
           </div>
 
           {/* Contact Information */}

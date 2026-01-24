@@ -13,7 +13,11 @@ export async function GET() {
 const contactFormSchema = z.object({
   name: z.string().min(2, 'Name is required'),
   email: z.string().email('Invalid email address'),
-  phone: z.string().min(10, 'Mobile number must be at least 10 digits').regex(/^[0-9+\-\s()]+$/, 'Invalid mobile number format'),
+  phone: z.string().optional().refine((val) => !val || val.length >= 10, {
+    message: 'Mobile number must be at least 10 digits'
+  }).refine((val) => !val || /^[0-9+\-\s()]+$/.test(val), {
+    message: 'Invalid mobile number format'
+  }),
   projectType: z.string().min(1, 'Please select a project type'),
   location: z.string().min(2, 'Location is required'),
   message: z.string().min(10, 'Message must be at least 10 characters'),
@@ -43,7 +47,7 @@ export async function POST(request: Request) {
       text: `
         Name: ${name}
         Email: ${email}
-        Mobile: ${phone}
+        Mobile: ${phone || 'Not provided'}
         Project Type: ${projectTypeLabels[projectType] || projectType}
         Location: ${location}
         Message: ${message}
@@ -62,7 +66,7 @@ export async function POST(request: Request) {
             </tr>
             <tr>
               <td style="padding: 10px; background-color: #f6f2ed; font-weight: bold;">Mobile:</td>
-              <td style="padding: 10px;"><a href="tel:${phone}">${phone}</a></td>
+              <td style="padding: 10px;">${phone ? `<a href="tel:${phone}">${phone}</a>` : 'Not provided'}</td>
             </tr>
             <tr>
               <td style="padding: 10px; background-color: #f6f2ed; font-weight: bold;">Project Type:</td>
