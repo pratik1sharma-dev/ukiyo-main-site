@@ -85,11 +85,10 @@ export default function Projects() {
       id: "gurgaon-residential-interior",
       category: "Architecture & Interior",
       title: "Luxury Residential Interior Design — Gurgaon",
-      mainImage: "/projects/gurgaon-residential/1.jpg",
+      mainImage: "/projects/gurgaon-residential/2.jpg",
       shortDescription: "A luxury residential interior design project in Gurgaon, creating sophisticated modern living spaces with premium finishes and thoughtful functionality.",
       fullDescription: "A luxury residential interior design project in Gurgaon that transforms living spaces into sophisticated, elegant environments. The design combines contemporary aesthetics with premium materials and finishes, creating spaces that reflect refined taste and modern luxury while maintaining warmth and character.",
       images: [
-        "/projects/gurgaon-residential/1.jpg",
         "/projects/gurgaon-residential/2.jpg",
         "/projects/gurgaon-residential/4.jpg",
         "/projects/gurgaon-residential/5.jpg",
