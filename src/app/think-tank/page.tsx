@@ -68,7 +68,7 @@ const thinkTankContent = [
     title: 'From Parking Lots to Public Realms: How Landscape Design Increases Footfall for Indian Retail',
     category: 'Commercial Landscape Strategy',
     shortDescription: 'Using landscape and public realm design to turn retail sites into destinations that increase dwell time, comfort, and brand visibility.',
-    mainImage: '/projects/haldiram/1.jpg',
+    mainImage: '/projects/kake.jpg',
     date: '2025-09-15',
     author: 'Ukiyo Design Team',
     readTime: '9 min read'
@@ -78,7 +78,7 @@ const thinkTankContent = [
     title: 'Can Political Advertising Make Better Cities? Rethinking OOH During Election Season',
     category: 'Public Space & Media',
     shortDescription: 'A critical look at how election-season OOH could double as public infrastructure instead of visual clutter in Indian cities.',
-    mainImage: '/ooh-garima.jpg',
+    mainImage: '/ooh-garima-1.jpg',
     date: '2025-04-30',
     author: 'Garima Dubey',
     readTime: '8 min read'

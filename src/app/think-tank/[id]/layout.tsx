@@ -37,12 +37,12 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
     'retail-public-realm-footfall': {
       title: 'From Parking Lots to Public Realms: Landscape Design for Indian Retail | Ukiyo Habitat',
       description: 'How better landscape and public realm design can increase footfall, dwell time, and brand visibility for Indian retail and F&B.',
-      image: '/projects/haldiram/1.jpg',
+      image: '/projects/kake.jpg',
     },
     'election-ooh-better-cities': {
       title: 'Can Political Advertising Make Better Cities? Rethinking OOH During Election Season | Ukiyo Habitat',
       description: 'A critical look at how election-season OOH could double as public infrastructure instead of visual clutter in Indian cities.',
-      image: '/ooh-garima.jpg',
+      image: '/ooh-garima-1.jpg',
     },
   };
 
