@@ -87,9 +87,9 @@ export default function Footer() {
             </nav>
           </div>
 
-           {/* Contact Info */}
+          {/* Contact Info */}
            <div className="space-y-4">
-             <h3 className="text-xl font-bold text-[#232323] mb-4">Get in Touch</h3>
+            <h3 className="text-xl font-bold text-[#232323] mb-4">Contact Ukiyo Habitat</h3>
              <div className="space-y-3 text-[#6b7280]">
                <p className="flex items-center gap-3">
                  <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="text-[#e7a77e]">

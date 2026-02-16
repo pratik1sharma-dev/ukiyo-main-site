@@ -202,7 +202,7 @@ export default function Home() {
           </div>
           {/* Main heading */}
           <h2 className="text-3xl sm:text-4xl font-bold text-[#232323] mb-4 text-center font-[var(--font-cormorant)] leading-tight">
-            What We Do, Through What We’ve Done
+            Explore Our Work & Services
           </h2>
           {/* Subheading */}
           <p className="text-lg sm:text-xl text-[#232323] mb-4 text-center font-light max-w-3xl mx-auto leading-relaxed">
@@ -274,7 +274,7 @@ export default function Home() {
               <h3 className="text-2xl font-bold text-[#232323] mb-2">Brand & Visual Communication</h3>
               <a href="/projects#visual-communication" className="inline-block mt-2 bg-gradient-to-r from-[#e7a77e] to-[#f59e42] text-white font-semibold rounded-full px-6 py-2 transition-all duration-300 shadow hover:shadow-lg text-sm">Explore Visual Communication →</a>
             </div>
-            {/* Workshops & Co-Design Labs */}
+            {/* Workshops, Co-Design Labs & Think Tank */}
             <div className="bg-[#f6f2ed] rounded-2xl shadow-2xl p-8 flex flex-col items-center text-center">
               <div className="relative w-full mb-8">
                 <img src="/projects/codesign.jpg" alt="Vastrapur Lake Workshop" className="w-full h-80 object-cover rounded-xl" />
@@ -282,8 +282,8 @@ export default function Home() {
                   Participatory Design
                 </div>
               </div>
-              <h3 className="text-2xl font-bold text-[#232323] mb-2">Workshops & Co-Design Labs</h3>
-              <a href="/think-tank" className="inline-block mt-2 bg-gradient-to-r from-[#e7a77e] to-[#f59e42] text-white font-semibold rounded-full px-6 py-2 transition-all duration-300 shadow hover:shadow-lg text-sm">Explore Think tank and collaborations →</a>
+              <h3 className="text-2xl font-bold text-[#232323] mb-2">Ukiyo Habitat Think Tank & Co-Design Labs</h3>
+              <a href="/think-tank" className="inline-block mt-2 bg-gradient-to-r from-[#e7a77e] to-[#f59e42] text-white font-semibold rounded-full px-6 py-2 transition-all duration-300 shadow hover:shadow-lg text-sm">Explore Think Tank & Research →</a>
             </div>
             {/* Emerging Tech / Speculative Futures */}
             <div className="bg-[#f6f2ed] rounded-2xl shadow-2xl p-8 flex flex-col items-center text-center md:col-span-2">
@@ -400,7 +400,7 @@ export default function Home() {
           
           {/* Main heading */}
           <h2 className="text-3xl sm:text-4xl font-bold text-[#232323] mb-6 font-[var(--font-cormorant)] leading-tight">
-            Recognition &
+            Ukiyo Habitat Recognition &
             <br />
             <span className="text-[#e7a77e]">Thought Leadership</span>
           </h2>
