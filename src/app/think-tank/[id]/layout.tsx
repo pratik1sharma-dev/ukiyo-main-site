@@ -29,6 +29,21 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
       description: 'A case study of the Haldiram landscape design at Modi Mall, Noida, exploring how thoughtful design creates safe, sustainable, and commercially successful spaces.',
       image: '/projects/haldiram/1.jpg',
     },
+    'extreme-heat-landscape-infrastructure': {
+      title: 'Designing Indian Cities for Extreme Heat: Landscape as Urban Infrastructure | Ukiyo Habitat',
+      description: 'How landscape can act as cooling infrastructure in Indian cities facing extreme heat and urban heat island effects.',
+      image: '/projects/bandhavgarh/front.png',
+    },
+    'retail-public-realm-footfall': {
+      title: 'From Parking Lots to Public Realms: Landscape Design for Indian Retail | Ukiyo Habitat',
+      description: 'How better landscape and public realm design can increase footfall, dwell time, and brand visibility for Indian retail and F&B.',
+      image: '/projects/haldiram/1.jpg',
+    },
+    'election-ooh-better-cities': {
+      title: 'Can Political Advertising Make Better Cities? Rethinking OOH During Election Season | Ukiyo Habitat',
+      description: 'A critical look at how election-season OOH could double as public infrastructure instead of visual clutter in Indian cities.',
+      image: '/ooh-garima.jpg',
+    },
   };
 
   const entry = titleMap[id];

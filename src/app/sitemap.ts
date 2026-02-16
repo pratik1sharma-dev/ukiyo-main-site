@@ -68,6 +68,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'sustainable-architecture-india',
     'landscape-design-trends',
     'haldiram-commercial-landscape',
+    'extreme-heat-landscape-infrastructure',
+    'retail-public-realm-footfall',
+    'election-ooh-better-cities',
   ];
 
   const articlePages = thinkTankArticles.map((article) => ({

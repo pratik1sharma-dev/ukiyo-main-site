@@ -52,6 +52,36 @@ const thinkTankContent = [
     date: '2025-11-21',
     author: 'Ukiyo Design Team',
     readTime: '12 min read'
+  },
+  {
+    id: 'extreme-heat-landscape-infrastructure',
+    title: 'Designing Indian Cities for Extreme Heat: Landscape as Urban Infrastructure',
+    category: 'Climate-Responsive Urban Design',
+    shortDescription: 'How landscape can act as cooling infrastructure in Indian cities facing extreme heat and urban heat island effects.',
+    mainImage: '/projects/bandhavgarh/front.png',
+    date: '2025-05-20',
+    author: 'Ukiyo Research Team',
+    readTime: '10 min read'
+  },
+  {
+    id: 'retail-public-realm-footfall',
+    title: 'From Parking Lots to Public Realms: How Landscape Design Increases Footfall for Indian Retail',
+    category: 'Commercial Landscape Strategy',
+    shortDescription: 'Using landscape and public realm design to turn retail sites into destinations that increase dwell time, comfort, and brand visibility.',
+    mainImage: '/projects/haldiram/1.jpg',
+    date: '2025-09-15',
+    author: 'Ukiyo Design Team',
+    readTime: '9 min read'
+  },
+  {
+    id: 'election-ooh-better-cities',
+    title: 'Can Political Advertising Make Better Cities? Rethinking OOH During Election Season',
+    category: 'Public Space & Media',
+    shortDescription: 'A critical look at how election-season OOH could double as public infrastructure instead of visual clutter in Indian cities.',
+    mainImage: '/ooh-garima.jpg',
+    date: '2025-04-30',
+    author: 'Garima Dubey',
+    readTime: '8 min read'
   }
 ];
 

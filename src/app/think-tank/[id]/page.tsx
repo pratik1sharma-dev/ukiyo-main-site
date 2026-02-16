@@ -375,6 +375,153 @@ const thinkTankContent: ThinkTankItem[] = [
       { type: 'paragraph', text: 'The Haldiram landscape design at Modi Mall, Noida, demonstrates how commercial landscapes can successfully balance multiple objectives. By creating safe, sustainable, accessible, and visually compelling spaces, the design not only enhances the customer experience but also contributes to business success through increased footfall, extended dwell time, and enhanced brand perception.' },
       { type: 'paragraph', text: 'At Ukiyo Habitat, we believe that every commercial landscape should be designed with this integrated approach—where safety, sustainability, accessibility, and commercial impact work together to create spaces that are both beautiful and beneficial. The future of commercial design lies in recognizing landscapes as essential components of business strategy, not just aesthetic additions.' }
     ]
+  },
+  {
+    id: 'extreme-heat-landscape-infrastructure',
+    title: 'Designing Indian Cities for Extreme Heat: Landscape as Urban Infrastructure',
+    category: 'Climate-Responsive Urban Design',
+    shortDescription: 'How landscape can act as cooling infrastructure in Indian cities facing extreme heat and urban heat island effects.',
+    mainImage: '/projects/bandhavgarh/front.png',
+    date: '2025-05-20',
+    author: 'Ukiyo Research Team',
+    readTime: '10 min read',
+    content: [
+      { type: 'heading', text: 'Introduction: Heatwaves Are Now a Design Brief' },
+      { type: 'paragraph', text: 'Every summer, Indian cities break their own temperature records. Streets shimmer, parks empty out by noon, and public spaces become hostile for anyone without a car or AC. Extreme heat is no longer a rare event—it is the new background condition we are designing in.' },
+      { type: 'paragraph', text: 'As landscape and urban designers, we believe heat is not just a climate story; it is an infrastructure story. The way we plant trees, shape streets, manage water, and specify materials can either amplify the urban heat island—or quietly cool it.' },
+      { type: 'heading', text: 'Heat in Indian Cities: More Than Just a Number' },
+      { type: 'paragraph', text: 'In Delhi NCR, Jabalpur, Bangalore and other cities we work in, heat is wrapped up with hard, reflective surfaces, sparse tree cover, stored daytime heat, broken shade, and zero-infiltration paving. When we design only for roads, parking, and building footprints, we ignore a powerful toolset for cooling: landscape.' },
+      { type: 'list', items: [
+        'Endless concrete, granite, and metal that store and radiate heat',
+        'Sparse or poorly placed tree cover along streets and plazas',
+        'Materials that release heat late into the night, keeping neighbourhoods hot',
+        'Fragmented pockets of shade instead of continuous shaded routes',
+        'Surfaces that repel rainwater instead of letting it soak and cool the soil'
+      ]},
+      { 
+        type: 'image',
+        src: '/projects/bandhavgarh/front.png',
+        alt: 'Bandhavgarh landscape demonstrating layered planting for cooler micro-climate',
+        caption: 'Bandhavgarh landscape: layered native planting that cools and restores the forest edge micro-climate.'
+      },
+      { type: 'heading', text: 'Landscape as Cooling Infrastructure' },
+      { type: 'paragraph', text: 'Landscape is often treated as an afterthought—something green to be “added” once the building and roads are done. In reality, it can function as a distributed cooling system running across the city.' },
+      { type: 'list', items: [
+        'Shade trees as micro-climate machines along streets, plazas, and building edges',
+        'Permeable, planted ground instead of dark, continuous blacktop',
+        'Water edges and rills that cool adjacent spaces when paired with planting and airflow',
+        'Wind corridors created by aligning openings, setbacks, and tree placement with prevailing winds'
+      ]},
+      { type: 'heading', text: 'Lessons from Our Work' },
+      { type: 'paragraph', text: 'In Bandhavgarh, along the forest fringes, dense native planting and layered canopy re-created forest edge conditions, naturally cooling the site while supporting biodiversity. At Vastrapur Lake, shaded seating loops, vegetated buffers and gentle topography make the waterfront usable beyond early morning and late evening.' },
+      { type: 'paragraph', text: 'At Haldiram in Modi Mall, Noida, micro-climate design directly supports commercial goals: non-slip, light-toned paving that stays cooler, shade along approach routes, and drainage that avoids waterlogging and “kichad” even during storms.' },
+      { type: 'heading', text: 'Five Principles for Heat-Resilient Indian Cities' },
+      { type: 'list', items: [
+        'Start with shade, not shrubs—tree canopy planning should lead the brief.',
+        'Design for 1 pm in May, not 7 pm in December—test sections and materials for peak heat.',
+        'Use water carefully and visibly—well-designed, well-aerated water bodies paired with shade and seating.',
+        'Let soil breathe—maximise permeable surfaces to cool cities and support groundwater.',
+        'Measure comfort, not just temperature—consider shade, breeze, glare, surface temperature, and time-of-day use.'
+      ]},
+      { type: 'heading', text: 'Conclusion: Cooling Is a Design Choice' },
+      { type: 'paragraph', text: 'Indian cities will continue to get hotter. But how hot our streets, plazas, campuses, and housing edges feel is not inevitable. It is the result of thousands of design decisions about trees, pavements, water, and built form.' },
+      { type: 'paragraph', text: 'When we treat landscape as infrastructure, we gain a quiet, resilient toolkit to cool cities beautifully and affordably. At Ukiyo Habitat, this is the lens we bring to every project—from forest edges to food courts, from residential complexes to public lakes.' }
+    ]
+  },
+  {
+    id: 'retail-public-realm-footfall',
+    title: 'From Parking Lots to Public Realms: How Landscape Design Increases Footfall for Indian Retail',
+    category: 'Commercial Landscape Strategy',
+    shortDescription: 'Using landscape and public realm design to turn retail sites into destinations that increase dwell time, comfort, and brand visibility.',
+    mainImage: '/projects/haldiram/1.jpg',
+    date: '2025-09-15',
+    author: 'Ukiyo Design Team',
+    readTime: '9 min read',
+    content: [
+      { type: 'heading', text: 'Introduction: Retail Is Competing on Experience' },
+      { type: 'paragraph', text: 'In Indian cities, malls and high streets are no longer competing only on brands and discounts. They are competing on experience—where families can comfortably spend a few hours, where kids have space to move, and where elders feel safe and oriented.' },
+      { type: 'paragraph', text: 'Landscape—the space between car and shopfront—is becoming a powerful differentiator. A thoughtful exterior can quietly move a site from a pure parking lot to a true public realm.' },
+      { 
+        type: 'image',
+        src: '/projects/haldiram/1.jpg',
+        alt: 'Haldiram landscape at Modi Mall, Noida, illustrating retail public realm',
+        caption: 'Haldiram at Modi Mall, Noida: landscape as an extension of the brand and public realm.'
+      },
+      { type: 'heading', text: 'The Invisible Journey: Car Door to Cash Counter' },
+      { type: 'paragraph', text: 'Most retail journeys share the same basic steps: arrive, navigate parking or drop-off, walk to the entrance, transition inside, and decide whether to linger or leave. If this outdoor experience is hot, confusing, flooded, dusty, or uncomfortable, the brand starts with a trust deficit before anyone sees a single product.' },
+      { type: 'heading', text: 'Haldiram at Modi Mall, Noida: Landscape as Brand Amplifier' },
+      { type: 'paragraph', text: 'Our proposal for Haldiram at Modi Mall approached landscape as part of the brand experience, not an add-on. Safe, non-slip pathways make movement easy for seniors and children; drainage design prevents waterlogging and muddy “kichad”; and family-friendly pockets with kids’ play and seating encourage longer stays.' },
+      { type: 'list', items: [
+        'Non-slip, light-toned paving that stays cooler and safer underfoot',
+        'Shaded approaches that protect visitors from heat while queuing or waiting',
+        'Kids’ play zones that integrate visually with the overall design',
+        'Composed views and planting that naturally encourage photo moments and sharing'
+      ]},
+      { type: 'heading', text: 'Kake Da Hotel: Interior Edges as Experience' },
+      { type: 'paragraph', text: 'Inside Kake Da Hotel at Ambience Mall, Vasant Kunj, interior “landscape” also shapes experience. A contemporary interpretation of Punjabi dhaba culture, warm materials and lighting, and intuitive circulation all contribute to the space becoming one of the mall’s most photographed dining destinations.' },
+      { type: 'heading', text: 'Why Landscape Matters for Footfall' },
+      { type: 'list', items: [
+        'Extends dwell time through comfortable shaded seating and play pockets',
+        'Encourages social media sharing with distinctive, photogenic corners',
+        'Signals care and safety through good lighting, planting, and clear paths',
+        'Softly buffers chaotic roads and parking from the calmer retail core'
+      ]},
+      { type: 'heading', text: 'Four Design Moves for Retail Landscapes' },
+      { type: 'list', items: [
+        'Treat entry as a sequence, not just a door—design the entire arrival journey.',
+        'Design for the non-shopper—make grandparents, kids, and companions comfortable.',
+        'Use planting as signage and zoning—guide movement without heavy-handed barriers.',
+        'Plan for monsoon from day one—no flooding, mud, or awkward stepping-stones.'
+      ]},
+      { type: 'heading', text: 'Conclusion: The Public Realm Is Part of the Brand' },
+      { type: 'paragraph', text: 'For Indian retail—especially F&B and experience-led brands—the space outside the door is not neutral. It can either leak value or quietly generate it.' },
+      { type: 'paragraph', text: 'By investing in landscape as public realm, brands like Haldiram and Kake Da Hotel can turn sites into destinations that people remember, photograph, and return to. At Ukiyo Habitat, we see this edge space as a shared canvas between brand, city, and everyday life.' }
+    ]
+  },
+  {
+    id: 'election-ooh-better-cities',
+    title: 'Can Political Advertising Make Better Cities? Rethinking OOH During Election Season',
+    category: 'Public Space & Media',
+    shortDescription: 'A critical look at how election-season OOH could double as public infrastructure instead of visual clutter in Indian cities.',
+    mainImage: '/ooh-garima.jpg',
+    date: '2025-04-30',
+    author: 'Garima Dubey',
+    readTime: '8 min read',
+    content: [
+      { type: 'heading', text: 'Introduction: When Cities Turn Into Billboards' },
+      { type: 'paragraph', text: 'Every election season, Indian cities transform. Flyovers, medians, and roundabouts are draped in banners, flags, and flex. Political messaging becomes the dominant street language.' },
+      { type: 'paragraph', text: 'Most of this out-of-home (OOH) media is treated as a necessary visual mess—something we tolerate until it is cleared away. But what if we used this enormous investment differently? Instead of asking only “How do we remove clutter?”, we can ask: how can all this visibility also serve public space?' },
+      { 
+        type: 'image',
+        src: '/ooh-garima.jpg',
+        alt: 'OOH talk exploring public space and advertising',
+        caption: 'Exploring how OOH can move from visual noise to public asset in Indian cities.'
+      },
+      { type: 'heading', text: 'From Disruption to Contribution' },
+      { type: 'paragraph', text: 'In her talk at South India Talks OOH 2025, our co-founder Garima Dubey described a future where OOH is not an interruption but a quiet character that changes the plot. Applied to election season, this could mean hoardings that provide shade, structures that include seating or rain protection, and media elements that double as wayfinding or civic information.' },
+      { type: 'heading', text: 'Election Media as Temporary Urban Infrastructure' },
+      { type: 'paragraph', text: 'Election cycles pour enormous money and materials into the city surface—poles, frames, gantries, flex, lighting, kiosks. Instead of treating all of this as single-use visual noise, cities could demand that OOH structures contribute physically to public life.' },
+      { type: 'list', items: [
+        'Design guidelines that require media structures to provide shade, seating, bike racks, or planters',
+        'Modular systems that can be re-skinned with new campaigns but remain as public amenities',
+        'Party-agnostic infrastructure where the structure stays, but messages change over time'
+      ]},
+      { type: 'heading', text: 'What This Could Look Like' },
+      { type: 'paragraph', text: 'Imagine election banners mounted on a continuous shaded walkway with seating every 50 metres; gantry frames over intersections that incorporate safe pedestrian crossings and legible wayfinding; or party flags mounted on solar-powered light poles that stay as improved lighting long after the campaign ends.' },
+      { type: 'heading', text: 'Risks and Design Responsibilities' },
+      { type: 'paragraph', text: 'This vision is not simple. It comes with real risks: visual dominance of one party in critical civic spaces, the danger of normalising permanent political messaging, and questions of maintenance and ownership once campaigns end.' },
+      { type: 'list', items: [
+        'Clearly separate time-bound messaging from long-term infrastructure in design and regulation.',
+        'Ensure equitable access to prominent sites via transparent policies.',
+        'Build removal, reuse, and retrofitting into every OOH structure brief.'
+      ]},
+      { type: 'heading', text: 'From OOH as Expense to OOH as Investment' },
+      { type: 'paragraph', text: 'For political parties and brands alike, OOH is a recurring cost. If every major campaign left behind better-lit streets, cooler shaded sidewalks, clearer wayfinding, or small but meaningful amenities, that spend would become part of the city’s public good.' },
+      { type: 'paragraph', text: 'OOH vendors, designers, and urban bodies could co-create a catalogue of dual-use formats: each media type paired with a physical benefit.' },
+      { type: 'heading', text: 'Conclusion: Designing the Democracy We See' },
+      { type: 'paragraph', text: 'Election seasons reveal what our cities look like when visibility becomes the only priority. As urban and landscape designers, we cannot simply wish advertising away—but we can insist that if it occupies our shared air and ground, it should also give something back.' },
+      { type: 'paragraph', text: 'At Ukiyo Habitat, we see this as part of a larger question: can every layer of the city—even the most temporary—be designed to support climate, community, and dignity?' }
+    ]
   }
   // Add other think tank content here
 ];
