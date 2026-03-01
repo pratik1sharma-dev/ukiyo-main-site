@@ -1,6 +1,9 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
 
-export const metadata = {
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ukiyohabitat.com';
+
+export const metadata: Metadata = {
   title: "Careers | Ukiyo Habitat",
   description: "Join Ukiyo Habitat. We're hiring a Trainee, Junior Architect, Senior Architect, and Business & Marketing Associate. Build sustainable, people-centric design with us.",
   keywords: [
@@ -13,6 +16,18 @@ export const metadata = {
     "trainee architect India",
     "marketing jobs design firm",
   ],
+  openGraph: {
+    title: "Careers | Ukiyo Habitat — Design Trainee, Architect, Marketing Roles",
+    description: "Join Ukiyo Habitat. We're hiring Design Trainee, Junior Architect, Senior Architect, and Business & Marketing Associate. Delhi NCR.",
+    url: `${siteUrl}/careers`,
+    siteName: "Ukiyo Habitat",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Careers | Ukiyo Habitat — We're Hiring",
+    description: "Design Trainee, Junior Architect, Senior Architect, Business & Marketing Associate. Build sustainable design with us.",
+  },
 };
 
 const jobs = [
@@ -94,9 +109,52 @@ const jobs = [
   },
 ];
 
+const employmentTypeMap: Record<string, string> = {
+  "Trainee / Intern": "INTERN",
+  "Full-time": "FULL_TIME",
+  "Part-time": "PART_TIME",
+};
+
+function CareersJsonLd() {
+  const jobPostings = jobs.map((job) => ({
+    "@type": "JobPosting" as const,
+    title: job.title,
+    description: `${job.description} Responsibilities: ${job.responsibilities.join(" ")} Requirements: ${job.requirements.join(" ")}`,
+    datePosted: "2025-01-24",
+    employmentType: employmentTypeMap[job.type] || "FULL_TIME",
+    hiringOrganization: {
+      "@type": "Organization" as const,
+      name: "Ukiyo Habitat",
+      sameAs: siteUrl,
+    },
+    jobLocation: {
+      "@type": "Place" as const,
+      address: {
+        "@type": "PostalAddress" as const,
+        addressLocality: job.location.includes("Remote") ? "Delhi NCR" : job.location.split(" / ")[0],
+        addressRegion: "Delhi",
+        addressCountry: "IN",
+      },
+    },
+  }));
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": jobPostings,
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
 export default function Careers() {
   return (
     <div className="min-h-screen bg-white pt-24">
+      <CareersJsonLd />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-[#f6f2ed] to-[#f0ebe6] py-24 relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

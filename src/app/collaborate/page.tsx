@@ -1,6 +1,9 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
 
-export const metadata = {
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ukiyohabitat.com';
+
+export const metadata: Metadata = {
   title: "Collaborate | Ukiyo Habitat",
   description: "Partner with Ukiyo Habitat—project collaborations, research, talks & workshops, podcasts, media, and careers. Build better habitats together.",
   keywords: [
@@ -11,6 +14,18 @@ export const metadata = {
     "podcast landscape design",
     "media interviews architecture",
   ],
+  openGraph: {
+    title: "Collaborate with Ukiyo Habitat — Projects, Research, Talks, Media",
+    description: "Partner with Ukiyo Habitat. Project collaborations, research, talks & workshops, podcasts, media. Build better habitats together.",
+    url: `${siteUrl}/collaborate`,
+    siteName: "Ukiyo Habitat",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Collaborate with Ukiyo Habitat",
+    description: "Project collaborations, research, talks, podcasts, media. Build better habitats together.",
+  },
 };
 
 const collabSections = [
@@ -64,9 +79,42 @@ const collabSections = [
   },
 ];
 
+function CollaborateJsonLd() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "Collaborate with Ukiyo Habitat",
+    description: "Partner with Ukiyo Habitat—project collaborations, research, talks & workshops, podcasts, media, and careers. Build better habitats together.",
+    url: `${siteUrl}/collaborate`,
+    publisher: {
+      "@type": "Organization",
+      name: "Ukiyo Habitat",
+      url: siteUrl,
+    },
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Project Collaborations" },
+        { "@type": "ListItem", position: 2, name: "Research & Think Tank" },
+        { "@type": "ListItem", position: 3, name: "Talks & Workshops" },
+        { "@type": "ListItem", position: 4, name: "Media & Conversations" },
+        { "@type": "ListItem", position: 5, name: "Careers" },
+      ],
+    },
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
 export default function Collaborate() {
   return (
     <div className="min-h-screen bg-white pt-24">
+      <CollaborateJsonLd />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-[#f6f2ed] to-[#f0ebe6] py-24 relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
