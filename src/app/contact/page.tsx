@@ -2,7 +2,8 @@
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 
 const formSchema = z.object({
   name: z.string().min(2, 'Name is required'),
@@ -20,6 +21,8 @@ const formSchema = z.object({
 type FormData = z.infer<typeof formSchema>;
 
 export default function Contact() {
+  const searchParams = useSearchParams();
+  const roleParam = searchParams.get('role');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState('');
@@ -28,10 +31,18 @@ export default function Contact() {
     register,
     handleSubmit,
     reset,
+    setValue,
     formState: { errors },
   } = useForm<FormData>({
     resolver: zodResolver(formSchema),
   });
+
+  useEffect(() => {
+    if (roleParam) {
+      setValue('projectType', 'job');
+      setValue('message', `I am applying for: ${roleParam}\n\n`);
+    }
+  }, [roleParam, setValue]);
 
   const onSubmit = async (data: FormData) => {
     try {
@@ -232,6 +243,7 @@ export default function Contact() {
                     disabled={isSubmitting}
                   >
                     <option value="">Select project type</option>
+                    <option value="job">Job Application</option>
                     <option value="landscape">Landscape Design</option>
                     <option value="interior">Interior Design</option>
                     <option value="urban">Urban Design</option>

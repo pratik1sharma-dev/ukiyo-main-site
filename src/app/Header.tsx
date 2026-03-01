@@ -86,6 +86,9 @@ export default function Header() {
           <li><Link href="/think-tank" className="hover:text-[#e7a77e] transition-all duration-300 font-semibold relative group hover:scale-105">Think Tank
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#e7a77e] transition-all duration-300 group-hover:w-full"></span>
           </Link></li>
+          <li><Link href="/careers" className="hover:text-[#e7a77e] transition-all duration-300 font-semibold relative group hover:scale-105">Careers
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#e7a77e] transition-all duration-300 group-hover:w-full"></span>
+          </Link></li>
           <li><Link href="/contact" className="hover:text-[#e7a77e] transition-all duration-300 font-semibold relative group hover:scale-105">Contact
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#e7a77e] transition-all duration-300 group-hover:w-full"></span>
           </Link></li>
@@ -137,6 +140,7 @@ export default function Header() {
               <li><Link href="/think-tank" onClick={() => setMenuOpen(false)} className="hover:text-[#e7a77e] transition-colors duration-300">Think Tank</Link></li>
               <li><Link href="/about" onClick={() => setMenuOpen(false)} className="hover:text-[#e7a77e] transition-colors duration-300">About Us</Link></li>
               <li><Link href="/services" onClick={() => setMenuOpen(false)} className="hover:text-[#e7a77e] transition-colors duration-300">Services</Link></li>
+              <li><Link href="/careers" onClick={() => setMenuOpen(false)} className="hover:text-[#e7a77e] transition-colors duration-300">Careers</Link></li>
               <li><Link href="/contact" onClick={() => setMenuOpen(false)} className="hover:text-[#e7a77e] transition-colors duration-300">Contact</Link></li>
             </ul>
           </div>
