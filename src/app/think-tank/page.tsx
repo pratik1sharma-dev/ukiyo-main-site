@@ -4,6 +4,16 @@ import Image from 'next/image';
 // Think tank content data
 const thinkTankContent = [
   {
+    id: 'climate-resilient-living',
+    title: 'Climate-Resilient Living: How Landscape Architecture Can Combat El Niño Effects',
+    category: 'Sustainability',
+    shortDescription: 'Landscape architecture combats El Niño effects.',
+    mainImage: '/hero-bg-3.jpg',
+    date: '2026-06-14',
+    author: 'Ukiyo Design Team',
+    readTime: '8 min read'
+  },
+  {
     id: 'smart-landscapes-for-a-warming-world',
     title: 'Smart Landscapes for a Warming World: Combating El Niño with Sustainable Design',
     category: 'Sustainability',
