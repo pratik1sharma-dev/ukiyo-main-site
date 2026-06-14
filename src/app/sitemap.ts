@@ -76,6 +76,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Dynamic think tank articles
   const thinkTankArticles = [
+  'climate-resilient-living',
     'ooh-urban-design',
     'sustainable-architecture-india',
     'landscape-design-trends',
