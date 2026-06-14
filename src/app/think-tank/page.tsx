@@ -4,6 +4,16 @@ import Image from 'next/image';
 // Think tank content data
 const thinkTankContent = [
   {
+    id: 'smart-landscapes-for-a-warming-world',
+    title: 'Smart Landscapes for a Warming World: Combating El Niño with Sustainable Design',
+    category: 'Sustainability',
+    shortDescription: 'Designing landscapes to combat El Niño with sustainable solutions.',
+    mainImage: '/hero-bg-3.jpg',
+    date: '2026-06-14',
+    author: 'Ukiyo Design Team',
+    readTime: '8 min read'
+  },
+  {
     id: 'transform-your-outdoor-space',
     title: 'Transform Your Outdoor Space: High-End Residential Landscape Design Ideas,
     category: 'Landscape Design',
