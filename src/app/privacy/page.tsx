@@ -20,7 +20,7 @@ export default function PrivacyPage() {
           - We do not sell your personal data. We may share it with trusted service providers strictly to operate our services.
         </p>
         <p>
-          - You can contact us at <a href="mailto:hello@ukiyohabitat.com" className="text-[#e7a77e] hover:underline">hello@ukiyohabitat.com</a> for any privacy-related questions.
+          - You can contact us at <a href="mailto:ukiyohabitat@gmail.com" className="text-[#e7a77e] hover:underline">ukiyohabitat@gmail.com</a> for any privacy-related questions.
         </p>
       </div>
     </main>

@@ -20,7 +20,7 @@ export default function TermsPage() {
           - Unauthorized use of this website may give rise to a claim for damages and/or be a criminal offense.
         </p>
         <p>
-          - For questions, contact us at <a href="mailto:hello@ukiyohabitat.com" className="text-[#e7a77e] hover:underline">hello@ukiyohabitat.com</a>.
+          - For questions, contact us at <a href="mailto:ukiyohabitat@gmail.com" className="text-[#e7a77e] hover:underline">ukiyohabitat@gmail.com</a>.
         </p>
       </div>
     </main>

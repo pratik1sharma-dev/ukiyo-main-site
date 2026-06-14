@@ -71,6 +71,11 @@ const collabSections = [
     description: "Podcast hosts, journalists, editors, and creators—we're happy to join conversations on cities, climate, food + public realm, and everyday habitats. Podcasts, IG Lives, panels, or features.",
     cta: "Invite us to speak",
     href: "/contact?type=media",
+    pastAppearances: [
+      { name: "Bharat Rising Summit", type: "Summit" },
+      { name: "OOH Urban Design Conference", type: "Panel" },
+      { name: "Spotify Podcast", type: "Podcast" },
+    ],
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
@@ -157,6 +162,19 @@ export default function Collaborate() {
                     <p className="text-[#6b7280] leading-relaxed mb-6">
                       {section.description}
                     </p>
+                    {'pastAppearances' in section && section.pastAppearances && section.pastAppearances.length > 0 && (
+                      <div className="mb-6 p-4 bg-white/60 rounded-xl border border-[#e7d8c9]">
+                        <h4 className="text-sm font-bold text-[#232323] uppercase tracking-wide mb-3">Past appearances</h4>
+                        <ul className="space-y-2">
+                          {section.pastAppearances.map((item, i) => (
+                            <li key={i} className="flex items-center gap-2 text-[#6b7280]">
+                              <span className="w-2 h-2 bg-[#e7a77e] rounded-full shrink-0"></span>
+                              <span><strong className="text-[#232323]">{item.name}</strong> · {item.type}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                     <Link
                       href={section.href}
                       className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#e7a77e] to-[#f59e42] text-white font-semibold rounded-full hover:from-[#d18e64] hover:to-[#ea580c] transition-all duration-300 shadow-md hover:shadow-lg"

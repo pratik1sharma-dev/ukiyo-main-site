@@ -327,7 +327,7 @@ export default function ContactForm() {
                 </svg>
               </div>
               <h3 className="text-lg font-semibold text-[#232323] mb-2">Email</h3>
-              <p className="text-[#6b7280]">hello@ukiyohabitat.com</p>
+              <p className="text-[#6b7280]">ukiyohabitat@gmail.com</p>
             </div>
 
             <div className="text-center">

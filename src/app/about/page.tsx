@@ -302,7 +302,71 @@ export default function About() {
           </div>
         </section>
 
-        {/* 6. Call to Action Section */}
+        {/* 6. Media & Speaking Section */}
+        <section className="py-24 bg-white relative">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#232323] mb-6">
+                Media & Speaking
+              </h2>
+              <p className="text-xl text-[#6b7280] max-w-2xl mx-auto">
+                Where we&apos;ve shared our work and ideas.
+              </p>
+              <div className="divider-primary mx-auto mt-6"></div>
+            </div>
+
+            <div className="bg-gradient-to-br from-[#f6f2ed] to-[#f0ebe6] rounded-2xl p-8 md:p-10 border border-[#e7d8c9]">
+              <ul className="space-y-6">
+                <li className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 bg-[#e7a77e]/20 rounded-lg flex items-center justify-center">
+                    <svg className="w-5 h-5 text-[#e7a77e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-[#232323]">Bharat Rising Summit</h3>
+                    <p className="text-[#6b7280]">Speaking at the Bharat Rising Summit on cities, design, and India&apos;s urban future.</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 bg-[#e7a77e]/20 rounded-lg flex items-center justify-center">
+                    <svg className="w-5 h-5 text-[#e7a77e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-[#232323]">OOH Urban Design Conference</h3>
+                    <p className="text-[#6b7280]">Panel discussion on OOH (Out-of-Home advertising) and its role in public space design.</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 bg-[#e7a77e]/20 rounded-lg flex items-center justify-center">
+                    <svg className="w-5 h-5 text-[#e7a77e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-[#232323]">Spotify Podcast</h3>
+                    <p className="text-[#6b7280]">Guest appearance on a Spotify podcast discussing landscape, cities, and sustainable design.</p>
+                  </div>
+                </li>
+              </ul>
+              <div className="mt-10 pt-8 border-t border-[#e7d8c9]">
+                <Link
+                  href="/collaborate"
+                  className="inline-flex items-center text-[#e7a77e] font-semibold hover:text-[#d18e64] transition-colors"
+                >
+                  Want to invite us? See how to collaborate
+                  <svg className="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                  </svg>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 7. Call to Action Section */}
         <section className="py-24 bg-gradient-to-br from-[#f6f2ed] to-[#f0ebe6]">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl p-12 border border-[#e7d8c9]">
