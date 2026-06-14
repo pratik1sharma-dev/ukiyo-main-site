@@ -23,6 +23,29 @@ interface ThinkTankItem {
 // Import the think tank content from the main page
 const thinkTankContent: ThinkTankItem[] = [
   {
+    id: 'climate-resilient-living',
+    title: 'Climate-Resilient Living: How Landscape Architecture Can Combat El Niño Effects',
+    category: 'Sustainability',
+    shortDescription: 'Landscape architecture combats El Niño effects.',
+    mainImage: '/hero-bg-3.jpg',
+    date: '2026-06-14',
+    author: 'Ukiyo Design Team',
+    readTime: '8 min read',
+    content: [
+      { type: 'paragraph', text: 'Climate change has become a pressing issue globally, and India is no exception. The country has been experiencing severe weather conditions, including the devastating effects of El Niño. As a result, there is an increasing need for climate-resilient living, which can be achieved through innovative landscape architecture. At Ukiyo Design, we believe that well-designed outdoor spaces can help mitigate the impacts of climate change, and we are committed to creating sustainable and resilient landscapes that promote wellness and harmony with nature.' },
+      { type: 'heading', text: 'Understanding El Niño Effects' },
+      { type: 'paragraph', text: 'El Niño is a complex weather phenomenon that occurs when the surface temperature of the Pacific Ocean rises, leading to extreme weather events such as droughts, floods, and heatwaves. These events can have devastating effects on the environment, human health, and the economy. In India, El Niño has been linked to severe droughts, crop failures, and water shortages, highlighting the need for climate-resilient infrastructure and landscape design. By understanding the effects of El Niño, landscape architects can design outdoor spaces that are adapted to these changing weather patterns and help reduce the risks associated with them.' },
+      { type: 'paragraph', text: 'Landscape architecture can play a critical role in mitigating the effects of El Niño by incorporating climate-resilient design principles. This includes the use of drought-tolerant plants, rainwater harvesting systems, and green roofs, which can help reduce the urban heat island effect and manage stormwater runoff. Additionally, landscape architects can design outdoor spaces that promote biodiversity, improve air quality, and provide shade and shelter from extreme weather events. By adopting these strategies, we can create resilient and sustainable landscapes that support human well-being and the environment.' },
+      { type: 'list', items: ['Drought-tolerant plants', 'Rainwater harvesting systems', 'Green roofs', 'Permeable pavements', 'Green walls'] },
+      { type: 'heading', text: 'Designing Climate-Resilient Landscapes' },
+      { type: 'paragraph', text: 'Designing climate-resilient landscapes requires a holistic approach that takes into account the social, economic, and environmental factors that affect a particular region. At Ukiyo Design, we use a multidisciplinary approach that involves collaboration with architects, engineers, and environmental scientists to create sustainable and resilient landscapes. Our design process involves assessing the site\\'s microclimate, soil conditions, and hydrology, as well as the local culture and community needs. By understanding these factors, we can design outdoor spaces that are adapted to the local climate and support the well-being of both people and the environment.' },
+      { type: 'paragraph', text: 'One of the key principles of climate-resilient landscape design is to create outdoor spaces that are flexible and adaptable to changing weather conditions. This can be achieved through the use of modular design elements, such as movable planters and seating areas, which can be easily rearranged or removed in response to extreme weather events. Additionally, landscape architects can design outdoor spaces that incorporate multiple functions, such as parks that also serve as flood control measures or green roofs that provide insulation and reduce energy consumption. By designing landscapes that are flexible and multifunctional, we can create resilient and sustainable outdoor spaces that support human well-being and the environment.' },
+      { type: 'heading', text: 'Promoting Wellness and Sustainability' },
+      { type: 'paragraph', text: 'Climate-resilient landscape design is not only about mitigating the effects of climate change but also about promoting wellness and sustainability. At Ukiyo Design, we believe that outdoor spaces should be designed to support human health and well-being, while also protecting the environment. This can be achieved through the use of natural materials, incorporation of biodiversity, and creation of spaces that promote physical activity and social interaction. By designing outdoor spaces that are sustainable, resilient, and supportive of human well-being, we can create a healthier and more livable environment for future generations.' },
+      { type: 'paragraph', text: 'In conclusion, climate-resilient living is essential for mitigating the effects of El Niño and promoting sustainability and wellness. At Ukiyo Design, we are committed to creating innovative and sustainable landscapes that support human well-being and the environment. By adopting climate-resilient design principles and incorporating sustainable materials and technologies, we can create outdoor spaces that are resilient, adaptable, and supportive of human health and the environment. As we move forward in an increasingly uncertain climate, it is essential that we prioritize climate-resilient landscape design and create outdoor spaces that promote wellness, sustainability, and harmony with nature.' }
+    ]
+  },
+  {
     id: 'villa-wellness-hub',
     title: 'How to Make My Villa a Wellness Hub',
     category: 'Residential Wellness Design',
