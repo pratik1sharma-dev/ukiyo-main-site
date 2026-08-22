@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import { trackWhatsAppClick } from '../utils/analytics';
 
 interface WhatsAppButtonProps {
   phoneNumber?: string;
@@ -20,6 +21,7 @@ export default function WhatsAppButton({
   }, []);
 
   const handleClick = () => {
+    trackWhatsAppClick('Floating Widget');
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${phoneNumber.replace(/\D/g, '')}?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');

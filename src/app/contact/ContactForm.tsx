@@ -5,6 +5,8 @@ import { z } from 'zod';
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 
+import { trackLeadSubmission, trackWhatsAppClick, trackPhoneClick } from '../utils/analytics';
+
 const formSchema = z.object({
   name: z.string().min(2, 'Name is required'),
   email: z.string().email('Invalid email address'),
@@ -64,6 +66,9 @@ export default function ContactForm() {
         throw new Error(errorMessage);
       }
 
+      // Track lead submission conversion event
+      trackLeadSubmission(data.projectType, data.location);
+
       setIsSuccess(true);
       reset();
     } catch (err) {
@@ -122,6 +127,7 @@ export default function ContactForm() {
                           href="https://wa.me/919876543210?text=Hi!%20I%20just%20submitted%20a%20contact%20form%20and%20would%20like%20to%20discuss%20my%20project."
                           target="_blank"
                           rel="noopener noreferrer"
+                          onClick={() => trackWhatsAppClick('Contact Success Box')}
                           className="inline-flex items-center justify-center px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors duration-200 font-medium text-sm"
                         >
                           <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
@@ -131,6 +137,7 @@ export default function ContactForm() {
                         </a>
                         <a 
                           href="tel:+919876543210"
+                          onClick={() => trackPhoneClick('Contact Success Box')}
                           className="inline-flex items-center justify-center px-4 py-2 bg-[#e7a77e] text-white rounded-lg hover:bg-[#d18e64] transition-colors duration-200 font-medium text-sm"
                         >
                           <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

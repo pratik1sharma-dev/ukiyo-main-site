@@ -5,8 +5,8 @@ import Script from 'next/script';
 // Type declarations for global gtag function
 declare global {
   interface Window {
-    gtag: (
-      command: 'config' | 'event' | 'js',
+    gtag?: (
+      command: 'config' | 'event' | 'js' | string,
       targetId: string,
       config?: {
         page_path?: string;
@@ -16,7 +16,7 @@ declare global {
         [key: string]: any;
       }
     ) => void;
-    dataLayer: any[];
+    dataLayer?: any[];
   }
 }
 

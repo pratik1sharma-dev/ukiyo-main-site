@@ -93,5 +93,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...projectPages, ...articlePages];
+  // Dynamic city location pages
+  const cities = [
+    'jabalpur',
+    'indore',
+    'bangalore',
+    'pushkar',
+    'bhopal',
+    'ayodhya',
+    'delhi-ncr',
+    'gurgaon',
+    'noida',
+  ];
+
+  const locationPages = cities.map((city) => ({
+    url: `${baseUrl}/locations/${city}`,
+    lastModified: currentDate,
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
+
+  return [...staticPages, ...projectPages, ...articlePages, ...locationPages];
 } 
