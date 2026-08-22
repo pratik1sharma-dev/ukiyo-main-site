@@ -23,6 +23,88 @@ interface ThinkTankItem {
 // Import the think tank content from the main page
 const thinkTankContent: ThinkTankItem[] = [
   {
+    id: 'harit-setu-blue-green-infrastructure',
+    title: 'Harit Setu: Blue-Green Infrastructure Strategies for Indian Metro Cities',
+    category: 'Water-Sensitive Urban Design',
+    shortDescription: 'How linear green corridors and bioswales integrate stormwater management with ecological mobility across Indian urban centers.',
+    mainImage: '/projects/harit-setu.jpg',
+    date: '2026-08-15',
+    author: 'Ukiyo Research Team',
+    readTime: '11 min read',
+    content: [
+      { type: 'heading', text: 'Introduction: Re-engineering City Hydrology' },
+      { type: 'paragraph', text: 'Indian metropolitan regions face a dual crisis every monsoon: sudden urban flooding followed by acute groundwater depletion. Traditional concrete drains flush rainwater away as wastewater, starving the water table. The Harit Setu framework proposed by Ukiyo Habitat redefines urban drainage as linear ecological corridors—transforming flood zones into active public landscapes.' },
+      { 
+        type: 'image',
+        src: '/projects/harit-setu.jpg',
+        alt: 'Harit Setu blue green infrastructure network visualization',
+        caption: 'Harit Setu framework: integrating bioswales, rain gardens, and non-motorized transport along urban edges.'
+      },
+      { type: 'heading', text: 'Key Pillars of Blue-Green Corridors' },
+      { type: 'list', items: [
+        'Bioswales & Infiltration Trenches: Capturing run-off at source to naturally filter and recharge aquifers.',
+        'Non-Motorized Transit (NMT) Paths: Shaded pedestrian and cycle lanes running along natural drainage paths.',
+        'Native Wetland Flora: Phytoremediation using native plants like Typha and Vetiver grass to cleanse surface run-off.',
+        'Micro-Climate Mitigation: Lowering ambient street temperatures by 2°C to 4°C during summer peaks.'
+      ]},
+      { type: 'heading', text: 'Implementation Framework for Delhi NCR & Metro Regions' },
+      { type: 'paragraph', text: 'By retrofitting road rights-of-way and underutilized canal edges into Harit Setu corridors, cities reduce storm damage costs while adding high-quality recreational open spaces for dense neighborhoods.' }
+    ]
+  },
+  {
+    id: 'participatory-codesign-urban-placemaking',
+    title: 'Participatory Co-Design: How Community Listening Shapes Resilient Public Spaces',
+    category: 'Urban Placemaking & Research',
+    shortDescription: 'Empowering citizens through collaborative mapping, co-design workshops, and community-led public space stewardship.',
+    mainImage: '/projects/codesign.jpg',
+    date: '2026-08-01',
+    author: 'Garima Dubey',
+    readTime: '9 min read',
+    content: [
+      { type: 'heading', text: 'Designing With People, Not Just For Them' },
+      { type: 'paragraph', text: 'Public space interventions often fail when top-down blueprints ignore the daily rhythms of local residents, street vendors, elders, and children. At Ukiyo Habitat, we place participatory co-design at the center of urban placemaking—treating local communities as co-creators rather than passive end-users.' },
+      { 
+        type: 'image',
+        src: '/projects/codesign.jpg',
+        alt: 'Participatory co-design workshop with community stakeholders',
+        caption: 'Co-design workshop in action: mapping neighborhood stories and spatial priorities.'
+      },
+      { type: 'heading', text: 'The Co-Design Process' },
+      { type: 'list', items: [
+        'Spatial Storytelling & Micro-Surveys: Understanding historical usage, safety concerns, and seasonal shifts.',
+        'Tactical Urbanism Prototyping: Testing temporary seating, shade, and pop-up plazas before permanent construction.',
+        'Inclusive Governance Models: Forming local stewardship committees for long-term maintenance and pride.'
+      ]},
+      { type: 'paragraph', text: 'When citizens actively shape their streets and parks, public space usage increases by over 60%, fostering safety, equity, and civic belonging.' }
+    ]
+  },
+  {
+    id: 'biophilic-workplace-campuses',
+    title: 'Designing Future-Ready Workplace Campuses: Integrating Nature, Microclimates, and Commercial Value',
+    category: 'Commercial Architecture & Ecology',
+    shortDescription: 'How outdoor biophilic workspaces and climate-adaptive corporate landscapes boost employee productivity and property valuation.',
+    mainImage: '/hero-bg-8.jpg',
+    date: '2026-07-20',
+    author: 'Ukiyo Design Team',
+    readTime: '10 min read',
+    content: [
+      { type: 'heading', text: 'The Evolution of the Corporate Campus' },
+      { type: 'paragraph', text: 'Modern corporate offices in Gurgaon, Noida, and Bangalore are moving beyond glass towers surrounded by asphalt parking. Today’s premier employers recognize that biophilic landscapes—outdoor meeting pods, walking loops, micro-climate shade structures, and courtyard gardens—directly improve employee mental focus, retention, and ESG sustainability metrics.' },
+      { 
+        type: 'image',
+        src: '/hero-bg-8.jpg',
+        alt: 'Modern biophilic workplace campus with outdoor green meeting spaces',
+        caption: 'Biophilic corporate landscape: outdoor work zones, natural shade, and native courtyard planting.'
+      },
+      { type: 'heading', text: 'Commercial & Environmental ROI' },
+      { type: 'list', items: [
+        'Higher Dwell & Engagement Time: Employees leverage outdoor breakout spaces for collaboration.',
+        'Energy Efficiency: Strategic tree shading lowers cooling loads on adjacent building glass facades by up to 18%.',
+        'Increased Asset Valuation: Biophilic certified commercial properties command premium rental rates.'
+      ]}
+    ]
+  },
+  {
     id: 'climate-resilient-living',
     title: 'Climate-Resilient Living: How Landscape Architecture Can Combat El Niño Effects',
     category: 'Sustainability',

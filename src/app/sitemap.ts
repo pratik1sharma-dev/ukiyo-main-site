@@ -76,7 +76,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Dynamic think tank articles
   const thinkTankArticles = [
-  'climate-resilient-living',
+    'harit-setu-blue-green-infrastructure',
+    'participatory-codesign-urban-placemaking',
+    'biophilic-workplace-campuses',
+    'climate-resilient-living',
     'ooh-urban-design',
     'sustainable-architecture-india',
     'landscape-design-trends',

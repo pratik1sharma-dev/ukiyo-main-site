@@ -4,6 +4,36 @@ import Image from 'next/image';
 // Think tank content data
 const thinkTankContent = [
   {
+    id: 'harit-setu-blue-green-infrastructure',
+    title: 'Harit Setu: Blue-Green Infrastructure Strategies for Indian Metro Cities',
+    category: 'Water-Sensitive Urban Design',
+    shortDescription: 'How linear green corridors and bioswales integrate stormwater management with ecological mobility across Indian urban centers.',
+    mainImage: '/projects/harit-setu.jpg',
+    date: '2026-08-15',
+    author: 'Ukiyo Research Team',
+    readTime: '11 min read'
+  },
+  {
+    id: 'participatory-codesign-urban-placemaking',
+    title: 'Participatory Co-Design: How Community Listening Shapes Resilient Public Spaces',
+    category: 'Urban Placemaking & Research',
+    shortDescription: 'Empowering citizens through collaborative mapping, co-design workshops, and community-led public space stewardship.',
+    mainImage: '/projects/codesign.jpg',
+    date: '2026-08-01',
+    author: 'Garima Dubey',
+    readTime: '9 min read'
+  },
+  {
+    id: 'biophilic-workplace-campuses',
+    title: 'Designing Future-Ready Workplace Campuses: Integrating Nature, Microclimates, and Commercial Value',
+    category: 'Commercial Architecture & Ecology',
+    shortDescription: 'How outdoor biophilic workspaces and climate-adaptive corporate landscapes boost employee productivity and property valuation.',
+    mainImage: '/hero-bg-8.jpg',
+    date: '2026-07-20',
+    author: 'Ukiyo Design Team',
+    readTime: '10 min read'
+  },
+  {
     id: 'climate-resilient-living',
     title: 'Climate-Resilient Living: How Landscape Architecture Can Combat El Niño Effects',
     category: 'Sustainability',
