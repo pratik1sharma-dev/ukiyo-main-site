@@ -49,3 +49,14 @@ export const trackPhoneClick = (source: string) => {
     event_label: source,
   });
 };
+
+/**
+ * Tracks job application submissions separately from client leads
+ */
+export const trackJobApplication = (role: string) => {
+  trackEvent('job_application_submit', {
+    event_category: 'Careers',
+    event_label: role,
+    job_role: role,
+  });
+};

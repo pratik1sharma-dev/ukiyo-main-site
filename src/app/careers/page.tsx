@@ -200,15 +200,23 @@ export default function Careers() {
                       </span>
                     </div>
                   </div>
-                  <Link
-                    href={`/contact?role=${encodeURIComponent(job.title)}`}
-                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#e7a77e] to-[#f59e42] text-white font-semibold rounded-full hover:from-[#d18e64] hover:to-[#ea580c] transition-all duration-300 shadow-md hover:shadow-lg shrink-0"
-                  >
-                    Apply
-                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                    </svg>
-                  </Link>
+                  <div className="flex flex-wrap gap-2 shrink-0">
+                    <a
+                      href={`mailto:ukiyohabitat@gmail.com?subject=Application%20for%20${encodeURIComponent(job.title)}&body=Hi%20Ukiyo%20Habitat%20Team,%0A%0AI%20am%20applying%20for%20the%20${encodeURIComponent(job.title)}%20role.%20Please%20find%20my%20resume%20and%20portfolio%20attached.%0A%0AName:%20%0APhone:%20%0ALink%20to%20Portfolio:%20`}
+                      className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#e7a77e] to-[#f59e42] text-white font-semibold rounded-full hover:from-[#d18e64] hover:to-[#ea580c] transition-all duration-300 shadow-md hover:shadow-lg text-sm"
+                    >
+                      Email Resume
+                      <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                      </svg>
+                    </a>
+                    <Link
+                      href={`/contact?role=${encodeURIComponent(job.title)}`}
+                      className="inline-flex items-center px-5 py-3 bg-white text-[#232323] border border-[#e7d8c9] font-medium rounded-full hover:bg-[#f0ebe6] transition-all duration-300 text-sm"
+                    >
+                      Web Form
+                    </Link>
+                  </div>
                 </div>
 
                 <p className="text-[#6b7280] mb-6 leading-relaxed">

@@ -5,7 +5,7 @@ import { z } from 'zod';
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 
-import { trackLeadSubmission, trackWhatsAppClick, trackPhoneClick } from '../utils/analytics';
+import { trackLeadSubmission, trackJobApplication, trackWhatsAppClick, trackPhoneClick } from '../utils/analytics';
 
 const formSchema = z.object({
   name: z.string().min(2, 'Name is required'),
@@ -41,8 +41,8 @@ export default function ContactForm() {
 
   useEffect(() => {
     if (roleParam) {
-      setValue('projectType', 'job');
-      setValue('message', `I am applying for: ${roleParam}\n\n`);
+      setValue('projectType', 'other');
+      setValue('message', `[Job Application for ${roleParam}]\n\n`);
     }
   }, [roleParam, setValue]);
 
@@ -66,8 +66,12 @@ export default function ContactForm() {
         throw new Error(errorMessage);
       }
 
-      // Track lead submission conversion event
-      trackLeadSubmission(data.projectType, data.location);
+      // Track job application separately from sales lead submissions
+      if (roleParam || data.message.includes('[Job Application')) {
+        trackJobApplication(roleParam || 'General Applicant');
+      } else {
+        trackLeadSubmission(data.projectType, data.location);
+      }
 
       setIsSuccess(true);
       reset();
@@ -102,12 +106,24 @@ export default function ContactForm() {
           <div className="bg-gradient-to-br from-[#f6f2ed] to-[#f0ebe6] rounded-2xl p-8 md:p-12 shadow-xl border border-[#e7d8c9]">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-[#232323] mb-4">
-                Start a Conversation
+                {roleParam ? `Job Application: ${roleParam}` : 'Start a Project Conversation'}
               </h2>
               <p className="text-lg text-[#6b7280] max-w-2xl mx-auto">
-                Tell us about your project, ideas, or questions. We&apos;d love to hear from you and explore how we can work together.
+                {roleParam ? (
+                  <span>Applying for <strong>{roleParam}</strong>? You can submit your details below or email your CV & Portfolio directly to <a href={`mailto:ukiyohabitat@gmail.com?subject=Application%20for%20${encodeURIComponent(roleParam)}`} className="text-[#e7a77e] underline font-semibold">ukiyohabitat@gmail.com</a>.</span>
+                ) : (
+                  "Tell us about your project, masterplan, or design vision. We'd love to discuss how we can work together."
+                )}
               </p>
             </div>
+
+            {roleParam && (
+              <div className="mb-8 p-4 bg-amber-50 border border-amber-200 text-amber-800 rounded-xl text-sm flex items-center justify-between">
+                <div>
+                  <strong>Job Seekers & Applicants:</strong> For faster application review, email your CV and portfolio to <a href={`mailto:ukiyohabitat@gmail.com?subject=Application%20for%20${encodeURIComponent(roleParam)}`} className="underline font-bold">ukiyohabitat@gmail.com</a> with subject <em>[Application] {roleParam}</em>.
+                </div>
+              </div>
+            )}
             
             {isSuccess && (
               <div className="mb-8 p-6 bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-300 rounded-xl shadow-lg">
@@ -244,14 +260,13 @@ export default function ContactForm() {
                     disabled={isSubmitting}
                   >
                     <option value="">Select project type</option>
-                    <option value="job">Job Application</option>
-                    <option value="landscape">Landscape Design</option>
-                    <option value="interior">Interior Design</option>
-                    <option value="urban">Urban Design</option>
-                    <option value="architecture">Architecture</option>
-                    <option value="commercial">Commercial Landscape</option>
-                    <option value="residential">Residential Design</option>
-                    <option value="other">Other</option>
+                    <option value="landscape">Landscape Architecture & Design</option>
+                    <option value="commercial">Commercial Landscape & Public Realm</option>
+                    <option value="urban">Urban Design & Masterplanning</option>
+                    <option value="residential">Luxury Residential & Villa Design</option>
+                    <option value="architecture">Sustainable Architecture</option>
+                    <option value="interior">Interior Environments</option>
+                    <option value="other">General Project Inquiry</option>
                   </select>
                   {errors.projectType && (
                     <p className="mt-2 text-sm text-red-600">{errors.projectType.message}</p>
